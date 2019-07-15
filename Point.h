@@ -1,49 +1,107 @@
-#ifndef Point_H
-#define Point_H
+#ifndef POINT_H
+#define POINT_H
 
 #include "DataTypes.h"
 
 class Point
 {
-	/*! ID of the point. */
 	int ID;			
-	/*! Values of the point. */
 	DoubleVector values; 
 
 public:
-	/*! Constructor. */
+	/*!
+	 * Default Constructor.
+	 */
 	Point();
-	/*! Destructor. */
+
+	/*!
+	 * Destructor.
+	 */
 	~Point();
 
-	/*! Sets the ID of the point. */
-	void setID(int ID);
-	/* Returns the ID of the point. */
+	/*! 
+	 * Setter of the ID of the point.
+	 * @param _ID the ID of the point
+	 */
+	void setID(int _ID);
+
+	/*!
+	 * Getter of the ID of the point. 
+	 * @return the ID of the point.
+	 */
 	int getID();
 
-	/*! Add value to the values vector of the point. */
+	/*! 
+	 * This function adds a value to the internal vector of the point.
+	 * @param value the value to be added. 
+	 */
 	void addValue(double value);
-	/*! Get a value from the values vector of the point, for a specific index. */
+
+	/*! 
+	 * Getter of a value from internal vector of the point. 
+	 * @param index the index of the value to be returned.
+	 * @return the returned value.
+	 */
 	double getValue(int index);
-	/*! Get the size of the values vector of the point. */
+	
+	/*! 
+	 * Getter of the size of the internal vector of the point.
+	 * @return the size of the internal vector.
+	 */
 	int getValuesSize();
-	/*! Change a value of the values vector of the point, at a specific index. */
+	
+	/*! 
+	 * This function updates a specific value of the internal vector of the point.
+     * @param index the index of the value to be updated.
+     * @param the new value.
+	 */
 	void changeValue(int index, double newValue);
-	/*! Get a pointer to the values vector of the point. */
+	
+	/*! 
+	 * Getter of a pointer to the internal vector of the point.
+	 * @return a pointer to the internal vector of the point.
+	 */
 	DoubleVector* getValues();
 
-	/*! Overloaded operators functions. */
+	/*!
+     * + operator overloading function.
+     * @param p a reference to the rhs Point.
+	 */
 	Point operator+(const Point &p);
+	
+	/*!
+     * = operator overloading function.
+     * @param p a reference to the rhs Point.
+	 */
 	Point operator=(const Point &p);
+	
+	/*!
+     * == operator overloading function.
+     * @param p a reference to the rhs Point.
+	 */
 	bool operator==(const Point &p);
+	
+	/*!
+     * < operator overloading function.
+     * @param p a reference to the rhs Point.
+	 */
 	bool operator<(const Point &p);
+	
+	/*!
+     * / operator overloading function (Point object with integer).
+     * @param the integer by which all the values of the internal vector of the point are divided.
+	 */
 	Point operator/(int m);
 	
-	/*! prints the values of the point in console. */
+	/*! 
+	 * This function prints the values of the point in console.
+	 */
 	void printValuesToConsole(); 
-	/*! prints the values of the point in a file. */
+	
+	/*!
+	 * This function writes the values of the point in a file.
+	 */
 	void writeValuesToFile(std::ostream &out); 
-
 };
 
-#endif
+#endif	// POINT_H

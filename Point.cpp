@@ -6,13 +6,15 @@ Point::Point() : ID(-1)
 
 Point::~Point()
 {
-	if(values.size() > 0)
+	if (values.size() > 0)
+	{
 		values.clear();
+	}
 }
 
-void Point::setID(int ID)
+void Point::setID(int _ID)
 {
-	this->ID = ID;
+	ID = _ID;
 }
 
 int Point::getID()
@@ -28,9 +30,13 @@ void Point::addValue(double value)
 double Point::getValue(int index)
 {
 	if (index >= 0 && index < values.size())
+	{
 		return values[index];
+	}
 	else
+	{
 		return -1.0; // error indicator
+	}
 }
 
 int Point::getValuesSize()
@@ -41,7 +47,9 @@ int Point::getValuesSize()
 void Point::changeValue(int index, double newValue)
 {
 	if (index >= 0 && index < values.size())
+	{
 		values[index] = newValue;
+	}
 }
 
 DoubleVector* Point::getValues()
@@ -53,42 +61,46 @@ Point Point::operator+(const Point &p)
 {
 	if (values.size() == p.values.size())
 	{
-		for (int i = 0 ; i < values.size() ; i++)
+		for (size_t i = 0; i < values.size(); ++i)
+		{
 			values[i] += p.values[i];
+		}
 	}
-	return *this;
-}
-
-Point Point::operator/(int m)
-{
-	for (int i = 0 ; i < values.size() ; i++)
-		values[i] /= m;
 	return *this;
 }
 
 Point Point::operator=(const Point &p)
 {
-	int i;
+	size_t i;
 	if (values.size() == 0)
 	{
-		for (i = 0 ; i < p.values.size() ; i++)
+		for (i = 0; i < p.values.size(); ++i)
+		{
 			values.push_back(p.values[i]);
+		}
 	}
 	else
 	{
-		for (i = 0 ; i < p.values.size() ; i++)
+		for (i = 0; i < p.values.size(); ++i)
+		{
 			values[i] = p.values[i];
+		}
 	}
 	return *this;
 }
 
 bool Point::operator==(const Point &p)
 {
-	int s1 = values.size();
-	int s2 = p.values.size();
-	int s = s1 < s2 ? s1 : s2;
-	for (int i = 0 ; i < s ; i++)
-		if(values[i] != p.values[i]) return false;
+	size_t s1 = values.size();
+	size_t s2 = p.values.size();
+	size_t s = s1 < s2 ? s1 : s2;
+	for (size_t i = 0; i < s; ++i)
+	{
+		if (values[i] != p.values[i])
+		{
+			return false;
+		}
+	}
 	return true;
 }
 
@@ -96,22 +108,42 @@ bool Point::operator<(const Point &p)
 {
 	if (values.size() == p.values.size())
 	{
-		for (int i = 0 ; i < values.size() ; i++)
-			if (values[i] >= p.values[i]) return false;
+		for (size_t i = 0; i < values.size(); ++i)
+		{
+			if (values[i] >= p.values[i])
+			{
+				return false;
+			}
+		}
 		return true;
 	}
 	else
+	{
 		return false;
+	}
+}
+
+Point Point::operator/(int m)
+{
+	for (size_t i = 0; i < values.size(); ++i)
+	{
+		values[i] /= m;
+	}
+	return *this;
 }
 
 void Point::printValuesToConsole()
 {
-	for (int i = 0 ; i < values.size() ; i++)
+	for (size_t i = 0; i < values.size(); ++i)
+	{
 		std::cout << " " << values[i];
+	}
 }
 
 void Point::writeValuesToFile(std::ostream &out)
 {
-	for (int i = 0 ; i < values.size() ; i++)
+	for (size_t i = 0; i < values.size(); ++i)
+	{
 		out << " " << values[i];
+	}
 }
