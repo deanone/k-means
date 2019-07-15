@@ -1,0 +1,9 @@
+# Don't track content of these directories
+generateData/
+kmeansTest1/
+
+# Specific file types #
+###################
+*.out
+*.properties
+*.txt
