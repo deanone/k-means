@@ -7,12 +7,14 @@ Cluster::Cluster(Point c, int id) : center(c), ID(id)
 Cluster::~Cluster()
 {
 	if (pointsOfCluster.size() > 0)
+	{
 		pointsOfCluster.clear();
+	}
 }
 
-void Cluster::setID(int ID)
+void Cluster::setID(int _ID)
 {
-	this->ID = ID;
+	ID = _ID;
 }
 
 int Cluster::getID()
@@ -20,9 +22,9 @@ int Cluster::getID()
 	return ID;
 }
 
-void Cluster::setCenter(Point &center)
+void Cluster::setCenter(Point &_center)
 {
-	this->center = center;
+	center = _center;
 }
 
 Point Cluster::getCenter()
@@ -35,15 +37,17 @@ void Cluster::setPointsToCluster(Point *p)
 	pointsOfCluster.push_back(p);
 }
 
-int Cluster::getNumOfPointsInCluster()
+size_t Cluster::getNumOfPointsInCluster()
 {
 	return pointsOfCluster.size();
 }
 
-Point* Cluster::getPointOfCluster(int index)
+Point* Cluster::getPointOfCluster(size_t index)
 {
 	if (index >= 0 && index < pointsOfCluster.size())
+	{
 		return pointsOfCluster[index];
+	}
 }
 
 void Cluster::clearPointsOfCluster()
@@ -53,13 +57,19 @@ void Cluster::clearPointsOfCluster()
 
 bool Cluster::operator==(Cluster &c)
 {
-	if (center == c.center) return true;
+	if (center == c.center)
+	{
+		return true;
+	}
 	return false;
 }
 
 bool Cluster::operator<(Cluster &c)
 {
-	if (center < c.center) return true;
+	if (center < c.center)
+	{
+		return true;
+	}
 	return false;
 }
 
@@ -71,8 +81,10 @@ void Cluster::printCentroidInConsole()
 
 void Cluster::printAllocationInConsole()
 {
-	for (int i = 0 ; i < pointsOfCluster.size() ; i++)
+	for (int i = 0; i < pointsOfCluster.size(); ++i)
+	{
 		std::cout << pointsOfCluster[i]->getID() << " " << ID << "\n";
+	}
 }
 
 void Cluster::writeCentroidToFile(std::ostream &out)
@@ -83,6 +95,8 @@ void Cluster::writeCentroidToFile(std::ostream &out)
 
 void Cluster::writeAllocationToFile(std::ostream &out)
 {
-	for (int i = 0 ; i < pointsOfCluster.size() ; i++)
+	for (int i = 0; i < pointsOfCluster.size(); ++i)
+	{
 		out << pointsOfCluster[i]->getID() << " " << ID << "\n";
+	}
 }
