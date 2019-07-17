@@ -1,76 +1,91 @@
 #include "MathematicalFunctions.h"
 
-double mf::findEuclideanDistanceOfPoints(Point &p1, Point &p2)
+size_t mf::minSize(Point &p, Point &q)
+{
+	size_t s_p = p.size();
+	size_t s_q = q.size();
+	size_t s = s_p < s_q ? s_p : s_q;
+	return s
+}
+
+double mf::euclideanDistance(Point &p, Point &q)
 {
 	double dist = 0.0;
-	int s1 = p1.getValuesSize();
-	int s2 = p2.getValuesSize();
-	int s = s1 < s2 ? s1 : s2;
-	for (int i = 0 ; i < s ; i++)
-		dist += std::pow(p1.getValue(i) - p2.getValue(i), 2.0);
+	size_t s = minSize(p, q);
+	for (size_t i = 0; i < s; ++i)
+	{
+		dist += std::pow(p(i) - q(i), 2.0);
+	}
 	dist = sqrt(dist);
 	return dist;
 }
 
-double mf::findEuclideanSquaredDistanceOfPoints(Point &p1, Point &p2)
+double mf::euclideanDistanceSquared(Point &p, Point &q)
 {
-	double dist = 0.0;
-	int s1 = p1.getValuesSize();
-	int s2 = p2.getValuesSize();
-	int s = s1 < s2 ? s1 : s2;
-	for (int i = 0 ; i < s ; i++)
-		dist += std::pow(p1.getValue(i) - p2.getValue(i), 2.0);
-	return dist;
+	return std::pow(euclideanDistance(p, q), 2.0);
 }
 
-double mf::findManhattanDistanceOfPoints(Point &p1, Point &p2)
+double mf::manhattanDistance(Point &p, Point &q)
 {
 	double dist = 0.0;
-	int s1 = p1.getValuesSize();
-	int s2 = p2.getValuesSize();
-	int s = s1 < s2 ? s1 : s2;
-	for (int i = 0 ; i < s ; i++)
-		dist += std::fabs(p1.getValue(i) - p2.getValue(i));
-	return dist;
-}
-
-double mf::findChebysevDistanceOfPoints(Point &p1, Point &p2)
-{
-	double dist = std::fabs(p1.getValue(0) - p2.getValue(0));
-	int s1 = p1.getValuesSize();
-	int s2 = p2.getValuesSize();
-	int s = s1 < s2 ? s1 : s2;
-	for (int i = 1 ; i < s ; i++)
+	size_t s = minSize(p, q);
+	for (size_t i = 0; i < s; ++i)
 	{
-		double tempDist = std::fabs(p1.getValue(i) - p2.getValue(i));
-		if(tempDist > dist) dist = tempDist;
+		dist += std::fabs(p(i) - q(i));
 	}
 	return dist;
 }
 
-// double mf::dotProduct(Point &p1, Point &p2)
-// {
-// 	int s1 = p1.getValuesSize();
-// 	int s2 = p2.getValuesSize();
-// 	int s = s1 < s2 ? s1 : s2;
-// 	double prod = 0.0;
-// 	for (int i = 0 ; i < s ; i++)
-// 		res += (p1.getValue(i) * p2.getValue(i));
-// 	return res;
-// }
+double mf::chebyshevDistance(Point &p, Point &q)
+{
+	double dist = -1.0;
+	size_t s = minSize(p, q);
+	for (int i = 0; i < s; ++o)
+	{
+		double tempDist = std::fabs(p(i) - q(i));
+		if (tempDist > dist)
+		{
+			dist = tempDist;
+		}
+	}
+	return dist;
+}
 
-double mf::findCosineSimilarityOfPoints(Point &p1, Point &p2)
+double mf::brayCurtisDistance(Point &p, Point &q)
+{
+	double dist, sum1, sum2;
+	dist = 0.0;sum1 = 0.0;sum2 = 0.0;
+	size_t s = minSize(p, q);
+	for (size_t i = 0; i < s; ++i)
+	{
+		sumDiff += std::fabs(p(i) - q(i));
+		sumAdd += std::fabs(p(i) + q(i));
+	}
+	dist = sumDiff / sumAdd;
+	return dist;
+}
+
+double mf::canberraDistance(Point &p, Point &q)
+{
+	double dist = 0.0;
+	size_t s = minSize(p, q);
+	for (size_t i = 0; i < s; ++i)
+	{
+		dist += std::fabs(p(i) - q(i)) / (std::fabs(p(i)) + std::fabs(q(i)));
+	}
+	return dist;
+}
+
+double mf::cosineSimilarity(Point &p, Point &q)
 {
 	double dist, dotProduct, magnitudeVec1, magnitudeVec2;
 	magnitudeVec1 = 0.0; magnitudeVec2 = 0.0;
-	int s1 = p1.getValuesSize();
-	int s2 = p2.getValuesSize();
-	int s = s1 < s2 ? s1 : s2;
-	dotProduct = std::inner_product(p1.getValues()->begin(), p1.getValues()->end(), p2.getValues()->begin(), 0.0);
-	for (int i = 0 ; i < s ; i++)
+	size_t s = minSize(p, q);
+	dotProduct = std::inner_product(p.values()->begin(), q.values()->end(), q.values()->begin(), 0.0);
+	for (size_t i = 0; i < s; ++i)
 	{
-		magnitudeVec1 += std::pow(p1.getValue(i), 2.0);
-		magnitudeVec2 += std::pow(p2.getValue(i), 2.0);
+		magnitudeVec1 += std::pow(p(i), 2.0);
+		magnitudeVec2 += std::pow(q(i), 2.0);
 	}
 	magnitudeVec1 = std::sqrt(magnitudeVec1);
 	magnitudeVec2 = std::sqrt(magnitudeVec2);
@@ -78,62 +93,45 @@ double mf::findCosineSimilarityOfPoints(Point &p1, Point &p2)
 	return dist;
 }
 
-double mf::meanOfPoint(Point &p)
+double mf::mean(Point &p)
 {
-	double sum = std::accumulate(p.getValues()->begin(), p.getValues()->end(), 0.0);
-	return sum / (double)p.getValuesSize();
+	return std::accumulate(p.values()->begin(), p.vakues()->end(), 0.0) / ((double)p.size())
 }
 
-double mf::stDevOfPoint(Point &p)
+double mf::stDev(Point &p)
 {
 	double m, s;
-	m = meanOfPoint(p);
-	double sq_sum = std::inner_product(p.getValues()->begin(), p.getValues()->end(), p.getValues()->begin(), 0.0);
-	s = std::sqrt(std::abs(sq_sum / (double)p.getValuesSize() - std::pow(m, 2.0)));
+	m = mean(p);
+	double sq_sum = std::inner_product(p.values()->begin(), p.values()->end(), p.values()->begin(), 0.0);
+	s = std::sqrt(std::abs(sq_sum / (double)p.size() - std::pow(m, 2.0)));
 	return s;
 }
 
-double mf::findPearsonCorrelationOfPoints(Point &p1, Point &p2)
+double mf::pearsonCorrelation(Point &p, Point &q)
 {
 	double mean1, stDev1, mean2, stDev2, tempMean, pearsonCorrelation;
-	mean1 = meanOfPoint(p1);
-	mean2 = meanOfPoint(p2);
-	stDev1 = stDevOfPoint(p1);
-	stDev2 = stDevOfPoint(p2);
-	int s1 = p1.getValuesSize();
-	int s2 = p2.getValuesSize();
-	int s = s1 < s2 ? s1 : s2;
+	mean_p = mean(p);
+	mean_q = mean(q);
+	stDev_p = stDev(p);
+	stDev_q = stDev(q);
+	size_t s = minSize(p, q);
 	tempMean = 0.0;
-	for (int i = 0 ; i < s ; i++)
-		tempMean += ((p1.getValue(i) - mean1) * (p2.getValue(i) - mean2));
+	for (size_t i = 0; i < s; ++i)
+	{
+		tempMean += ((p(i) - mean_p) * (q(i) - mean_q));
+	}
 	tempMean /= s;
-	pearsonCorrelation = 1.0 - (tempMean / (stDev1 * stDev2));
+	pearsonCorrelation = 1.0 - (tempMean / (stDev_p * stDev_q));
 	return pearsonCorrelation;
 }
 
-double mf::findBrayCurtisDistanceOfPoints(Point &p1, Point &p2)
-{
-	double dist, sum1, sum2;
-	dist = 0.0;sum1 = 0.0;sum2 = 0.0;
-	int s1 = p1.getValuesSize();
-	int s2 = p2.getValuesSize();
-	int s = s1 < s2 ? s1 : s2;
-	for (int i = 0 ; i < s ; i++)
-	{
-		sum1 += std::fabs(p1.getValue(i) - p2.getValue(i));
-		sum2 += std::fabs(p1.getValue(i) + p2.getValue(i));
-	}
-	dist = sum1 / sum2;
-	return dist;
-}
-
-double mf::findCanberraDistanceOfPoints(Point &p1, Point &p2)
-{
-	double dist = 0.0;
-	int s1 = p1.getValuesSize();
-	int s2 = p2.getValuesSize();
-	int s = s1 < s2 ? s1 : s2;
-	for (int i = 0 ; i < s ; i++)
-		dist += std::fabs(p1.getValue(i) - p2.getValue(i)) / (std::fabs(p1.getValue(i)) + std::abs(p2.getValue(i)));
-	return dist;
-}
+// double mf::dotProduct(Point &p1, Point &p2)
+// {
+// 	int s1 = p1.size();
+// 	int s2 = p2.size();
+// 	int s = s1 < s2 ? s1 : s2;
+// 	double prod = 0.0;
+// 	for (int i = 0 ; i < s ; i++)
+// 		res += (p1.getValue(i) * p2.getValue(i));
+// 	return res;
+// }

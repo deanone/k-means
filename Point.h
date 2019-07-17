@@ -6,7 +6,7 @@
 class Point
 {
 	int ID;			
-	DoubleVector values; 
+	DoubleVector v; 
 
 public:
 	/*!
@@ -35,33 +35,26 @@ public:
 	 * This function adds a value to the internal vector of the point.
 	 * @param value the value to be added. 
 	 */
-	void addValue(double value);
-
-	/*! 
-	 * Getter of a value from internal vector of the point. 
-	 * @param index the index of the value to be returned.
-	 * @return the returned value.
-	 */
-	double getValue(int index);
+	void addValue(double val);
 	
 	/*! 
 	 * Getter of the size of the internal vector of the point.
 	 * @return the size of the internal vector.
 	 */
-	int getValuesSize();
+	size_t size();
 	
 	/*! 
 	 * This function updates a specific value of the internal vector of the point.
      * @param index the index of the value to be updated.
      * @param the new value.
 	 */
-	void changeValue(int index, double newValue);
+	void changeValue(int index, double val);
 	
 	/*! 
 	 * Getter of a pointer to the internal vector of the point.
 	 * @return a pointer to the internal vector of the point.
 	 */
-	DoubleVector* getValues();
+	DoubleVector* values();
 
 	/*!
      * + operator overloading function.
@@ -89,9 +82,15 @@ public:
 	
 	/*!
      * / operator overloading function (Point object with integer).
-     * @param the integer by which all the values of the internal vector of the point are divided.
+     * @param m the integer by which all the values of the internal vector of the point are divided.
 	 */
 	Point operator/(int m);
+
+	/*!
+     * () operator overloading function. It returns the value of the internal vector of the point that corresponds to the given index.
+     * @param index the index of the value to be returned.
+	 */
+	double operator()(size_t index);
 	
 	/*! 
 	 * This function prints the values of the point in console.

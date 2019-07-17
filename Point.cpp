@@ -6,9 +6,9 @@ Point::Point() : ID(-1)
 
 Point::~Point()
 {
-	if (values.size() > 0)
+	if (v.size() > 0)
 	{
-		values.clear();
+		v.clear();
 	}
 }
 
@@ -24,46 +24,34 @@ int Point::getID()
 
 void Point::addValue(double value)
 {
-	values.push_back(value);
+	v.push_back(value);
 }
 
-double Point::getValue(int index)
+size_t Point::size()
 {
-	if (index >= 0 && index < values.size())
-	{
-		return values[index];
-	}
-	else
-	{
-		return -1.0; // error indicator
-	}
+	return v.size();
 }
 
-int Point::getValuesSize()
+void Point::changeValue(int index, double val)
 {
-	return values.size();
-}
-
-void Point::changeValue(int index, double newValue)
-{
-	if (index >= 0 && index < values.size())
+	if (index >= 0 && index < v.size())
 	{
-		values[index] = newValue;
+		v[index] = val;
 	}
 }
 
-DoubleVector* Point::getValues()
+DoubleVector* Point::values()
 {
-	return &values;
+	return &v;
 }
 
 Point Point::operator+(const Point &p)
 {
-	if (values.size() == p.values.size())
+	if (v.size() == p.v.size())
 	{
-		for (size_t i = 0; i < values.size(); ++i)
+		for (size_t i = 0; i < v.size(); ++i)
 		{
-			values[i] += p.values[i];
+			v[i] += p.v[i];
 		}
 	}
 	return *this;
@@ -72,18 +60,18 @@ Point Point::operator+(const Point &p)
 Point Point::operator=(const Point &p)
 {
 	size_t i;
-	if (values.size() == 0)
+	if (v.size() == 0)
 	{
-		for (i = 0; i < p.values.size(); ++i)
+		for (i = 0; i < p.v.size(); ++i)
 		{
-			values.push_back(p.values[i]);
+			v.push_back(p.v[i]);
 		}
 	}
 	else
 	{
-		for (i = 0; i < p.values.size(); ++i)
+		for (i = 0; i < p.v.size(); ++i)
 		{
-			values[i] = p.values[i];
+			v[i] = p.v[i];
 		}
 	}
 	return *this;
@@ -91,12 +79,12 @@ Point Point::operator=(const Point &p)
 
 bool Point::operator==(const Point &p)
 {
-	size_t s1 = values.size();
-	size_t s2 = p.values.size();
+	size_t s1 = v.size();
+	size_t s2 = p.v.size();
 	size_t s = s1 < s2 ? s1 : s2;
 	for (size_t i = 0; i < s; ++i)
 	{
-		if (values[i] != p.values[i])
+		if (v[i] != p.v[i])
 		{
 			return false;
 		}
@@ -106,11 +94,11 @@ bool Point::operator==(const Point &p)
 
 bool Point::operator<(const Point &p)
 {
-	if (values.size() == p.values.size())
+	if (v.size() == p.v.size())
 	{
-		for (size_t i = 0; i < values.size(); ++i)
+		for (size_t i = 0; i < v.size(); ++i)
 		{
-			if (values[i] >= p.values[i])
+			if (v[i] >= p.v[i])
 			{
 				return false;
 			}
@@ -125,25 +113,37 @@ bool Point::operator<(const Point &p)
 
 Point Point::operator/(int m)
 {
-	for (size_t i = 0; i < values.size(); ++i)
+	for (size_t i = 0; i < v.size(); ++i)
 	{
-		values[i] /= m;
+		v[i] /= m;
 	}
 	return *this;
 }
 
+double Point::operator()(size_t index)
+{
+	if (index >= 0 && index < v.size())
+	{
+		return v[index];
+	}
+	else
+	{
+		return -1.0; // error indicator
+	}
+}
+
 void Point::printValuesToConsole()
 {
-	for (size_t i = 0; i < values.size(); ++i)
+	for (size_t i = 0; i < v.size(); ++i)
 	{
-		std::cout << " " << values[i];
+		std::cout << " " << v[i];
 	}
 }
 
 void Point::writeValuesToFile(std::ostream &out)
 {
-	for (size_t i = 0; i < values.size(); ++i)
+	for (size_t i = 0; i < v.size(); ++i)
 	{
-		out << " " << values[i];
+		out << " " << v[i];
 	}
 }
