@@ -5,7 +5,21 @@ size_t mf::minSize(Point &p, Point &q)
 	size_t s_p = p.size();
 	size_t s_q = q.size();
 	size_t s = s_p < s_q ? s_p : s_q;
-	return s
+	return s;
+}
+
+double mf::mean(Point &p)
+{
+	return std::accumulate(p.values()->begin(), p.values()->end(), 0.0) / ((double)p.size());
+}
+
+double mf::stDev(Point &p)
+{
+	double m, s;
+	m = mean(p);
+	double sq_sum = std::inner_product(p.values()->begin(), p.values()->end(), p.values()->begin(), 0.0);
+	s = std::sqrt(std::abs(sq_sum / (double)p.size() - std::pow(m, 2.0)));
+	return s;
 }
 
 double mf::euclideanDistance(Point &p, Point &q)
@@ -40,7 +54,7 @@ double mf::chebyshevDistance(Point &p, Point &q)
 {
 	double dist = -1.0;
 	size_t s = minSize(p, q);
-	for (int i = 0; i < s; ++o)
+	for (int i = 0; i < s; ++i)
 	{
 		double tempDist = std::fabs(p(i) - q(i));
 		if (tempDist > dist)
@@ -53,8 +67,8 @@ double mf::chebyshevDistance(Point &p, Point &q)
 
 double mf::brayCurtisDistance(Point &p, Point &q)
 {
-	double dist, sum1, sum2;
-	dist = 0.0;sum1 = 0.0;sum2 = 0.0;
+	double dist, sumDiff, sumAdd;
+	dist = 0.0;sumDiff = 0.0;sumAdd = 0.0;
 	size_t s = minSize(p, q);
 	for (size_t i = 0; i < s; ++i)
 	{
@@ -76,6 +90,24 @@ double mf::canberraDistance(Point &p, Point &q)
 	return dist;
 }
 
+double mf::pearsonCorrelation(Point &p, Point &q)
+{
+	double mean_p, stDev_p, mean_q, stDev_q, tempMean, pearsonCorrelation;
+	mean_p = mean(p);
+	mean_q = mean(q);
+	stDev_p = stDev(p);
+	stDev_q = stDev(q);
+	size_t s = minSize(p, q);
+	tempMean = 0.0;
+	for (size_t i = 0; i < s; ++i)
+	{
+		tempMean += ((p(i) - mean_p) * (q(i) - mean_q));
+	}
+	tempMean /= s;
+	pearsonCorrelation = 1.0 - (tempMean / (stDev_p * stDev_q));
+	return pearsonCorrelation;
+}
+
 double mf::cosineSimilarity(Point &p, Point &q)
 {
 	double dist, dotProduct, magnitudeVec1, magnitudeVec2;
@@ -93,45 +125,13 @@ double mf::cosineSimilarity(Point &p, Point &q)
 	return dist;
 }
 
-double mf::mean(Point &p)
+double mf::dot(Point &p, Point &q)
 {
-	return std::accumulate(p.values()->begin(), p.vakues()->end(), 0.0) / ((double)p.size())
-}
-
-double mf::stDev(Point &p)
-{
-	double m, s;
-	m = mean(p);
-	double sq_sum = std::inner_product(p.values()->begin(), p.values()->end(), p.values()->begin(), 0.0);
-	s = std::sqrt(std::abs(sq_sum / (double)p.size() - std::pow(m, 2.0)));
-	return s;
-}
-
-double mf::pearsonCorrelation(Point &p, Point &q)
-{
-	double mean1, stDev1, mean2, stDev2, tempMean, pearsonCorrelation;
-	mean_p = mean(p);
-	mean_q = mean(q);
-	stDev_p = stDev(p);
-	stDev_q = stDev(q);
 	size_t s = minSize(p, q);
-	tempMean = 0.0;
+	double res = 0.0;
 	for (size_t i = 0; i < s; ++i)
 	{
-		tempMean += ((p(i) - mean_p) * (q(i) - mean_q));
+		res += (p(i) * q(i));
 	}
-	tempMean /= s;
-	pearsonCorrelation = 1.0 - (tempMean / (stDev_p * stDev_q));
-	return pearsonCorrelation;
+	return res;
 }
-
-// double mf::dotProduct(Point &p1, Point &p2)
-// {
-// 	int s1 = p1.size();
-// 	int s2 = p2.size();
-// 	int s = s1 < s2 ? s1 : s2;
-// 	double prod = 0.0;
-// 	for (int i = 0 ; i < s ; i++)
-// 		res += (p1.getValue(i) * p2.getValue(i));
-// 	return res;
-// }

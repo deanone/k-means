@@ -26,19 +26,25 @@ Kmeans::Kmeans(std::string datasetFilename, std::string propertiesFileName)
 			std::string item;
 			StringVector items;
 			while (getline(ss, item, ','))
+			{
 				items.push_back(item);
+			}
 			int ID = std::stoi(items[0]);
 			Point point;
 			point.setID(ID);
-			for (int i = 1 ; i < items.size() ; i++)
+			for (size_t i = 1; i < items.size(); ++i)
+			{
 				point.addValue(std::stod(items[i]));
+			}
 			items.clear();
 			points.push_back(point);
 		}
 		in.close();
 	}
 	else
+	{
 		std::cout << "Cannot open file.\n";
+	}
 }
 
 Kmeans::Kmeans(std::string datasetFilename, int d, int numOfClusters, int numIt, int distMetric):
@@ -55,34 +61,50 @@ dimension(d), k(numOfClusters), numOfIterations(numIt), distanceMetric(distMetri
 			std::string item;
 			StringVector items;
 			while (getline(ss, item, ','))
+			{
 				items.push_back(item);
+			}
 			int ID = std::stoi(items[0]);
 			Point point;
 			point.setID(ID);
-			for (int i = 1 ; i < items.size() ; i++)
+			for (size_t i = 1; i < items.size(); ++i)
+			{
 				point.addValue(std::stod(items[i]));
+			}
 			items.clear();
 			points.push_back(point);
 		}
 		in.close();
 	}
 	else
+	{
 		std::cout << "Cannot open file.\n";
+	}
 
 }
 
 Kmeans::~Kmeans()
 {
 	if (points.size() > 0)
+	{
 		points.clear();
+	}
 	if (initialClusters.size() > 0)
+	{
 		initialClusters.clear();
+	}
 	if (finalClusters.size() > 0)
+	{
 		finalClusters.clear();
+	}
 	if (pointIDClusterIDAllocation.size() > 0)
+	{
 		pointIDClusterIDAllocation.clear();
+	}
 	if (clusterIDPointsOfClusterIDsAllocation.size() > 0)
+	{
 		clusterIDPointsOfClusterIDsAllocation.clear();
+	}
 }
 
 /*! Choose randomly K points from the data to be the initial centroids for the beginning of the algorithm. */
@@ -90,7 +112,7 @@ void Kmeans::setInitialClustersRandomly()
 {
 	int index;
 	srand (time(NULL)); 
-	for (int i = 0 ; i < k ; i++)
+	for (int i = 0; i < k; ++i)
 	{
 		index = rand() % points.size();
 		Cluster cl(points[index/*i*/], i);
@@ -101,7 +123,7 @@ void Kmeans::setInitialClustersRandomly()
 /*! Choose K points from the data to be the initial centroids for the beginning of the algorithm. */
 void Kmeans::setInitialClustersByInitialPoints()
 {
-	for (int i = 0 ; i < k ; i++)
+	for (int i = 0; i < k; ++i)
 	{
 		Cluster cl(points[i], i);
 		initialClusters.push_back(cl);	
@@ -115,36 +137,36 @@ void Kmeans::setPointsToClusters()
 	double dist = 0.0;
 	double minDist = 100000000.0;
 	int minID;
-	for (int i = 0 ; i < points.size() ; i++)
+	for (size_t i = 0; i < points.size(); ++i)
 	{
-		for(int j = 0 ; j < initialClusters.size() ; j++)
+		for (size_t j = 0; j < initialClusters.size(); ++j)
 		{
 			Point center = initialClusters[j].getCenter();
 			switch (distanceMetric)
 			{
 			case 1:
-				dist = mf::findEuclideanDistanceOfPoints(points[i], center);
+				dist = mf::euclideanDistance(points[i], center);
 				break;
 			case 2:
-				dist = mf::findEuclideanSquaredDistanceOfPoints(points[i], center);
+				dist = mf::euclideanDistanceSquared(points[i], center);
 				break;
 			case 3:
-				dist = mf::findManhattanDistanceOfPoints(points[i], center);
+				dist = mf::manhattanDistance(points[i], center);
 				break;
 			case 4:
-				dist = mf::findChebysevDistanceOfPoints(points[i], center);
+				dist = mf::chebyshevDistance(points[i], center);
 				break;
 			case 5:
-				dist = mf::findBrayCurtisDistanceOfPoints(points[i], center);
+				dist = mf::brayCurtisDistance(points[i], center);
 				break;
 			case 6:
-				dist = mf::findCanberraDistanceOfPoints(points[i], center);
+				dist = mf::canberraDistance(points[i], center);
 				break;
 			case 7:
-				dist = mf::findCosineSimilarityOfPoints(points[i], center);
+				dist = mf::cosineSimilarity(points[i], center);
 				break;
 			case 8:
-				dist = mf::findPearsonCorrelationOfPoints(points[i], center);
+				dist = mf::pearsonCorrelation(points[i], center);
 				break;
 			}
 			if (dist < minDist)
@@ -162,21 +184,27 @@ void Kmeans::setPointsToClusters()
 void Kmeans::setFinalClusters()
 {
 	int n;
-	for(int i = 0 ; i < k ; i++)
+	for (int i = 0; i < k; ++i)
 	{
 		Point new_centroid;
 		new_centroid.setID(i);
-		for(int l = 0 ; l < dimension ; l++)
+		for (int l = 0; l < dimension; ++l)
+		{
 			new_centroid.addValue(0.0);
+		}
 		n = initialClusters[i].getNumOfPointsInCluster();
 		if( n != 0)
 		{
-			for(int j = 0 ; j < n ; j++)
+			for (int j = 0; j < n; ++j)
+			{
 				new_centroid = new_centroid + (*(initialClusters[i].getPointOfCluster(j)));
+			}
 			new_centroid = new_centroid / n;
 			Cluster cl(new_centroid, i);
-			for(int m = 0 ; m < n ; m++)
+			for (int m = 0; m < n; ++m)
+			{
 				cl.setPointsToCluster(initialClusters[i].getPointOfCluster(m));
+			}
 			finalClusters.push_back(cl);
 		}
 		else
@@ -191,15 +219,20 @@ in the clusters didn't change so the algorithm converged.
 */
 bool Kmeans::isOver()
 {
-	for (int i = 0 ; i < k ; i++)
-		if(!(initialClusters[i].getCenter() == finalClusters[i].getCenter())) return false;
+	for (int i = 0; i < k; ++i)
+	{
+		if (!(initialClusters[i].getCenter() == finalClusters[i].getCenter()))
+		{
+			return false;
+		}
+	}
 	return true;
 }
 
 void Kmeans::initialize()
 {
 	initialClusters.clear();
-	for (int i = 0; i < k; i++)
+	for (int i = 0; i < k; ++i)
 	{
 		finalClusters[i].clearPointsOfCluster();
 		initialClusters.push_back(finalClusters[i]);
@@ -215,6 +248,7 @@ void Kmeans::runKmeans()
 	setInitialClustersByInitialPoints();
 	setPointsToClusters();
 	setFinalClusters();
+
 	// Next iterations
 	while ((!isOver()) && (it <= numOfIterations))
 	{
@@ -228,7 +262,7 @@ void Kmeans::runKmeans()
 void Kmeans::writeCentroidsToFile(std::string centroidsFilename)
 {
 	std::ofstream out(centroidsFilename.c_str());
-	for (int i = 0 ; i < finalClusters.size() ; i++)
+	for (size_t i = 0; i < finalClusters.size(); ++i)
 	{
 		finalClusters[i].writeCentroidToFile(out);
 		out << "\n";
@@ -238,20 +272,24 @@ void Kmeans::writeCentroidsToFile(std::string centroidsFilename)
 
 void Kmeans::createPointIDClusterIDAllocation()
 {
-	for (int i = 0 ; i < finalClusters.size() ; i++)
+	for (size_t i = 0; i < finalClusters.size(); ++i)
 	{
-		for (int j = 0 ; j < finalClusters[i].getNumOfPointsInCluster(); j++)
+		for (size_t j = 0; j < finalClusters[i].getNumOfPointsInCluster(); ++j)
+		{
 			pointIDClusterIDAllocation.insert(std::make_pair(finalClusters[i].getPointOfCluster(j)->getID(), finalClusters[i].getID())); // (PointID,ClusterID)
+		}
 	}
 }
 
 void Kmeans::createClusterIDPointsOfClusterIDsAllocation()
 {
-	for(int i = 0 ; i < finalClusters.size() ; i++)
+	for (size_t i = 0; i < finalClusters.size(); ++i)
 	{
 		IntVector pointsOfClusterIDs;
-		for(int j = 0 ; j < finalClusters[i].getNumOfPointsInCluster() ; j++)
+		for (int j = 0; j < finalClusters[i].getNumOfPointsInCluster(); ++j)
+		{
 			pointsOfClusterIDs.push_back(finalClusters[i].getPointOfCluster(j)->getID());
+		}
 		clusterIDPointsOfClusterIDsAllocation.insert(std::make_pair(finalClusters[i].getID(), pointsOfClusterIDs));
 		pointsOfClusterIDs.clear();
 	}
@@ -261,13 +299,15 @@ void Kmeans::writeClusterIDPointsOfClusterIDsAllocationToFile(std::string alloca
 {
 	std::ofstream out;
 	out.open(allocationFilename1.c_str());
-	for (auto it = clusterIDPointsOfClusterIDsAllocation.begin() ; it != clusterIDPointsOfClusterIDsAllocation.end() ; ++it)
+	for (auto it = clusterIDPointsOfClusterIDsAllocation.begin(); it != clusterIDPointsOfClusterIDsAllocation.end(); ++it)
 	{
 		int clusterID = it->first;
 		IntVector pointsOfClusterIDs = it->second;
 		out << clusterID;
-		for (int i = 0 ; i < pointsOfClusterIDs.size() ; i++)
+		for (size_t i = 0 ; i < pointsOfClusterIDs.size() ; i++)
+		{
 			out << " " << pointsOfClusterIDs[i];
+		}
 		out << "\n";
 		pointsOfClusterIDs.clear();
 	} 	
@@ -278,7 +318,7 @@ void Kmeans::writePointIDClusterIDAllocationToFile(std::string allocationFilenam
 {
 	std::ofstream out;
 	out.open(allocationFilename2.c_str());
-	for (auto it = pointIDClusterIDAllocation.begin() ; it != pointIDClusterIDAllocation.end() ; ++it)
+	for (auto it = pointIDClusterIDAllocation.begin(); it != pointIDClusterIDAllocation.end(); ++it)
 	{
 		int pointID = it->first;
 		int clusterID = it->second;
@@ -290,7 +330,7 @@ void Kmeans::writePointIDClusterIDAllocationToFile(std::string allocationFilenam
 double Kmeans::calculateSilhouette()
 {	
 	DoubleVector silhouettes;
-	for (int i = 0 ; i < points.size() ; i++)
+	for (size_t i = 0; i < points.size(); ++i)
 	{
 		double a_for_point, final_b_for_point, temp_b, silhouetteForPoint;
 	//	std::cout << "Calculating the average dissimilarity of point " << points[i].getID() << " of all other data within the same cluster..." << "\n";
@@ -298,27 +338,29 @@ double Kmeans::calculateSilhouette()
 		int clusterID = -1;
 		auto it = pointIDClusterIDAllocation.find(points[i].getID());
 		if (it != pointIDClusterIDAllocation.end())
+		{
 			clusterID = it->second;
+		}
 
-		for (int j = 0 ; j < finalClusters[clusterID].getNumOfPointsInCluster() ; j++)
+		for (int j = 0; j < finalClusters[clusterID].getNumOfPointsInCluster(); ++j)
 		{
 			Point* pointOfCluster = finalClusters[clusterID].getPointOfCluster(j);
-			a_for_point += mf::findEuclideanDistanceOfPoints(points[i], *pointOfCluster);
+			a_for_point += mf::euclideanDistance(points[i], *pointOfCluster);
 		}
 		a_for_point /= finalClusters[clusterID].getNumOfPointsInCluster();
 
 
 	//	std::cout << "Calculating the lowest average dissimilarity of point " << points[i].getID() << " of all other data of all other clusters..." << "\n";
 		DoubleVector b_for_point;
-		for (int j = 0 ; j < finalClusters.size() ; j++)
+		for (size_t j = 0; j < finalClusters.size(); ++j)
 		{
 			if(finalClusters[j].getID() != clusterID)
 			{
 				temp_b = 0;
-				for(int k = 0 ; k < finalClusters[j].getNumOfPointsInCluster() ; k++)
+				for (int k = 0; k < finalClusters[j].getNumOfPointsInCluster(); ++k)
 				{	
 					Point* pointOfCluster = finalClusters[j].getPointOfCluster(k);
-					temp_b += mf::findEuclideanDistanceOfPoints(points[i], *pointOfCluster);
+					temp_b += mf::euclideanDistance(points[i], *pointOfCluster);
 				}
 				temp_b /= finalClusters[j].pointsOfCluster.size();
 				b_for_point.push_back(temp_b);
@@ -333,8 +375,10 @@ double Kmeans::calculateSilhouette()
 	}
 
 	double silhouette = 0.0;
-	for(int i = 0 ; i < silhouettes.size() ; i++)
+	for (size_t i = 0; i < silhouettes.size(); ++i)
+	{
 		silhouette += silhouettes[i];
+	}
 	silhouette /= (double)silhouettes.size();
 	
 	return silhouette;
@@ -343,13 +387,13 @@ double Kmeans::calculateSilhouette()
 double Kmeans::calculateWCSS()
 {
 	double withinClusterVariance = 0.0;
-	for (int i = 0 ; i < finalClusters.size() ; i++)
+	for (size_t i = 0; i < finalClusters.size(); ++i)
 	{
-		for (int j = 0 ; j < finalClusters[i].getNumOfPointsInCluster() ; j++)
+		for (int j = 0; j < finalClusters[i].getNumOfPointsInCluster(); ++j)
 		{
 			Point* pointOfCluster = finalClusters[i].getPointOfCluster(j);
 			Point center = finalClusters[i].getCenter();
-			withinClusterVariance += mf::findEuclideanDistanceOfPoints(*pointOfCluster, center);
+			withinClusterVariance += mf::euclideanDistance(*pointOfCluster, center);
 		}
 	}
 	return withinClusterVariance;
@@ -360,43 +404,46 @@ double Kmeans::calculateDaviesBouldinIndex()
 	double DaviesDoublinIndex = 0.0;
 	DoubleVector AverageIntraClusterDistances;
 	DoubleVector2D InterClusterDistances;
-	for (int i = 0 ; i < finalClusters.size() ; i++)
+	for (size_t i = 0; i < finalClusters.size(); ++i)
 	{
 		double averageIntaClusterDistance = 0.0;
-		for (int j = 0 ; j < finalClusters[i].getNumOfPointsInCluster() ; j++)
+		for (int j = 0; j < finalClusters[i].getNumOfPointsInCluster(); ++j)
 		{
 			Point* pointOfCluster = finalClusters[i].getPointOfCluster(j);
 			Point center = finalClusters[i].getCenter();
-			averageIntaClusterDistance+= mf::findEuclideanDistanceOfPoints(*pointOfCluster, center);
+			averageIntaClusterDistance+= mf::euclideanDistance(*pointOfCluster, center);
 		}
 		averageIntaClusterDistance /= finalClusters[i].getNumOfPointsInCluster();
 		AverageIntraClusterDistances.push_back(averageIntaClusterDistance);
 	}
 
-	for (int i = 0 ; i < finalClusters.size() ; i++)
+	for (size_t i = 0; i < finalClusters.size(); ++i)
 	{
 		DoubleVector temp;
 		double interClusterDistance;
 		Point center1 = finalClusters[i].getCenter();
-		for (int j = 0 ; j < finalClusters.size() ; j++)
+		for (size_t j = 0; j < finalClusters.size(); ++j)
 		{
 			Point center2 = finalClusters[j].getCenter();
-			interClusterDistance = mf::findEuclideanDistanceOfPoints(center1, center2);
+			interClusterDistance = mf::euclideanDistance(center1, center2);
 			temp.push_back(interClusterDistance);
 		}
 		InterClusterDistances.push_back(temp);
 	}
 
-	for (int i = 0 ; i < finalClusters.size() ; i++)
+	for (size_t i = 0; i < finalClusters.size(); ++i)
 	{
 		double Di;
 		double maxDi = -1.0;
-		for (int j = 0 ; j < finalClusters.size() ; j++)
+		for (size_t j = 0; j < finalClusters.size(); ++j)
 		{
-			if (i!=j)
+			if (i != j)
 			{
 				Di = (AverageIntraClusterDistances[i]+AverageIntraClusterDistances[j]) / InterClusterDistances[i][j];
-				if(Di > maxDi) maxDi = Di;
+				if (Di > maxDi)
+				{
+					maxDi = Di;
+				}
 			}
 		}
 		DaviesDoublinIndex += maxDi;

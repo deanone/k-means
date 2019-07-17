@@ -5,17 +5,23 @@
 
 namespace mf
 {
+	// misc
 	size_t minSize(Point &p, Point &q);
+	double mean(Point &p);
+	double stDev(Point &p);
+
+	// distances
 	double euclideanDistance(Point &p, Point &q);
 	double euclideanDistanceSquared(Point &p, Point &q);
 	double manhattanDistance(Point &p, Point &q);
 	double chebyshevDistance(Point &p, Point &q);
 	double brayCurtisDistance(Point &p, Point &q);
 	double canberraDistance(Point &p, Point &q);
-	double cosineSimilarity(Point &p, Point &q);
-	double mean(Point &p);
-	double stDev(Point &p);
+
+	// correlations
 	double pearsonCorrelation(Point &p, Point &q);
+	double cosineSimilarity(Point &p, Point &q);
+	
 	double dot(Point &p, Point &q);
 }
 
