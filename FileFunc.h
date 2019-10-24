@@ -5,7 +5,8 @@
 typedef std::basic_istream<char,std::char_traits<char>> minput_stream;
 typedef std::basic_ostream<char,std::char_traits<char>> moutput_stream;
 
-namespace flnc{
+namespace flnc
+{
 	
 	/*!
 	 * Writes a vector to file. The format is:
@@ -78,7 +79,6 @@ namespace flnc{
 		for (int i = 0; i < vecSize; i++)
 			ReadVectorFromFile(TrainingFileIn, vec[i]);
 	}
-
 }
 
 #endif

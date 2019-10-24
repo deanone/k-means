@@ -107,7 +107,6 @@ Kmeans::~Kmeans()
 	}
 }
 
-/*! Choose randomly K points from the data to be the initial centroids for the beginning of the algorithm. */
 void Kmeans::setInitialClustersRandomly()
 {
 	int index;
@@ -120,7 +119,6 @@ void Kmeans::setInitialClustersRandomly()
 	}
 }
 
-/*! Choose K points from the data to be the initial centroids for the beginning of the algorithm. */
 void Kmeans::setInitialClustersByInitialPoints()
 {
 	for (int i = 0; i < k; ++i)
@@ -130,8 +128,6 @@ void Kmeans::setInitialClustersByInitialPoints()
 	}
 }
 
-
-/*! Put points in clusters. */
 void Kmeans::setPointsToClusters()
 {
 	double dist = 0.0;
@@ -144,30 +140,30 @@ void Kmeans::setPointsToClusters()
 			Point center = initialClusters[j].getCenter();
 			switch (distanceMetric)
 			{
-			case 1:
-				dist = mf::euclideanDistance(points[i], center);
-				break;
-			case 2:
-				dist = mf::euclideanDistanceSquared(points[i], center);
-				break;
-			case 3:
-				dist = mf::manhattanDistance(points[i], center);
-				break;
-			case 4:
-				dist = mf::chebyshevDistance(points[i], center);
-				break;
-			case 5:
-				dist = mf::brayCurtisDistance(points[i], center);
-				break;
-			case 6:
-				dist = mf::canberraDistance(points[i], center);
-				break;
-			case 7:
-				dist = mf::cosineSimilarity(points[i], center);
-				break;
-			case 8:
-				dist = mf::pearsonCorrelation(points[i], center);
-				break;
+				case 1:
+					dist = mf::euclideanDistance(points[i], center);
+					break;
+				case 2:
+					dist = mf::euclideanDistanceSquared(points[i], center);
+					break;
+				case 3:
+					dist = mf::manhattanDistance(points[i], center);
+					break;
+				case 4:
+					dist = mf::chebyshevDistance(points[i], center);
+					break;
+				case 5:
+					dist = mf::brayCurtisDistance(points[i], center);
+					break;
+				case 6:
+					dist = mf::canberraDistance(points[i], center);
+					break;
+				case 7:
+					dist = mf::cosineSimilarity(points[i], center);
+					break;
+				case 8:
+					dist = mf::pearsonCorrelation(points[i], center);
+					break;
 			}
 			if (dist < minDist)
 			{
@@ -180,7 +176,6 @@ void Kmeans::setPointsToClusters()
 	}
 }
 
-/*! Calculate new centroids */
 void Kmeans::setFinalClusters()
 {
 	int n;
@@ -208,15 +203,12 @@ void Kmeans::setFinalClusters()
 			finalClusters.push_back(cl);
 		}
 		else
+		{
 			finalClusters.push_back(initialClusters[i]);	
+		}
 	}
 }
 
-
-/*Check if the algorithm converged.At the end of an iteration,the centers of the clusters are the same
-with the centers of the initial clusters then it means that during the iteration the assignment of points
-in the clusters didn't change so the algorithm converged.
-*/
 bool Kmeans::isOver()
 {
 	for (int i = 0; i < k; ++i)

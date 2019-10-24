@@ -128,7 +128,7 @@ double Point::operator()(size_t index)
 	}
 	else
 	{
-		return -1.0; // error indicator
+		return -1.0;	//	error indicator
 	}
 }
 

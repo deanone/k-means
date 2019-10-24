@@ -1,9 +1,10 @@
 # Don't track content of these directories
 generateData/
 kmeansTest1/
+results/
+properties/
 
 # Specific file types #
 ###################
 *.out
-*.properties
-*.txt
+*.sh

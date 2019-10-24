@@ -6,7 +6,10 @@
 class PropertiesParser
 {
 protected:
-	/*!A map containing property names as keys and property values as values.*/
+	
+	/*!
+	 * A map containing property names as keys and property values as values.
+	 */
 	std::map<std::string, std::string> propMap;
 
 public:

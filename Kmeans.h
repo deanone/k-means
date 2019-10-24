@@ -6,20 +6,39 @@
 
 class Kmeans
 {
-	/*! Number of dimensions. */
+	/*! 
+	 * Number of dimensions.
+	 */
 	int	dimension;
-	/*! Number of clusters. */
-	int k;		
-	/* Maximum number of iterations for the convergence of the algorithm. */
+	
+	/*! 
+	 * Number of clusters.
+	 */
+	int k;
+
+	/* 
+	 * Maximum number of iterations for the convergence of the algorithm.
+	 */
 	int numOfIterations;
-	/*! The type of used distance metric. */
+
+	/*!
+	 * The type of used distance metric.
+	 */
 	int distanceMetric;		
 public:
-	/*! The data points (full dataset) to be clustered. */
-	std::vector<Point> points;		
-	/*! Initial clusters in data randomly chosen. */
+	/*! 
+	 * The data points (full dataset) to be clustered.
+	 */
+	std::vector<Point> points;
+
+	/*! 
+	 * Initial clusters.
+	 */
 	std::vector<Cluster> initialClusters;
-	/*! Current clusters. */
+	
+	/*! 
+	 * Current clusters.
+	 */
 	std::vector<Cluster> finalClusters;
 
 	std::vector<IntIntPair> sizes;
@@ -29,34 +48,77 @@ public:
 public:
 	/*! Constructor - the parameters of the algorithm are given as arguments. */
 	Kmeans(std::string datasetFilename, std::string propertiesFileName);
-	/*! Constructor 2. */
+	
+	/*!
+     * Constructor.
+     */
 	Kmeans(std::string datasetFilename, int d, int numOfClusters, int numIt, int distMetric);	
-	/*! Destructor. */
+	
+	/*!
+     * Destructor.
+     */
 	~Kmeans();				
 
-	/*! Sets the dimension of the points of the dataset. */
+	/*! 
+	 * Setter of the dimension of the points of the dataset.
+	 * @param dimension the features dimension (i.e. number of features).
+	 */
 	void setDimension(int dimension);
-	/*! Gets the dimension. */
+
+	/*! 
+	 * Getter of the dimension of the points of the dataset.
+	 * @return the features dimension.
+	 */
 	int getDimension();
-	/*! Sets the number of clusters. */
+
+	/*! 
+	 * Setter of the number of clusters.
+	 * @param k the number of clusters.
+	 */
 	void setK(int k);
-	/*! Gets the number of clusters. */
+
+	/*! 
+	 * Getter of the number of clusters.
+	 * @return the number of clusters.
+	 */
 	int getK();
 
-	/*! Assigns Points to Clusters. */
+	/*! 
+	 * Assigns points to clusters.
+	 */
 	void setPointsToClusters();
-	/*! Creates the initial clusters by choosing k random Points from the dataset. */		
+
+	/*! 
+	 * Creates the initial clusters by choosing k random points from the dataset.
+	 */		
 	void setInitialClustersRandomly();
-	/*! Creates the initial clusters by choosing the first k Points from the dataset. */
+
+	/*! 
+	 * Creates the initial clusters by choosing the first k points from the dataset.
+	 */
 	void setInitialClustersByInitialPoints();
-	/*! Generates current clusters. */
+
+	/*! 
+	 * Generates current clusters.
+	 */
 	void setFinalClusters();
-	/*! Makes the final clusters of the iteration n-1 initial clusters for the iteration n. */	
+
+	/*! 
+	 * Makes the final clusters of the iteration n - 1, initial clusters for the iteration n.
+	 */
 	void initialize();
-	/*! Checks if the algorithm converged. */
+
+	/*! 
+	 * Checks if the algorithm converged.
+	 * @return true if the algorithm converged, false otherwise.
+	 */
 	bool isOver();
-	/*! Runs the k-means routine. */
+
+	/*! 
+	 * Runs the k-means routine.
+	 */
 	void runKmeans();
+
 	void writeCentroidsToFile(std::string centroidsFilename);
 	void createPointIDClusterIDAllocation();
 	void createClusterIDPointsOfClusterIDsAllocation();
@@ -66,15 +128,22 @@ public:
 
 	/*! Cluster validity metrics */
 	
-	/*! Calculates the Silhouette metric. */
-	/*! https://en.wikipedia.org/wiki/Silhouette_(clustering) */
+	/*! 
+	 * Calculates the silhouette metric. (https://en.wikipedia.org/wiki/Silhouette_(clustering))
+	 * @return the value of the silhouette metric.
+	 */
 	double calculateSilhouette();
-	/*! Calculates Within Cluster Sum of Squares (WCSS). */
+
+	/*! 
+	 * Calculates within cluster sum of squares (WCSS).
+	 * @return the value of WCSS.
+ 	 */
 	double calculateWCSS(); 
 
-	/*!Davies-Bouldin index for clustering results internal evaluation. */
-	/*! http://en.wikipedia.org/wiki/Cluster_analysis */
-	/*! http://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index */
+	/* 
+	 * !Calculates the Davies-Bouldin index. (http://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index)
+	 * @return the value of Davies-Bouldin index.
+	 */
 	double calculateDaviesBouldinIndex();
 };
 

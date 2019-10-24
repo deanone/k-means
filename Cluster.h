@@ -65,40 +65,40 @@ public:
 	Point* getPointOfCluster(size_t index);
 	
 	/*!
-	 * This function deletes all Points of the cluster.
+	 * Deletes all points of the cluster.
 	 */
 	void clearPointsOfCluster();
 	
 	/*!
 	 * == operator overloading function.
-	 * @param c a reference to the rhs Cluster.
+	 * @param c a reference to the rhs cluster.
 	 */
 	bool operator==(Cluster &c);
 	
 	/*!
 	 * < operator overloading function.
-	 * @param c a reference to the rhs Cluster.
+	 * @param c a reference to the rhs cluster.
 	 */
 	bool operator<(Cluster &c);
 
 	/*!
-	 * This function prints the centroid of the cluster to console.
+	 * Prints the centroid of the cluster to console.
 	 */
 	void printCentroidInConsole();
 	
 	/*!
-	 * This function prints the ids of the points of cluster to console.
+	 * Prints the ids of the points of cluster to console.
 	 */
 	void printAllocationInConsole();
 	
 	/*!
-	 * This function writes the centroid of the cluster to file.
+	 * Writes the centroid of the cluster to file.
 	 * @param out the stream handle of the output file.
 	 */
 	void writeCentroidToFile(std::ostream &out);
 	
 	/*!
-	 * This function writes the ids of the points of cluster to file.
+	 * Writes the ids of the points of cluster to file.
 	 * @param out the stream handle of the output file.
 	 */
 	void writeAllocationToFile(std::ostream &out);

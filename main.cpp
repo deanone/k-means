@@ -9,51 +9,36 @@ std::string getExecutablePath()
 
 std::string getExecutablePathAndMatchItWithFilename(std::string filename)
 {
-    std::string sep;
-    sep = "/";
     std::string execPath = getExecutablePath();
-    std::string ffname = filename;
-    if (ffname.substr(0,1).compare(sep) == 0)
-            ffname = ffname.substr(1, ffname.size());
-    size_t found = execPath.find_last_of(sep);
-    execPath = execPath.substr(0,found);
-    int GoUp = 0;
-    while (ffname.substr(0,2).compare("..") == 0)
-    {
-        ffname = ffname.substr(3,ffname.size());
-        GoUp++;
-    }
-    for (int i = 0; i < GoUp; i++)
-    {
-        size_t found = execPath.find_last_of(sep);
-        execPath = execPath.substr(0,found);
-    }
+    size_t found = execPath.find_last_of("/");
+    execPath = execPath.substr(0, found);
     std::stringstream ss;
-    ss << execPath << sep << ffname;
+    ss << execPath << "/" << filename;
     return ss.str();
 }
 
 int main()
 {
-    
-	std::string datasetFilename = "data.txt";
+	std::string datasetFilename = "generateData/data.txt";
     datasetFilename = getExecutablePathAndMatchItWithFilename(datasetFilename);
 
-	std::string propertiesFilename = "kmeans.properties";
+	std::string propertiesFilename = "properties/kmeans.properties";
     propertiesFilename = getExecutablePathAndMatchItWithFilename(propertiesFilename);
 
-	std::string centroidsFilename = "Centroids.txt";
-	std::string allocationFilename1 = "Allocation1.txt";
-	std::string allocationFilename2 = "Allocation2.txt";
+	std::string centroidsFilename = "results/centroids.txt";
+	std::string allocationFilename1 = "results/allocation_1.txt";
+	std::string allocationFilename2 = "results/allocation_2.txt";
 	//Kmeans k(datasetFilename, propertiesFilename);
     Kmeans k(datasetFilename, 2, 2, 1000, 1);
     clock_t tStart = clock();
 	k.runKmeans();
-	//k.createPointIDClusterIDAllocation();
-	//k.createClusterIDPointsOfClusterIDsAllocation();
-	//k.writeCentroidsToFile(getExecutablePathAndMatchItWithFilename(centroidsFilename));
-	//k.writeClusterIDPointsOfClusterIDsAllocationToFile(getExecutablePathAndMatchItWithFilename(allocationFilename1));
-	//k.writePointIDClusterIDAllocationToFile(getExecutablePathAndMatchItWithFilename(allocationFilename2));
+	k.createPointIDClusterIDAllocation();
+	k.createClusterIDPointsOfClusterIDsAllocation();
+	k.writeCentroidsToFile(getExecutablePathAndMatchItWithFilename(centroidsFilename));
+	k.writeClusterIDPointsOfClusterIDsAllocationToFile(getExecutablePathAndMatchItWithFilename(allocationFilename1));
+	k.writePointIDClusterIDAllocationToFile(getExecutablePathAndMatchItWithFilename(allocationFilename2));
     //std::cout << "Silhouette: " << k.calculateSilhouette() << "\n";
     std::cout << "Elapsed time: " << (double)(clock() - tStart)/CLOCKS_PER_SEC << " seconds.\n";
+
+    return 0;
 }
