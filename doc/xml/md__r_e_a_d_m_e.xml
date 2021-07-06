@@ -6,6 +6,6 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>This repo contains the implementation of the k-means clustering machine learning algorithm:</para><para><ulink url="https://en.wikipedia.org/wiki/K-means_clustering">https://en.wikipedia.org/wiki/K-means_clustering</ulink></para><para>as a native C++ application. </para>    </detaileddescription>
+<para>This repo contains the implementation of the k-means clustering machine learning algorithm:</para><para><ulink url="https://en.wikipedia.org/wiki/K-means_clustering">https://en.wikipedia.org/wiki/K-means_clustering</ulink></para><para>as a native C++ application.</para><para>The documentation of the project is in the /doc directory. </para>    </detaileddescription>
   </compounddef>
 </doxygen>

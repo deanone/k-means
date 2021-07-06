@@ -12,6 +12,8 @@
 <codeline><highlight class="normal">https://en.wikipedia.org/wiki/K-means_clustering</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">as<sp/>a<sp/>native<sp/>C++<sp/>application.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>documentation<sp/>of<sp/>the<sp/>project<sp/>is<sp/>in<sp/>the<sp/>/doc<sp/>directory.</highlight></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>
