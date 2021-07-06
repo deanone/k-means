@@ -10,7 +10,7 @@ class Point
 
 public:
 	/*!
-	 * Default Constructor.
+	 * Default constructor.
 	 */
 	Point();
 
@@ -20,39 +20,39 @@ public:
 	~Point();
 
 	/*! 
-	 * Setter of the ID of the point.
-	 * @param _ID the ID of the point.
+	 * Sets the ID of the Point.
+	 * @param _ID the ID of the Point.
 	 */
 	void setID(int _ID);
 
 	/*!
-	 * Getter of the ID of the point. 
-	 * @return the ID of the point.
+	 * Returns the ID of the Point. 
+	 * @return the ID of the Point.
 	 */
-	int getID();
+	int getID() const;
 
 	/*! 
-	 * Adds a value to the internal vector of the point.
+	 * Adds a value to the internal vector of the Point.
 	 * @param value the value to be added. 
 	 */
 	void addValue(double val);
 	
 	/*! 
-	 * Getter of the size of the internal vector of the point.
+	 * Returns the size of the internal vector of the Point.
 	 * @return the size of the internal vector.
 	 */
 	size_t size();
 	
 	/*! 
-	 * Updates a specific value of the internal vector of the point.
+	 * Updates a specific value of the internal vector of the Point.
      * @param index the index of the value to be updated.
      * @param the new value.
 	 */
 	void changeValue(int index, double val);
 	
 	/*! 
-	 * Getter of a pointer to the internal vector of the point.
-	 * @return a pointer to the internal vector of the point.
+	 * Returns a pointer to the internal vector of the Point.
+	 * @return a pointer to the internal vector of the Point.
 	 */
 	DoubleVector* values();
 
@@ -99,12 +99,12 @@ public:
 	double operator()(size_t index);
 	
 	/*! 
-	 * Prints the values of the point in console.
+	 * Prints the values of the Point in console.
 	 */
 	void printValuesToConsole(); 
 	
 	/*!
-	 * Writes the values of the point in a file.
+	 * Writes the values of the Point in a file.
 	 */
 	void writeValuesToFile(std::ostream &out); 
 };

@@ -17,7 +17,7 @@ void Point::setID(int _ID)
 	ID = _ID;
 }
 
-int Point::getID()
+int Point::getID() const
 {
 	return ID;
 }
