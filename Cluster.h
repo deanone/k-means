@@ -23,82 +23,82 @@ public:
 	~Cluster();
 
 	/*! 
-	 * Setter of the ID of the cluster.
-	 * @param _ID the ID of the cluster.
+	 * Sets the ID of the Cluster.
+	 * @param ID the ID of the Cluster.
 	 */
-	void setID(int _ID);		
+	void setID(int ID);		
 	
 	/*!
-	 * Getter of the ID of the cluster.
-	 * @return the ID of the cluster.
+	 * Returns the ID of the Cluster.
+	 * @return the ID of the Cluster.
 	 */
-	int getID();
+	int getID() const;
 	
 	/*! 
-	 * Setter of the center of the cluster.
-	 * @param _center the center (i.e. a Point object) of the cluster.
+	 * Sets the center of the Cluster.
+	 * @param center the center (i.e., a Point object) of the Cluster.
 	 */
-	void setCenter(Point &_center);
+	void setCenter(Point &center);
 	
 	/*!
-	 * Getter of the center of the cluster.
-	 * @return the center (i.e. a Point object) of the cluster.
+	 * Returns the center of the Cluster.
+	 * @return the center (i.e., a Point object) of the Cluster.
 	 */
 	Point getCenter();
 
 	/*! 
-	 * This function adds Points to the cluster.
+	 * Adds Points to the Cluster.
 	 * @param p a Point to be added.
 	 */
 	void setPointsToCluster(Point *p);
 	
 	/*! 
-	 * Getter of the number of points in this cluster.
-	 * @return the number of points in the cluster.
+	 * Returns the number of points in the Cluster.
+	 * @return the number of points in the Cluster.
 	 */
 	size_t getNumOfPointsInCluster();
 	
 	/*! 
-	 * Getter of a Point of the cluster for a specific index.
+	 * Returns a Point of the Cluster for a specific index.
 	 * @param index the index of the Point to be returned.
 	 */
 	Point* getPointOfCluster(size_t index);
 	
 	/*!
-	 * Deletes all points of the cluster.
+	 * Deletes all points of the Cluster.
 	 */
 	void clearPointsOfCluster();
 	
 	/*!
 	 * == operator overloading function.
-	 * @param c a reference to the rhs cluster.
+	 * @param c a reference to the rhs Cluster.
 	 */
 	bool operator==(Cluster &c);
 	
 	/*!
 	 * < operator overloading function.
-	 * @param c a reference to the rhs cluster.
+	 * @param c a reference to the rhs Cluster.
 	 */
 	bool operator<(Cluster &c);
 
 	/*!
-	 * Prints the centroid of the cluster to console.
+	 * Prints the centroid of the Cluster to console.
 	 */
 	void printCentroidInConsole();
 	
 	/*!
-	 * Prints the ids of the points of cluster to console.
+	 * Prints the ids of the points of Cluster to console.
 	 */
 	void printAllocationInConsole();
 	
 	/*!
-	 * Writes the centroid of the cluster to file.
+	 * Writes the centroid of the Cluster to file.
 	 * @param out the stream handle of the output file.
 	 */
 	void writeCentroidToFile(std::ostream &out);
 	
 	/*!
-	 * Writes the ids of the points of cluster to file.
+	 * Writes the ids of the points of Cluster to file.
 	 * @param out the stream handle of the output file.
 	 */
 	void writeAllocationToFile(std::ostream &out);

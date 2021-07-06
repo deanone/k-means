@@ -12,19 +12,19 @@ Cluster::~Cluster()
 	}
 }
 
-void Cluster::setID(int _ID)
+void Cluster::setID(int ID)
 {
-	ID = _ID;
+	this->ID = ID;
 }
 
-int Cluster::getID()
+int Cluster::getID() const
 {
 	return ID;
 }
 
-void Cluster::setCenter(Point &_center)
+void Cluster::setCenter(Point &center)
 {
-	center = _center;
+	this->center = center;
 }
 
 Point Cluster::getCenter()
