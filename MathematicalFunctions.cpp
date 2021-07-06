@@ -1,6 +1,6 @@
 #include "MathematicalFunctions.h"
 
-size_t mf::minSize(Point &p, Point &q)
+size_t mf::minSize(Point& p, Point& q)
 {
 	size_t s_p = p.size();
 	size_t s_q = q.size();
@@ -8,21 +8,21 @@ size_t mf::minSize(Point &p, Point &q)
 	return s;
 }
 
-double mf::mean(Point &p)
+double mf::mean(Point& p)
 {
-	return std::accumulate(p.values()->begin(), p.values()->end(), 0.0) / ((double)p.size());
+	return std::accumulate(p.values()->begin(), p.values()->end(), 0.0) / (static_cast<double>(p.size()));
 }
 
-double mf::stDev(Point &p)
+double mf::stDev(Point& p)
 {
 	double m, s;
 	m = mean(p);
 	double sq_sum = std::inner_product(p.values()->begin(), p.values()->end(), p.values()->begin(), 0.0);
-	s = std::sqrt(std::abs(sq_sum / (double)p.size() - std::pow(m, 2.0)));
+	s = std::sqrt(std::abs(sq_sum / static_cast<double>(p.size()) - std::pow(m, 2.0)));
 	return s;
 }
 
-double mf::euclideanDistance(Point &p, Point &q)
+double mf::euclideanDistance(Point& p, Point& q)
 {
 	double dist = 0.0;
 	size_t s = minSize(p, q);
@@ -34,12 +34,12 @@ double mf::euclideanDistance(Point &p, Point &q)
 	return dist;
 }
 
-double mf::euclideanDistanceSquared(Point &p, Point &q)
+double mf::euclideanDistanceSquared(Point& p, Point& q)
 {
 	return std::pow(euclideanDistance(p, q), 2.0);
 }
 
-double mf::manhattanDistance(Point &p, Point &q)
+double mf::manhattanDistance(Point& p, Point& q)
 {
 	double dist = 0.0;
 	size_t s = minSize(p, q);
@@ -50,7 +50,7 @@ double mf::manhattanDistance(Point &p, Point &q)
 	return dist;
 }
 
-double mf::chebyshevDistance(Point &p, Point &q)
+double mf::chebyshevDistance(Point& p, Point& q)
 {
 	double dist = -1.0;
 	size_t s = minSize(p, q);
@@ -65,7 +65,7 @@ double mf::chebyshevDistance(Point &p, Point &q)
 	return dist;
 }
 
-double mf::brayCurtisDistance(Point &p, Point &q)
+double mf::brayCurtisDistance(Point& p, Point& q)
 {
 	double dist, sumDiff, sumAdd;
 	dist = 0.0;sumDiff = 0.0;sumAdd = 0.0;
@@ -79,7 +79,7 @@ double mf::brayCurtisDistance(Point &p, Point &q)
 	return dist;
 }
 
-double mf::canberraDistance(Point &p, Point &q)
+double mf::canberraDistance(Point& p, Point& q)
 {
 	double dist = 0.0;
 	size_t s = minSize(p, q);
@@ -90,7 +90,7 @@ double mf::canberraDistance(Point &p, Point &q)
 	return dist;
 }
 
-double mf::pearsonCorrelation(Point &p, Point &q)
+double mf::pearsonCorrelation(Point& p, Point& q)
 {
 	double mean_p, stDev_p, mean_q, stDev_q, tempMean, pearsonCorrelation;
 	mean_p = mean(p);
@@ -108,7 +108,7 @@ double mf::pearsonCorrelation(Point &p, Point &q)
 	return pearsonCorrelation;
 }
 
-double mf::cosineSimilarity(Point &p, Point &q)
+double mf::cosineSimilarity(Point& p, Point& q)
 {
 	double dist, dotProduct, magnitudeVec1, magnitudeVec2;
 	magnitudeVec1 = 0.0; magnitudeVec2 = 0.0;
@@ -125,7 +125,7 @@ double mf::cosineSimilarity(Point &p, Point &q)
 	return dist;
 }
 
-double mf::dot(Point &p, Point &q)
+double mf::dot(Point& p, Point& q)
 {
 	size_t s = minSize(p, q);
 	double res = 0.0;

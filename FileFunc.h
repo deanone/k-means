@@ -1,5 +1,5 @@
-#if !defined(_FLNC_H)
-#define _FLNC_H
+#ifndef FLNC_H
+#define FLNC_H
 
 #include <vector>
 typedef std::basic_istream<char,std::char_traits<char>> minput_stream;
@@ -81,4 +81,4 @@ namespace flnc
 	}
 }
 
-#endif
+#endif	// FLNC_H

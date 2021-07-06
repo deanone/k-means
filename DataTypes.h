@@ -10,7 +10,6 @@
 #include <cmath>
 #include <climits>
 #include <unistd.h>
-//#include <Windows.h>
 
 // STL
 #include <vector>
@@ -20,7 +19,7 @@
 #include <complex>
 #include <functional>
 
-// Typedefs
+// typedefs
 typedef std::vector<float> FloatVector;
 typedef std::vector<FloatVector> FloatVector2D;
 typedef std::vector<double> DoubleVector;
@@ -35,4 +34,4 @@ typedef std::map<int,int> IntIntMap;
 typedef std::map<int,IntVector> IntIntVectorMap;
 typedef std::map<int,FloatVector> IntFloatVectorMap;
 
-#endif
+#endif	// DATATYPES_H
