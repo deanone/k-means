@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_mathematical_functions_8h" kind="file" language="C++">
+    <compoundname>MathematicalFunctions.h</compoundname>
+    <includes refid="_point_8h" local="yes">Point.h</includes>
+    <includedby refid="_kmeans_8cpp" local="yes">Kmeans.cpp</includedby>
+    <includedby refid="_mathematical_functions_8cpp" local="yes">MathematicalFunctions.cpp</includedby>
+    <incdepgraph>
+      <node id="217">
+        <label>functional</label>
+      </node>
+      <node id="200">
+        <label>MathematicalFunctions.h</label>
+        <link refid="_mathematical_functions_8h"/>
+        <childnode refid="201" relation="include">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>cmath</label>
+      </node>
+      <node id="215">
+        <label>numeric</label>
+      </node>
+      <node id="206">
+        <label>string</label>
+      </node>
+      <node id="213">
+        <label>map</label>
+      </node>
+      <node id="204">
+        <label>fstream</label>
+      </node>
+      <node id="208">
+        <label>ctime</label>
+      </node>
+      <node id="201">
+        <label>Point.h</label>
+        <link refid="_point_8h"/>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>unistd.h</label>
+      </node>
+      <node id="212">
+        <label>vector</label>
+      </node>
+      <node id="205">
+        <label>sstream</label>
+      </node>
+      <node id="207">
+        <label>cstdlib</label>
+      </node>
+      <node id="203">
+        <label>iostream</label>
+      </node>
+      <node id="210">
+        <label>climits</label>
+      </node>
+      <node id="202">
+        <label>DataTypes.h</label>
+        <link refid="_data_types_8h"/>
+        <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>complex</label>
+      </node>
+      <node id="214">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="219">
+        <label>Kmeans.cpp</label>
+        <link refid="_kmeans_8cpp"/>
+      </node>
+      <node id="218">
+        <label>MathematicalFunctions.h</label>
+        <link refid="_mathematical_functions_8h"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>MathematicalFunctions.cpp</label>
+        <link refid="_mathematical_functions_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacemf">mf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_point_8h" kindref="compound">Point.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="namespacemf" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemf" kindref="compound">mf</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>misc</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kindref="member">minSize</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1ad29e1be602cf1426190438ba4a978886" kindref="member">mean</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a7b665e7f861360232bc6ff8b4ab53b79" kindref="member">stDev</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>distances</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a40500525d65df0f162783485b005a17c" kindref="member">euclideanDistance</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a18bfb051b8501f49ad1ce7910cf5fa4e" kindref="member">euclideanDistanceSquared</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a040ab6b23a68d7a4c2f818c1eae58644" kindref="member">manhattanDistance</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1aff2481aba46c30ed52226097357bb526" kindref="member">chebyshevDistance</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a53713d1a18fc6069e8da721e56dda3d1" kindref="member">brayCurtisDistance</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a000039a6817d1eaab151f74651c5fac4" kindref="member">canberraDistance</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>correlations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a00075eb9a854aee2323bf1f9e51cf1fa" kindref="member">pearsonCorrelation</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1ad3df0be2c20cff9d29cc6b3c550fd467" kindref="member">cosineSimilarity</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>dot<sp/>product</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a0a73292f72b80df3a0c6b970e2ca4be6" kindref="member">dot</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/><sp/>MF_H</highlight></codeline>
+    </programlisting>
+    <location file="MathematicalFunctions.h"/>
+  </compounddef>
+</doxygen>

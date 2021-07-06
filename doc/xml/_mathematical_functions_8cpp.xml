@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_mathematical_functions_8cpp" kind="file" language="C++">
+    <compoundname>MathematicalFunctions.cpp</compoundname>
+    <includes refid="_mathematical_functions_8h" local="yes">MathematicalFunctions.h</includes>
+    <incdepgraph>
+      <node id="198">
+        <label>functional</label>
+      </node>
+      <node id="181">
+        <label>MathematicalFunctions.h</label>
+        <link refid="_mathematical_functions_8h"/>
+        <childnode refid="182" relation="include">
+        </childnode>
+      </node>
+      <node id="190">
+        <label>cmath</label>
+      </node>
+      <node id="196">
+        <label>numeric</label>
+      </node>
+      <node id="187">
+        <label>string</label>
+      </node>
+      <node id="194">
+        <label>map</label>
+      </node>
+      <node id="185">
+        <label>fstream</label>
+      </node>
+      <node id="189">
+        <label>ctime</label>
+      </node>
+      <node id="182">
+        <label>Point.h</label>
+        <link refid="_point_8h"/>
+        <childnode refid="183" relation="include">
+        </childnode>
+      </node>
+      <node id="192">
+        <label>unistd.h</label>
+      </node>
+      <node id="193">
+        <label>vector</label>
+      </node>
+      <node id="186">
+        <label>sstream</label>
+      </node>
+      <node id="180">
+        <label>MathematicalFunctions.cpp</label>
+        <link refid="_mathematical_functions_8cpp"/>
+        <childnode refid="181" relation="include">
+        </childnode>
+      </node>
+      <node id="188">
+        <label>cstdlib</label>
+      </node>
+      <node id="184">
+        <label>iostream</label>
+      </node>
+      <node id="191">
+        <label>climits</label>
+      </node>
+      <node id="183">
+        <label>DataTypes.h</label>
+        <link refid="_data_types_8h"/>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>complex</label>
+      </node>
+      <node id="195">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mathematical_functions_8h" kindref="compound">MathematicalFunctions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kindref="member">mf::minSize</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s_p<sp/>=<sp/>p.<ref refid="class_point_1a8b0689db3397d2822086d7c9c8388e52" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s_q<sp/>=<sp/>q.<ref refid="class_point_1a8b0689db3397d2822086d7c9c8388e52" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s<sp/>=<sp/>s_p<sp/>&lt;<sp/>s_q<sp/>?<sp/>s_p<sp/>:<sp/>s_q;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="namespacemf_1ad29e1be602cf1426190438ba4a978886" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1ad29e1be602cf1426190438ba4a978886" kindref="member">mf::mean</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::accumulate(p.<ref refid="class_point_1a9dbaa711812c795591f242761ae49260" kindref="member">values</ref>()-&gt;begin(),<sp/>p.<ref refid="class_point_1a9dbaa711812c795591f242761ae49260" kindref="member">values</ref>()-&gt;end(),<sp/>0.0)<sp/>/<sp/>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p.<ref refid="class_point_1a8b0689db3397d2822086d7c9c8388e52" kindref="member">size</ref>()));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="namespacemf_1a7b665e7f861360232bc6ff8b4ab53b79" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a7b665e7f861360232bc6ff8b4ab53b79" kindref="member">mf::stDev</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m,<sp/>s;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>m<sp/>=<sp/><ref refid="namespacemf_1ad29e1be602cf1426190438ba4a978886" kindref="member">mean</ref>(p);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sq_sum<sp/>=<sp/>std::inner_product(p.<ref refid="class_point_1a9dbaa711812c795591f242761ae49260" kindref="member">values</ref>()-&gt;begin(),<sp/>p.<ref refid="class_point_1a9dbaa711812c795591f242761ae49260" kindref="member">values</ref>()-&gt;end(),<sp/>p.<ref refid="class_point_1a9dbaa711812c795591f242761ae49260" kindref="member">values</ref>()-&gt;begin(),<sp/>0.0);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>s<sp/>=<sp/>std::sqrt(std::abs(sq_sum<sp/>/<sp/>static_cast&lt;double&gt;(p.<ref refid="class_point_1a8b0689db3397d2822086d7c9c8388e52" kindref="member">size</ref>())<sp/>-<sp/>std::pow(m,<sp/>2.0)));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="namespacemf_1a40500525d65df0f162783485b005a17c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a40500525d65df0f162783485b005a17c" kindref="member">mf::euclideanDistance</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kindref="member">minSize</ref>(p,<sp/>q);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>s;<sp/>++i)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist<sp/>+=<sp/>std::pow(p(i)<sp/>-<sp/>q(i),<sp/>2.0);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>sqrt(dist);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="namespacemf_1a18bfb051b8501f49ad1ce7910cf5fa4e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a18bfb051b8501f49ad1ce7910cf5fa4e" kindref="member">mf::euclideanDistanceSquared</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::pow(<ref refid="namespacemf_1a40500525d65df0f162783485b005a17c" kindref="member">euclideanDistance</ref>(p,<sp/>q),<sp/>2.0);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="namespacemf_1a040ab6b23a68d7a4c2f818c1eae58644" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a040ab6b23a68d7a4c2f818c1eae58644" kindref="member">mf::manhattanDistance</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kindref="member">minSize</ref>(p,<sp/>q);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>s;<sp/>++i)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist<sp/>+=<sp/>std::fabs(p(i)<sp/>-<sp/>q(i));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="namespacemf_1aff2481aba46c30ed52226097357bb526" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1aff2481aba46c30ed52226097357bb526" kindref="member">mf::chebyshevDistance</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kindref="member">minSize</ref>(p,<sp/>q);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>s;<sp/>++i)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tempDist<sp/>=<sp/>std::fabs(p(i)<sp/>-<sp/>q(i));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tempDist<sp/>&gt;<sp/>dist)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>tempDist;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="namespacemf_1a53713d1a18fc6069e8da721e56dda3d1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a53713d1a18fc6069e8da721e56dda3d1" kindref="member">mf::brayCurtisDistance</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist,<sp/>sumDiff,<sp/>sumAdd;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>0.0;sumDiff<sp/>=<sp/>0.0;sumAdd<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kindref="member">minSize</ref>(p,<sp/>q);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>s;<sp/>++i)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sumDiff<sp/>+=<sp/>std::fabs(p(i)<sp/>-<sp/>q(i));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sumAdd<sp/>+=<sp/>std::fabs(p(i)<sp/>+<sp/>q(i));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>sumDiff<sp/>/<sp/>sumAdd;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="namespacemf_1a000039a6817d1eaab151f74651c5fac4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a000039a6817d1eaab151f74651c5fac4" kindref="member">mf::canberraDistance</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kindref="member">minSize</ref>(p,<sp/>q);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>s;<sp/>++i)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist<sp/>+=<sp/>std::fabs(p(i)<sp/>-<sp/>q(i))<sp/>/<sp/>(std::fabs(p(i))<sp/>+<sp/>std::fabs(q(i)));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="namespacemf_1a00075eb9a854aee2323bf1f9e51cf1fa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a00075eb9a854aee2323bf1f9e51cf1fa" kindref="member">mf::pearsonCorrelation</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mean_p,<sp/>stDev_p,<sp/>mean_q,<sp/>stDev_q,<sp/>tempMean,<sp/><ref refid="namespacemf_1a00075eb9a854aee2323bf1f9e51cf1fa" kindref="member">pearsonCorrelation</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>mean_p<sp/>=<sp/><ref refid="namespacemf_1ad29e1be602cf1426190438ba4a978886" kindref="member">mean</ref>(p);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>mean_q<sp/>=<sp/><ref refid="namespacemf_1ad29e1be602cf1426190438ba4a978886" kindref="member">mean</ref>(q);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>stDev_p<sp/>=<sp/><ref refid="namespacemf_1a7b665e7f861360232bc6ff8b4ab53b79" kindref="member">stDev</ref>(p);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>stDev_q<sp/>=<sp/><ref refid="namespacemf_1a7b665e7f861360232bc6ff8b4ab53b79" kindref="member">stDev</ref>(q);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kindref="member">minSize</ref>(p,<sp/>q);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>tempMean<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>s;<sp/>++i)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempMean<sp/>+=<sp/>((p(i)<sp/>-<sp/>mean_p)<sp/>*<sp/>(q(i)<sp/>-<sp/>mean_q));</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>tempMean<sp/>/=<sp/>s;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemf_1a00075eb9a854aee2323bf1f9e51cf1fa" kindref="member">pearsonCorrelation</ref><sp/>=<sp/>1.0<sp/>-<sp/>(tempMean<sp/>/<sp/>(stDev_p<sp/>*<sp/>stDev_q));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a00075eb9a854aee2323bf1f9e51cf1fa" kindref="member">pearsonCorrelation</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="namespacemf_1ad3df0be2c20cff9d29cc6b3c550fd467" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1ad3df0be2c20cff9d29cc6b3c550fd467" kindref="member">mf::cosineSimilarity</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist,<sp/>dotProduct,<sp/>magnitudeVec1,<sp/>magnitudeVec2;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>magnitudeVec1<sp/>=<sp/>0.0;<sp/>magnitudeVec2<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kindref="member">minSize</ref>(p,<sp/>q);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>dotProduct<sp/>=<sp/>std::inner_product(p.<ref refid="class_point_1a9dbaa711812c795591f242761ae49260" kindref="member">values</ref>()-&gt;begin(),<sp/>q.<ref refid="class_point_1a9dbaa711812c795591f242761ae49260" kindref="member">values</ref>()-&gt;end(),<sp/>q.<ref refid="class_point_1a9dbaa711812c795591f242761ae49260" kindref="member">values</ref>()-&gt;begin(),<sp/>0.0);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>s;<sp/>++i)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magnitudeVec1<sp/>+=<sp/>std::pow(p(i),<sp/>2.0);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magnitudeVec2<sp/>+=<sp/>std::pow(q(i),<sp/>2.0);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>magnitudeVec1<sp/>=<sp/>std::sqrt(magnitudeVec1);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>magnitudeVec2<sp/>=<sp/>std::sqrt(magnitudeVec2);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>1.0<sp/>-<sp/>(dotProduct<sp/>/<sp/>(magnitudeVec1<sp/>*<sp/>magnitudeVec2));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="namespacemf_1a0a73292f72b80df3a0c6b970e2ca4be6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemf_1a0a73292f72b80df3a0c6b970e2ca4be6" kindref="member">mf::dot</ref>(<ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>p,<sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>q)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kindref="member">minSize</ref>(p,<sp/>q);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>s;<sp/>++i)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>+=<sp/>(p(i)<sp/>*<sp/>q(i));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="MathematicalFunctions.cpp"/>
+  </compounddef>
+</doxygen>

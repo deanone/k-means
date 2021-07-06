@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="_kmeans_8h" local="yes">Kmeans.h</includes>
+    <includes refid="_generic_func_8h" local="yes">GenericFunc.h</includes>
+    <incdepgraph>
+      <node id="176">
+        <label>functional</label>
+      </node>
+      <node id="168">
+        <label>cmath</label>
+      </node>
+      <node id="174">
+        <label>numeric</label>
+      </node>
+      <node id="165">
+        <label>string</label>
+      </node>
+      <node id="172">
+        <label>map</label>
+      </node>
+      <node id="163">
+        <label>fstream</label>
+      </node>
+      <node id="177">
+        <label>Cluster.h</label>
+        <link refid="_cluster_8h"/>
+        <childnode refid="160" relation="include">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+      </node>
+      <node id="167">
+        <label>ctime</label>
+      </node>
+      <node id="160">
+        <label>Point.h</label>
+        <link refid="_point_8h"/>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="170">
+        <label>unistd.h</label>
+      </node>
+      <node id="171">
+        <label>vector</label>
+      </node>
+      <node id="164">
+        <label>sstream</label>
+      </node>
+      <node id="178">
+        <label>GenericFunc.h</label>
+        <link refid="_generic_func_8h"/>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="166">
+        <label>cstdlib</label>
+      </node>
+      <node id="162">
+        <label>iostream</label>
+      </node>
+      <node id="169">
+        <label>climits</label>
+      </node>
+      <node id="161">
+        <label>DataTypes.h</label>
+        <link refid="_data_types_8h"/>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+      </node>
+      <node id="175">
+        <label>complex</label>
+      </node>
+      <node id="173">
+        <label>algorithm</label>
+      </node>
+      <node id="159">
+        <label>Kmeans.h</label>
+        <link refid="_kmeans_8h"/>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cpp" line="4" column="1" bodyfile="main.cpp" bodystart="4" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_kmeans_8h" kindref="compound">Kmeans.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_generic_func_8h" kindref="compound">GenericFunc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>data<sp/>to<sp/>cluster</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>datasetFilename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;generateData/data.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>datasetFilename<sp/>=<sp/><ref refid="namespacegf_1a00f9f0ea9a0804a71cf70c6b1eb158cf" kindref="member">gf::getExecutablePathAndMatchItWithFilename</ref>(datasetFilename);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>k-means<sp/>configuration<sp/>parameters<sp/>(e.g.,<sp/>number<sp/>of<sp/>clusters)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>propertiesFilename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;properties/kmeans.properties&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>propertiesFilename<sp/>=<sp/><ref refid="namespacegf_1a00f9f0ea9a0804a71cf70c6b1eb158cf" kindref="member">gf::getExecutablePathAndMatchItWithFilename</ref>(propertiesFilename);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>files<sp/>to<sp/>store<sp/>the<sp/>results<sp/>of<sp/>the<sp/>algorithm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>centroidsFilename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;results/centroids.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>allocationFilename1<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;results/allocation_1.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>allocationFilename2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;results/allocation_2.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>new<sp/>Kmeans<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_kmeans" kindref="compound">Kmeans</ref><sp/>k(datasetFilename,<sp/>2,<sp/>2,<sp/>1000,<sp/>1);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>measure<sp/>elaspsed<sp/>time<sp/>only<sp/>for<sp/>the<sp/>clustering<sp/>routine<sp/>(i.e.,<sp/>not<sp/>including<sp/>the<sp/>time<sp/>for<sp/>saving<sp/>results)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>clock_t<sp/>start<sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>k.<ref refid="class_kmeans_1a71506d95b271c5b7d50c8f293cf7615e" kindref="member">runKmeans</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>clock_t<sp/>end<sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>elapsedTime<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(clock()<sp/>-<sp/>start)<sp/>/<sp/>CLOCKS_PER_SEC;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Elapsed<sp/>time<sp/>for<sp/>running<sp/>the<sp/>k-means<sp/>routine:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>elapsedTime<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>seconds.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>save<sp/>clustering<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>k.<ref refid="class_kmeans_1adcbac766aa19bd96820946709144fdfe" kindref="member">createPointIDClusterIDAllocation</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>k.<ref refid="class_kmeans_1a033a59c81733a7bc1d330c29d2d7f51b" kindref="member">createClusterIDPointsOfClusterIDsAllocation</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>k.<ref refid="class_kmeans_1a8ab27fb4fc940c55234b40950d6bd51f" kindref="member">writeCentroidsToFile</ref>(<ref refid="namespacegf_1a00f9f0ea9a0804a71cf70c6b1eb158cf" kindref="member">gf::getExecutablePathAndMatchItWithFilename</ref>(centroidsFilename));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>k.<ref refid="class_kmeans_1a9a8994567cffa176f187784b3f31a1f5" kindref="member">writeClusterIDPointsOfClusterIDsAllocationToFile</ref>(<ref refid="namespacegf_1a00f9f0ea9a0804a71cf70c6b1eb158cf" kindref="member">gf::getExecutablePathAndMatchItWithFilename</ref>(allocationFilename1));</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>k.<ref refid="class_kmeans_1a211500cbcd8d204437b2407832184dcc" kindref="member">writePointIDClusterIDAllocationToFile</ref>(<ref refid="namespacegf_1a00f9f0ea9a0804a71cf70c6b1eb158cf" kindref="member">gf::getExecutablePathAndMatchItWithFilename</ref>(allocationFilename2));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::cout<sp/>&lt;&lt;<sp/>&quot;Silhouette:<sp/>&quot;<sp/>&lt;&lt;<sp/>k.calculateSilhouette()<sp/>&lt;&lt;<sp/>&quot;\n&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="main.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,118 @@
+\section{flnc Namespace Reference}
+\label{namespaceflnc}\index{flnc@{flnc}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\+Y\+PE $>$ }\\void \textbf{ Write\+Vector\+To\+File} (\textbf{ moutput\+\_\+stream} $\ast$Training\+File\+Out, const std\+::vector$<$ T\+Y\+PE $>$ \&vec)
+\item 
+{\footnotesize template$<$typename T\+Y\+PE $>$ }\\void \textbf{ Write2\+D\+Vector\+To\+File} (\textbf{ moutput\+\_\+stream} $\ast$Training\+File\+Out, const std\+::vector$<$ std\+::vector$<$ T\+Y\+PE $>$ $>$ \&vec)
+\item 
+{\footnotesize template$<$typename T\+Y\+PE $>$ }\\void \textbf{ Read\+Vector\+From\+File} (\textbf{ minput\+\_\+stream} $\ast$Training\+File\+In, std\+::vector$<$ T\+Y\+PE $>$ \&vec)
+\item 
+{\footnotesize template$<$typename T\+Y\+PE $>$ }\\void \textbf{ Read2\+D\+Vector\+From\+File} (\textbf{ minput\+\_\+stream} $\ast$Training\+File\+In, std\+::vector$<$ std\+::vector$<$ T\+Y\+PE $>$ $>$ \&vec)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{namespaceflnc_a43f11ba9f2a94bcf4e8680f806a54a47}} 
+\index{flnc@{flnc}!Read2\+D\+Vector\+From\+File@{Read2\+D\+Vector\+From\+File}}
+\index{Read2\+D\+Vector\+From\+File@{Read2\+D\+Vector\+From\+File}!flnc@{flnc}}
+\subsubsection{Read2\+D\+Vector\+From\+File()}
+{\footnotesize\ttfamily template$<$typename T\+Y\+PE $>$ \\
+void flnc\+::\+Read2\+D\+Vector\+From\+File (\begin{DoxyParamCaption}\item[{\textbf{ minput\+\_\+stream} $\ast$}]{Training\+File\+In,  }\item[{std\+::vector$<$ std\+::vector$<$ T\+Y\+PE $>$ $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+Reads a vector of vectors to file. The format of the file must be 
+\begin{DoxyCode}
+number\_of\_vectors
+vector\_size vector\_1st\_element vector\_2nd\_element ...
+vector\_size vector\_1st\_element vector\_2nd\_element ...
+    ...            ...                ...         ...
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em Training\+File\+In} & the input stream of the file to read the vector from. \\
+\hline
+{\em vec} & the vector of vectors to be read to file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file File\+Func.\+h.
+
+\mbox{\label{namespaceflnc_a51e2434fe14f26a9d979282b2d6524f5}} 
+\index{flnc@{flnc}!Read\+Vector\+From\+File@{Read\+Vector\+From\+File}}
+\index{Read\+Vector\+From\+File@{Read\+Vector\+From\+File}!flnc@{flnc}}
+\subsubsection{Read\+Vector\+From\+File()}
+{\footnotesize\ttfamily template$<$typename T\+Y\+PE $>$ \\
+void flnc\+::\+Read\+Vector\+From\+File (\begin{DoxyParamCaption}\item[{\textbf{ minput\+\_\+stream} $\ast$}]{Training\+File\+In,  }\item[{std\+::vector$<$ T\+Y\+PE $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+Reads a vector from file. The format of the file must be 
+\begin{DoxyCode}
+vector\_size vector\_1st\_element vector\_2nd\_element ...
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em Training\+File\+In} & the input stream of the file to read the vector from. \\
+\hline
+{\em vec} & the vector to be read to file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file File\+Func.\+h.
+
+\mbox{\label{namespaceflnc_a5ee4b13fe9860b1398a2e2c8d07776c8}} 
+\index{flnc@{flnc}!Write2\+D\+Vector\+To\+File@{Write2\+D\+Vector\+To\+File}}
+\index{Write2\+D\+Vector\+To\+File@{Write2\+D\+Vector\+To\+File}!flnc@{flnc}}
+\subsubsection{Write2\+D\+Vector\+To\+File()}
+{\footnotesize\ttfamily template$<$typename T\+Y\+PE $>$ \\
+void flnc\+::\+Write2\+D\+Vector\+To\+File (\begin{DoxyParamCaption}\item[{\textbf{ moutput\+\_\+stream} $\ast$}]{Training\+File\+Out,  }\item[{const std\+::vector$<$ std\+::vector$<$ T\+Y\+PE $>$ $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+Writes a vector of vectors to file. The format is\+: 
+\begin{DoxyCode}
+number\_of\_vectors
+vector\_size vector\_1st\_element vector\_2nd\_element ...
+vector\_size vector\_1st\_element vector\_2nd\_element ...
+    ...            ...                ...         ...
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em Training\+File\+Out} & the output stream of the file to write the vector to. \\
+\hline
+{\em vec} & the vector of vectors to be written to file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file File\+Func.\+h.
+
+\mbox{\label{namespaceflnc_aa6a517635283780c9142bf6ad194013e}} 
+\index{flnc@{flnc}!Write\+Vector\+To\+File@{Write\+Vector\+To\+File}}
+\index{Write\+Vector\+To\+File@{Write\+Vector\+To\+File}!flnc@{flnc}}
+\subsubsection{Write\+Vector\+To\+File()}
+{\footnotesize\ttfamily template$<$typename T\+Y\+PE $>$ \\
+void flnc\+::\+Write\+Vector\+To\+File (\begin{DoxyParamCaption}\item[{\textbf{ moutput\+\_\+stream} $\ast$}]{Training\+File\+Out,  }\item[{const std\+::vector$<$ T\+Y\+PE $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+Writes a vector to file. The format is\+: 
+\begin{DoxyCode}
+vector\_size vector\_1st\_element vector\_2nd\_element ...
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em Training\+File\+Out} & the output stream of the file to write the vector to. \\
+\hline
+{\em vec} & the vector to be written to file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file File\+Func.\+h.
+

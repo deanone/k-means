@@ -1,0 +1,305 @@
+\section{Properties\+Parser Class Reference}
+\label{class_properties_parser}\index{Properties\+Parser@{Properties\+Parser}}
+
+
+{\ttfamily \#include $<$Properties\+Parser.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Properties\+Parser} (std\+::string properties\+Filename)
+\item 
+void \textbf{ add\+Properties\+File} (std\+::string properties\+Filename)
+\item 
+bool \textbf{ property\+Exists} (std\+::string property\+Name)
+\item 
+std\+::string \textbf{ get\+Property\+As\+String} (std\+::string property\+Name)
+\item 
+int \textbf{ get\+Property\+As\+Int} (std\+::string property\+Name)
+\item 
+bool \textbf{ get\+Property\+As\+Bool} (std\+::string property\+Name)
+\item 
+float \textbf{ get\+Property\+As\+Float} (std\+::string property\+Name)
+\item 
+double \textbf{ get\+Property\+As\+Double} (std\+::string property\+Name)
+\item 
+std\+::string \textbf{ get\+Property\+As\+String\+Or\+Default\+To} (std\+::string property\+Name, std\+::string default\+Property\+Value)
+\item 
+int \textbf{ get\+Property\+As\+Int\+Or\+Default\+To} (std\+::string property\+Name, int default\+Property\+Value)
+\item 
+bool \textbf{ get\+Property\+As\+Bool\+Or\+Default\+To} (std\+::string property\+Name, bool default\+Property\+Value)
+\item 
+float \textbf{ get\+Property\+As\+Float\+Or\+Default\+To} (std\+::string property\+Name, float default\+Property\+Value)
+\item 
+double \textbf{ get\+Property\+As\+Double\+Or\+Default\+To} (std\+::string property\+Name, double default\+Property\+Value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \textbf{ prop\+Map}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Properties\+Parser.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_properties_parser_aa075e76c89abc9639b2b146433ac9dd0}} 
+\index{Properties\+Parser@{Properties\+Parser}!Properties\+Parser@{Properties\+Parser}}
+\index{Properties\+Parser@{Properties\+Parser}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{Properties\+Parser()}
+{\footnotesize\ttfamily Properties\+Parser\+::\+Properties\+Parser (\begin{DoxyParamCaption}\item[{std\+::string}]{properties\+Filename }\end{DoxyParamCaption})}
+
+Constructor. 
+
+Definition at line 6 of file Properties\+Parser.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_properties_parser_a8cb6ad9a2c83e27dffc9a3a1f0cc6097}} 
+\index{Properties\+Parser@{Properties\+Parser}!add\+Properties\+File@{add\+Properties\+File}}
+\index{add\+Properties\+File@{add\+Properties\+File}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{add\+Properties\+File()}
+{\footnotesize\ttfamily void Properties\+Parser\+::add\+Properties\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{properties\+Filename }\end{DoxyParamCaption})}
+
+Creates the properties map from the properties contained in a file. 
+\begin{DoxyParams}{Parameters}
+{\em properties\+Filename} & the name of the file that contains the properties. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_a8a64ae1f8c21897ea7cd8b02a37dbf9f}} 
+\index{Properties\+Parser@{Properties\+Parser}!get\+Property\+As\+Bool@{get\+Property\+As\+Bool}}
+\index{get\+Property\+As\+Bool@{get\+Property\+As\+Bool}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{get\+Property\+As\+Bool()}
+{\footnotesize\ttfamily bool Properties\+Parser\+::get\+Property\+As\+Bool (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name }\end{DoxyParamCaption})}
+
+Returns a property as type bool. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the bool type property. 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_a47050c9748f17321a60b080f21258b93}} 
+\index{Properties\+Parser@{Properties\+Parser}!get\+Property\+As\+Bool\+Or\+Default\+To@{get\+Property\+As\+Bool\+Or\+Default\+To}}
+\index{get\+Property\+As\+Bool\+Or\+Default\+To@{get\+Property\+As\+Bool\+Or\+Default\+To}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{get\+Property\+As\+Bool\+Or\+Default\+To()}
+{\footnotesize\ttfamily bool Properties\+Parser\+::get\+Property\+As\+Bool\+Or\+Default\+To (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name,  }\item[{bool}]{default\+Property\+Value }\end{DoxyParamCaption})}
+
+Returns a property as type bool, or return a default bool type value. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property. \\
+\hline
+{\em default\+Property\+Value} & the default value of the property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the bool type property, or a default bool type value. 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_ac22f3d6ac1e9737a29ec2a69d3302a2f}} 
+\index{Properties\+Parser@{Properties\+Parser}!get\+Property\+As\+Double@{get\+Property\+As\+Double}}
+\index{get\+Property\+As\+Double@{get\+Property\+As\+Double}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{get\+Property\+As\+Double()}
+{\footnotesize\ttfamily double Properties\+Parser\+::get\+Property\+As\+Double (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name }\end{DoxyParamCaption})}
+
+Returns a property as type double. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the double type property. 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_a269a569985b8fd79b816baa4962cfa62}} 
+\index{Properties\+Parser@{Properties\+Parser}!get\+Property\+As\+Double\+Or\+Default\+To@{get\+Property\+As\+Double\+Or\+Default\+To}}
+\index{get\+Property\+As\+Double\+Or\+Default\+To@{get\+Property\+As\+Double\+Or\+Default\+To}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{get\+Property\+As\+Double\+Or\+Default\+To()}
+{\footnotesize\ttfamily double Properties\+Parser\+::get\+Property\+As\+Double\+Or\+Default\+To (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name,  }\item[{double}]{default\+Property\+Value }\end{DoxyParamCaption})}
+
+Returns a property as type double, or return a default double type value. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property. \\
+\hline
+{\em default\+Property\+Value} & the default value of the property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the double type property, or a default double type value. 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_a2a5c7bdd4d170982e1003ec52283c3c8}} 
+\index{Properties\+Parser@{Properties\+Parser}!get\+Property\+As\+Float@{get\+Property\+As\+Float}}
+\index{get\+Property\+As\+Float@{get\+Property\+As\+Float}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{get\+Property\+As\+Float()}
+{\footnotesize\ttfamily float Properties\+Parser\+::get\+Property\+As\+Float (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name }\end{DoxyParamCaption})}
+
+Returns a property as type float. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the float type property. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_a452cb82689e31abc2a1192015328e323}} 
+\index{Properties\+Parser@{Properties\+Parser}!get\+Property\+As\+Float\+Or\+Default\+To@{get\+Property\+As\+Float\+Or\+Default\+To}}
+\index{get\+Property\+As\+Float\+Or\+Default\+To@{get\+Property\+As\+Float\+Or\+Default\+To}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{get\+Property\+As\+Float\+Or\+Default\+To()}
+{\footnotesize\ttfamily float Properties\+Parser\+::get\+Property\+As\+Float\+Or\+Default\+To (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name,  }\item[{float}]{default\+Property\+Value }\end{DoxyParamCaption})}
+
+Returns a property as type float, or return a default float type value. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property. \\
+\hline
+{\em default\+Property\+Value} & the default value of the property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the int float property, or a default float type value. 
+\end{DoxyReturn}
+
+
+Definition at line 113 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_abe15fe0fd4563627204f58f9256aacbf}} 
+\index{Properties\+Parser@{Properties\+Parser}!get\+Property\+As\+Int@{get\+Property\+As\+Int}}
+\index{get\+Property\+As\+Int@{get\+Property\+As\+Int}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{get\+Property\+As\+Int()}
+{\footnotesize\ttfamily int Properties\+Parser\+::get\+Property\+As\+Int (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name }\end{DoxyParamCaption})}
+
+Returns a property as type int. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the int type property. 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_a1ed9676009e9e2c0624150b8d3b658c0}} 
+\index{Properties\+Parser@{Properties\+Parser}!get\+Property\+As\+Int\+Or\+Default\+To@{get\+Property\+As\+Int\+Or\+Default\+To}}
+\index{get\+Property\+As\+Int\+Or\+Default\+To@{get\+Property\+As\+Int\+Or\+Default\+To}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{get\+Property\+As\+Int\+Or\+Default\+To()}
+{\footnotesize\ttfamily int Properties\+Parser\+::get\+Property\+As\+Int\+Or\+Default\+To (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name,  }\item[{int}]{default\+Property\+Value }\end{DoxyParamCaption})}
+
+Returns a property as type int, or return a default int type value. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property. \\
+\hline
+{\em default\+Property\+Value} & the default value of the property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the int type property, or a default int type value. 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_a8566ea176851c43e244ea291eb5968e5}} 
+\index{Properties\+Parser@{Properties\+Parser}!get\+Property\+As\+String@{get\+Property\+As\+String}}
+\index{get\+Property\+As\+String@{get\+Property\+As\+String}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{get\+Property\+As\+String()}
+{\footnotesize\ttfamily std\+::string Properties\+Parser\+::get\+Property\+As\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name }\end{DoxyParamCaption})}
+
+Returns a property as type string. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the string type property. 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_abc496cea92a4d563710e11f85f2dc957}} 
+\index{Properties\+Parser@{Properties\+Parser}!get\+Property\+As\+String\+Or\+Default\+To@{get\+Property\+As\+String\+Or\+Default\+To}}
+\index{get\+Property\+As\+String\+Or\+Default\+To@{get\+Property\+As\+String\+Or\+Default\+To}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{get\+Property\+As\+String\+Or\+Default\+To()}
+{\footnotesize\ttfamily std\+::string Properties\+Parser\+::get\+Property\+As\+String\+Or\+Default\+To (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name,  }\item[{std\+::string}]{default\+Property\+Value }\end{DoxyParamCaption})}
+
+Returns a property as type string, or return a default string type value. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property. \\
+\hline
+{\em default\+Property\+Value} & the default value of the property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the string type property, or a default string type value. 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file Properties\+Parser.\+cpp.
+
+\mbox{\label{class_properties_parser_a75272b9a95defaf287a061e45f8acc51}} 
+\index{Properties\+Parser@{Properties\+Parser}!property\+Exists@{property\+Exists}}
+\index{property\+Exists@{property\+Exists}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{property\+Exists()}
+{\footnotesize\ttfamily bool Properties\+Parser\+::property\+Exists (\begin{DoxyParamCaption}\item[{std\+::string}]{property\+Name }\end{DoxyParamCaption})}
+
+Checks if a specific property exists in the properties map. 
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & the name of the property to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if property exists in the properties map, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Properties\+Parser.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{class_properties_parser_a3a1d77a3b2bad9327510f594c193f624}} 
+\index{Properties\+Parser@{Properties\+Parser}!prop\+Map@{prop\+Map}}
+\index{prop\+Map@{prop\+Map}!Properties\+Parser@{Properties\+Parser}}
+\subsubsection{prop\+Map}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ Properties\+Parser\+::prop\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+A map containing property names as keys and property values as values. 
+
+Definition at line 13 of file Properties\+Parser.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Properties\+Parser.\+h}\item 
+\textbf{ Properties\+Parser.\+cpp}\end{DoxyCompactItemize}

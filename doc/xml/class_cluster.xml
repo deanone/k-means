@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_cluster" kind="class" language="C++" prot="public">
+    <compoundname>Cluster</compoundname>
+    <includes refid="_cluster_8h" local="no">Cluster.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cluster_1a4afc7b3399570b17157ac1a9b592a17f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Cluster::ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="8" column="1" bodyfile="Cluster.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_cluster_1ac1d89bf8b236d6fe18a0865276274d9c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_point" kindref="compound">Point</ref> * &gt;</type>
+        <definition>std::vector&lt;Point*&gt; Cluster::pointsOfCluster</definition>
+        <argsstring></argsstring>
+        <name>pointsOfCluster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="11" column="1" bodyfile="Cluster.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cluster_1acc4e23a98671996549c96284a5b57976" prot="public" static="no" mutable="no">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Cluster::center</definition>
+        <argsstring></argsstring>
+        <name>center</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="12" column="1" bodyfile="Cluster.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cluster_1a5e07ba3b4772eb29eeac0095eef3cd3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Cluster::Cluster</definition>
+        <argsstring>(Point c, int id)</argsstring>
+        <name>Cluster</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="18" column="1" bodyfile="Cluster.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a4bddfc88ac859610acab15dd12851b58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Cluster::~Cluster</definition>
+        <argsstring>()</argsstring>
+        <name>~Cluster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="23" column="1" bodyfile="Cluster.cpp" bodystart="7" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a6b6cf07bd9eb4ed49231265e33ea335a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cluster::setID</definition>
+        <argsstring>(int ID)</argsstring>
+        <name>setID</name>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the ID of the <ref refid="class_cluster" kindref="compound">Cluster</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ID of the <ref refid="class_cluster" kindref="compound">Cluster</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="29" column="1" bodyfile="Cluster.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a7e3843eaa486b9dd28de25a7c9f4e1f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Cluster::getID</definition>
+        <argsstring>() const</argsstring>
+        <name>getID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the ID of the <ref refid="class_cluster" kindref="compound">Cluster</ref>. <simplesect kind="return"><para>the ID of the <ref refid="class_cluster" kindref="compound">Cluster</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="35" column="1" bodyfile="Cluster.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a62456a396315240a3fbfbcb060f0e6ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cluster::setCenter</definition>
+        <argsstring>(Point &amp;center)</argsstring>
+        <name>setCenter</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>center</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the center of the <ref refid="class_cluster" kindref="compound">Cluster</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>center</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the center (i.e., a <ref refid="class_point" kindref="compound">Point</ref> object) of the <ref refid="class_cluster" kindref="compound">Cluster</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="41" column="1" bodyfile="Cluster.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a72b992c37dc0792e84dbe5ac2d89bbbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Cluster::getCenter</definition>
+        <argsstring>()</argsstring>
+        <name>getCenter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the center of the <ref refid="class_cluster" kindref="compound">Cluster</ref>. <simplesect kind="return"><para>the center (i.e., a <ref refid="class_point" kindref="compound">Point</ref> object) of the <ref refid="class_cluster" kindref="compound">Cluster</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="47" column="1" bodyfile="Cluster.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a43ab4e6a60110bba519e54a1634521fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cluster::setPointsToCluster</definition>
+        <argsstring>(Point *p)</argsstring>
+        <name>setPointsToCluster</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds Points to the <ref refid="class_cluster" kindref="compound">Cluster</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <ref refid="class_point" kindref="compound">Point</ref> to be added. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="53" column="1" bodyfile="Cluster.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a937233153e5610b9e8d91815e3a43b5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Cluster::getNumOfPointsInCluster</definition>
+        <argsstring>()</argsstring>
+        <name>getNumOfPointsInCluster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of points in the <ref refid="class_cluster" kindref="compound">Cluster</ref>. <simplesect kind="return"><para>the number of points in the <ref refid="class_cluster" kindref="compound">Cluster</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="59" column="1" bodyfile="Cluster.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a77c17b4532c831f5c9c3ef9fdc4f3822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref> *</type>
+        <definition>Point * Cluster::getPointOfCluster</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>getPointOfCluster</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a <ref refid="class_point" kindref="compound">Point</ref> of the <ref refid="class_cluster" kindref="compound">Cluster</ref> for a specific index. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index of the <ref refid="class_point" kindref="compound">Point</ref> to be returned. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="65" column="1" bodyfile="Cluster.cpp" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1afa46912376ac9690ee946612ddc99c76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cluster::clearPointsOfCluster</definition>
+        <argsstring>()</argsstring>
+        <name>clearPointsOfCluster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes all points of the <ref refid="class_cluster" kindref="compound">Cluster</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="70" column="1" bodyfile="Cluster.cpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1ae1bfa43c1d8e63b5b7c8de057822655e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cluster::operator==</definition>
+        <argsstring>(Cluster &amp;c)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="class_cluster" kindref="compound">Cluster</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>== operator overloading function. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a reference to the rhs <ref refid="class_cluster" kindref="compound">Cluster</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="76" column="1" bodyfile="Cluster.cpp" bodystart="58" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a2e34a51e1018f359c406effc187c3443" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cluster::operator&lt;</definition>
+        <argsstring>(Cluster &amp;c)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type><ref refid="class_cluster" kindref="compound">Cluster</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt; operator overloading function. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a reference to the rhs <ref refid="class_cluster" kindref="compound">Cluster</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="82" column="1" bodyfile="Cluster.cpp" bodystart="67" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a0a1e41f9daeb97afd1c38ccf057ab465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cluster::printCentroidInConsole</definition>
+        <argsstring>()</argsstring>
+        <name>printCentroidInConsole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the centroid of the <ref refid="class_cluster" kindref="compound">Cluster</ref> to console. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="87" column="1" bodyfile="Cluster.cpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a7674117b1d96399b80866984ba9a7669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cluster::printAllocationInConsole</definition>
+        <argsstring>()</argsstring>
+        <name>printAllocationInConsole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the ids of the points of <ref refid="class_cluster" kindref="compound">Cluster</ref> to console. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="92" column="1" bodyfile="Cluster.cpp" bodystart="82" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a854307ce8f209f71102f61c36dbfacf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cluster::writeCentroidToFile</definition>
+        <argsstring>(std::ostream &amp;out)</argsstring>
+        <name>writeCentroidToFile</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes the centroid of the <ref refid="class_cluster" kindref="compound">Cluster</ref> to file. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stream handle of the output file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="98" column="1" bodyfile="Cluster.cpp" bodystart="90" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cluster_1a1d4245d0e9c51efac7cd51a9425466ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cluster::writeAllocationToFile</definition>
+        <argsstring>(std::ostream &amp;out)</argsstring>
+        <name>writeAllocationToFile</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes the ids of the points of <ref refid="class_cluster" kindref="compound">Cluster</ref> to file. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stream handle of the output file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cluster.h" line="104" column="1" bodyfile="Cluster.cpp" bodystart="96" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Cluster</label>
+        <link refid="class_cluster"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>center</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Point</label>
+        <link refid="class_point"/>
+      </node>
+    </collaborationgraph>
+    <location file="Cluster.h" line="7" column="1" bodyfile="Cluster.h" bodystart="6" bodyend="105"/>
+    <listofallmembers>
+      <member refid="class_cluster_1acc4e23a98671996549c96284a5b57976" prot="public" virt="non-virtual"><scope>Cluster</scope><name>center</name></member>
+      <member refid="class_cluster_1afa46912376ac9690ee946612ddc99c76" prot="public" virt="non-virtual"><scope>Cluster</scope><name>clearPointsOfCluster</name></member>
+      <member refid="class_cluster_1a5e07ba3b4772eb29eeac0095eef3cd3a" prot="public" virt="non-virtual"><scope>Cluster</scope><name>Cluster</name></member>
+      <member refid="class_cluster_1a72b992c37dc0792e84dbe5ac2d89bbbe" prot="public" virt="non-virtual"><scope>Cluster</scope><name>getCenter</name></member>
+      <member refid="class_cluster_1a7e3843eaa486b9dd28de25a7c9f4e1f9" prot="public" virt="non-virtual"><scope>Cluster</scope><name>getID</name></member>
+      <member refid="class_cluster_1a937233153e5610b9e8d91815e3a43b5e" prot="public" virt="non-virtual"><scope>Cluster</scope><name>getNumOfPointsInCluster</name></member>
+      <member refid="class_cluster_1a77c17b4532c831f5c9c3ef9fdc4f3822" prot="public" virt="non-virtual"><scope>Cluster</scope><name>getPointOfCluster</name></member>
+      <member refid="class_cluster_1a4afc7b3399570b17157ac1a9b592a17f" prot="private" virt="non-virtual"><scope>Cluster</scope><name>ID</name></member>
+      <member refid="class_cluster_1a2e34a51e1018f359c406effc187c3443" prot="public" virt="non-virtual"><scope>Cluster</scope><name>operator&lt;</name></member>
+      <member refid="class_cluster_1ae1bfa43c1d8e63b5b7c8de057822655e" prot="public" virt="non-virtual"><scope>Cluster</scope><name>operator==</name></member>
+      <member refid="class_cluster_1ac1d89bf8b236d6fe18a0865276274d9c" prot="public" virt="non-virtual"><scope>Cluster</scope><name>pointsOfCluster</name></member>
+      <member refid="class_cluster_1a7674117b1d96399b80866984ba9a7669" prot="public" virt="non-virtual"><scope>Cluster</scope><name>printAllocationInConsole</name></member>
+      <member refid="class_cluster_1a0a1e41f9daeb97afd1c38ccf057ab465" prot="public" virt="non-virtual"><scope>Cluster</scope><name>printCentroidInConsole</name></member>
+      <member refid="class_cluster_1a62456a396315240a3fbfbcb060f0e6ca" prot="public" virt="non-virtual"><scope>Cluster</scope><name>setCenter</name></member>
+      <member refid="class_cluster_1a6b6cf07bd9eb4ed49231265e33ea335a" prot="public" virt="non-virtual"><scope>Cluster</scope><name>setID</name></member>
+      <member refid="class_cluster_1a43ab4e6a60110bba519e54a1634521fc" prot="public" virt="non-virtual"><scope>Cluster</scope><name>setPointsToCluster</name></member>
+      <member refid="class_cluster_1a1d4245d0e9c51efac7cd51a9425466ad" prot="public" virt="non-virtual"><scope>Cluster</scope><name>writeAllocationToFile</name></member>
+      <member refid="class_cluster_1a854307ce8f209f71102f61c36dbfacf1" prot="public" virt="non-virtual"><scope>Cluster</scope><name>writeCentroidToFile</name></member>
+      <member refid="class_cluster_1a4bddfc88ac859610acab15dd12851b58" prot="public" virt="non-virtual"><scope>Cluster</scope><name>~Cluster</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

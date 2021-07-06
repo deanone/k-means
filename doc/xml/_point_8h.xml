@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_point_8h" kind="file" language="C++">
+    <compoundname>Point.h</compoundname>
+    <includes refid="_data_types_8h" local="yes">DataTypes.h</includes>
+    <includedby refid="_cluster_8h" local="yes">Cluster.h</includedby>
+    <includedby refid="_kmeans_8h" local="yes">Kmeans.h</includedby>
+    <includedby refid="_mathematical_functions_8h" local="yes">MathematicalFunctions.h</includedby>
+    <includedby refid="_point_8cpp" local="yes">Point.cpp</includedby>
+    <incdepgraph>
+      <node id="256">
+        <label>functional</label>
+      </node>
+      <node id="248">
+        <label>cmath</label>
+      </node>
+      <node id="254">
+        <label>numeric</label>
+      </node>
+      <node id="245">
+        <label>string</label>
+      </node>
+      <node id="252">
+        <label>map</label>
+      </node>
+      <node id="243">
+        <label>fstream</label>
+      </node>
+      <node id="247">
+        <label>ctime</label>
+      </node>
+      <node id="240">
+        <label>Point.h</label>
+        <link refid="_point_8h"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+      </node>
+      <node id="250">
+        <label>unistd.h</label>
+      </node>
+      <node id="251">
+        <label>vector</label>
+      </node>
+      <node id="244">
+        <label>sstream</label>
+      </node>
+      <node id="246">
+        <label>cstdlib</label>
+      </node>
+      <node id="242">
+        <label>iostream</label>
+      </node>
+      <node id="249">
+        <label>climits</label>
+      </node>
+      <node id="241">
+        <label>DataTypes.h</label>
+        <link refid="_data_types_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="255">
+        <label>complex</label>
+      </node>
+      <node id="253">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="259">
+        <label>Cluster.cpp</label>
+        <link refid="_cluster_8cpp"/>
+      </node>
+      <node id="261">
+        <label>Kmeans.cpp</label>
+        <link refid="_kmeans_8cpp"/>
+      </node>
+      <node id="263">
+        <label>MathematicalFunctions.h</label>
+        <link refid="_mathematical_functions_8h"/>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+      </node>
+      <node id="265">
+        <label>Point.cpp</label>
+        <link refid="_point_8cpp"/>
+      </node>
+      <node id="258">
+        <label>Cluster.h</label>
+        <link refid="_cluster_8h"/>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+      </node>
+      <node id="262">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="257">
+        <label>Point.h</label>
+        <link refid="_point_8h"/>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>MathematicalFunctions.cpp</label>
+        <link refid="_mathematical_functions_8cpp"/>
+      </node>
+      <node id="260">
+        <label>Kmeans.h</label>
+        <link refid="_kmeans_8h"/>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_point" prot="public">Point</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>POINT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POINT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_data_types_8h" kindref="compound">DataTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_point" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_point" kindref="compound">Point</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_data_types_8h_1a82f6bc76e1c7a0f51bf3e95ad5d3c590" kindref="member">DoubleVector</ref><sp/>v;<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point_1ad92f2337b839a94ce97dcdb439b4325a" kindref="member">Point</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point_1a395fa04b4ec126b66fc053f829a30cc1" kindref="member">~Point</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1aac952f18d9bf4cac6e71e487bf0a6485" kindref="member">setID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_ID);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_point_1a70f96664692429af8c591eac51e65faa" kindref="member">getID</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1adc21fb4804add5777f2a1774b024fea7" kindref="member">addValue</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_point_1a8b0689db3397d2822086d7c9c8388e52" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a1a104867c565a737ae4b090d17de94f5" kindref="member">changeValue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_data_types_8h_1a82f6bc76e1c7a0f51bf3e95ad5d3c590" kindref="member">DoubleVector</ref>*<sp/><ref refid="class_point_1a9dbaa711812c795591f242761ae49260" kindref="member">values</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_point_1a84ede377561c9e12fd4624ce79dee52e" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_point_1a1abb26c14e145a8b4782a30b821dd19e" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_point_1a1a69a0a1dea189f07e044f6eb868937d" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_point_1a9d0a9f62ffc7345f802085706101cd62" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_point_1a4f99aacff8c681d1666213fef33b69ea" kindref="member">operator/</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1a7cc71f8277ff5a921bab778f4200558f" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1ac1204531b317c36ba7cd0a2c2ca20859" kindref="member">printValuesToConsole</ref>();<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1acfe860d2ad9f538ac35e1007697b965c" kindref="member">writeValuesToFile</ref>(std::ostream<sp/>&amp;out);<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/><sp/>POINT_H</highlight></codeline>
+    </programlisting>
+    <location file="Point.h"/>
+  </compounddef>
+</doxygen>

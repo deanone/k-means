@@ -1,0 +1,203 @@
+.TH "mf" 3 "Tue Jul 6 2021" "Version 1.0" "k-means in native C++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mf
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "size_t \fBminSize\fP (\fBPoint\fP &p, \fBPoint\fP &q)"
+.br
+.ti -1c
+.RI "double \fBmean\fP (\fBPoint\fP &p)"
+.br
+.ti -1c
+.RI "double \fBstDev\fP (\fBPoint\fP &p)"
+.br
+.ti -1c
+.RI "double \fBeuclideanDistance\fP (\fBPoint\fP &p, \fBPoint\fP &q)"
+.br
+.ti -1c
+.RI "double \fBeuclideanDistanceSquared\fP (\fBPoint\fP &p, \fBPoint\fP &q)"
+.br
+.ti -1c
+.RI "double \fBmanhattanDistance\fP (\fBPoint\fP &p, \fBPoint\fP &q)"
+.br
+.ti -1c
+.RI "double \fBchebyshevDistance\fP (\fBPoint\fP &p, \fBPoint\fP &q)"
+.br
+.ti -1c
+.RI "double \fBbrayCurtisDistance\fP (\fBPoint\fP &p, \fBPoint\fP &q)"
+.br
+.ti -1c
+.RI "double \fBcanberraDistance\fP (\fBPoint\fP &p, \fBPoint\fP &q)"
+.br
+.ti -1c
+.RI "double \fBpearsonCorrelation\fP (\fBPoint\fP &p, \fBPoint\fP &q)"
+.br
+.ti -1c
+.RI "double \fBcosineSimilarity\fP (\fBPoint\fP &p, \fBPoint\fP &q)"
+.br
+.ti -1c
+.RI "double \fBdot\fP (\fBPoint\fP &p, \fBPoint\fP &q)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "double mf::brayCurtisDistance (\fBPoint\fP & p, \fBPoint\fP & q)"
+Computes the Bray–Curtis distance between two \fBPoint\fP objects\&. https://en.wikipedia.org/wiki/Bray%E2%80%93Curtis_dissimilarity 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP the first \fBPoint\fP\&. 
+.br
+\fIq\fP the second \fBPoint\fP\&.  the Bray–Curtis distance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file MathematicalFunctions\&.cpp\&.
+.SS "double mf::canberraDistance (\fBPoint\fP & p, \fBPoint\fP & q)"
+Computes the Canberra distance between two \fBPoint\fP objects\&. https://en.wikipedia.org/wiki/Canberra_distance 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP the first \fBPoint\fP\&. 
+.br
+\fIq\fP the second \fBPoint\fP\&.  the Canberra distance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file MathematicalFunctions\&.cpp\&.
+.SS "double mf::chebyshevDistance (\fBPoint\fP & p, \fBPoint\fP & q)"
+Computes the Chebyshev distance between two \fBPoint\fP objects\&. https://en.wikipedia.org/wiki/Chebyshev_distance 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP the first \fBPoint\fP\&. 
+.br
+\fIq\fP the second \fBPoint\fP\&.  the Chebyshev distance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file MathematicalFunctions\&.cpp\&.
+.SS "double mf::cosineSimilarity (\fBPoint\fP & p, \fBPoint\fP & q)"
+Computes the cosine similarity between two \fBPoint\fP objects\&. https://en.wikipedia.org/wiki/Cosine_similarity 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP the first \fBPoint\fP\&. 
+.br
+\fIq\fP the second \fBPoint\fP\&.  the cosine similarity\&. 
+.RE
+.PP
+
+.PP
+Definition at line 111 of file MathematicalFunctions\&.cpp\&.
+.SS "double mf::dot (\fBPoint\fP & p, \fBPoint\fP & q)"
+Computes the dot product between two \fBPoint\fP objects\&. https://en.wikipedia.org/wiki/Dot_product 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP the first \fBPoint\fP\&. 
+.br
+\fIq\fP the second \fBPoint\fP\&.  the dot product\&. 
+.RE
+.PP
+
+.PP
+Definition at line 128 of file MathematicalFunctions\&.cpp\&.
+.SS "double mf::euclideanDistance (\fBPoint\fP & p, \fBPoint\fP & q)"
+Computes the Euclidean distance between two \fBPoint\fP objects\&. https://en.wikipedia.org/wiki/Euclidean_distance 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP the first \fBPoint\fP\&. 
+.br
+\fIq\fP the second \fBPoint\fP\&.  the Euclidean distance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file MathematicalFunctions\&.cpp\&.
+.SS "double mf::euclideanDistanceSquared (\fBPoint\fP & p, \fBPoint\fP & q)"
+Computes the squared Euclidean distance between two \fBPoint\fP objects\&. https://en.wikipedia.org/wiki/Euclidean_distance 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP the first \fBPoint\fP\&. 
+.br
+\fIq\fP the second \fBPoint\fP\&.  the squared Euclidean distance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file MathematicalFunctions\&.cpp\&.
+.SS "double mf::manhattanDistance (\fBPoint\fP & p, \fBPoint\fP & q)"
+Computes the Manhattan (or taxicab) distance between two \fBPoint\fP objects\&. https://en.wikipedia.org/wiki/Taxicab_geometry 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP the first \fBPoint\fP\&. 
+.br
+\fIq\fP the second \fBPoint\fP\&.  the Manhattan distance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file MathematicalFunctions\&.cpp\&.
+.SS "double mf::mean (\fBPoint\fP & p)"
+Returns the mean value of a \fBPoint\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the mean value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 11 of file MathematicalFunctions\&.cpp\&.
+.SS "size_t mf::minSize (\fBPoint\fP & p, \fBPoint\fP & q)"
+Returns the minimum of the sizes of two \fBPoint\fP objects\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the minimum of the sizes\&. 
+.RE
+.PP
+
+.PP
+Definition at line 3 of file MathematicalFunctions\&.cpp\&.
+.SS "double mf::pearsonCorrelation (\fBPoint\fP & p, \fBPoint\fP & q)"
+Computes the Pearson correlation coefficient between two \fBPoint\fP objects\&. https://en.wikipedia.org/wiki/Pearson_correlation_coefficient 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP the first \fBPoint\fP\&. 
+.br
+\fIq\fP the second \fBPoint\fP\&.  the Pearson correlation coefficient\&. 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file MathematicalFunctions\&.cpp\&.
+.SS "double mf::stDev (\fBPoint\fP & p)"
+Returns the standard deviation value of a \fBPoint\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the standard deviation value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 16 of file MathematicalFunctions\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for k-means in native C++ from the source code\&.

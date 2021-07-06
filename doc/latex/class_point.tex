@@ -1,0 +1,297 @@
+\section{Point Class Reference}
+\label{class_point}\index{Point@{Point}}
+
+
+{\ttfamily \#include $<$Point.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Point} ()
+\item 
+\textbf{ $\sim$\+Point} ()
+\item 
+void \textbf{ set\+ID} (int \+\_\+\+ID)
+\item 
+int \textbf{ get\+ID} () const
+\item 
+void \textbf{ add\+Value} (double val)
+\item 
+size\+\_\+t \textbf{ size} ()
+\item 
+void \textbf{ change\+Value} (int index, double val)
+\item 
+\textbf{ Double\+Vector} $\ast$ \textbf{ values} ()
+\item 
+\textbf{ Point} \textbf{ operator+} (const \textbf{ Point} \&p)
+\item 
+\textbf{ Point} \textbf{ operator=} (const \textbf{ Point} \&p)
+\item 
+bool \textbf{ operator==} (const \textbf{ Point} \&p)
+\item 
+bool \textbf{ operator$<$} (const \textbf{ Point} \&p)
+\item 
+\textbf{ Point} \textbf{ operator/} (int m)
+\item 
+double \textbf{ operator()} (size\+\_\+t index)
+\item 
+void \textbf{ print\+Values\+To\+Console} ()
+\item 
+void \textbf{ write\+Values\+To\+File} (std\+::ostream \&out)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Point.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_point_ad92f2337b839a94ce97dcdb439b4325a}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection{Point()}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. 
+
+Definition at line 3 of file Point.\+cpp.
+
+\mbox{\label{class_point_a395fa04b4ec126b66fc053f829a30cc1}} 
+\index{Point@{Point}!````~Point@{$\sim$\+Point}}
+\index{````~Point@{$\sim$\+Point}!Point@{Point}}
+\subsubsection{$\sim$\+Point()}
+{\footnotesize\ttfamily Point\+::$\sim$\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. 
+
+Definition at line 7 of file Point.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_point_adc21fb4804add5777f2a1774b024fea7}} 
+\index{Point@{Point}!add\+Value@{add\+Value}}
+\index{add\+Value@{add\+Value}!Point@{Point}}
+\subsubsection{add\+Value()}
+{\footnotesize\ttfamily void Point\+::add\+Value (\begin{DoxyParamCaption}\item[{double}]{val }\end{DoxyParamCaption})}
+
+Adds a value to the internal vector of the \doxyref{Point}{p.}{class_point}. 
+\begin{DoxyParams}{Parameters}
+{\em value} & the value to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Point.\+cpp.
+
+\mbox{\label{class_point_a1a104867c565a737ae4b090d17de94f5}} 
+\index{Point@{Point}!change\+Value@{change\+Value}}
+\index{change\+Value@{change\+Value}!Point@{Point}}
+\subsubsection{change\+Value()}
+{\footnotesize\ttfamily void Point\+::change\+Value (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{double}]{val }\end{DoxyParamCaption})}
+
+Updates a specific value of the internal vector of the \doxyref{Point}{p.}{class_point}. 
+\begin{DoxyParams}{Parameters}
+{\em index} & the index of the value to be updated. \\
+\hline
+{\em the} & new value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file Point.\+cpp.
+
+\mbox{\label{class_point_a70f96664692429af8c591eac51e65faa}} 
+\index{Point@{Point}!get\+ID@{get\+ID}}
+\index{get\+ID@{get\+ID}!Point@{Point}}
+\subsubsection{get\+I\+D()}
+{\footnotesize\ttfamily int Point\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the ID of the \doxyref{Point}{p.}{class_point}. \begin{DoxyReturn}{Returns}
+the ID of the \doxyref{Point}{p.}{class_point}. 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Point.\+cpp.
+
+\mbox{\label{class_point_a7cc71f8277ff5a921bab778f4200558f}} 
+\index{Point@{Point}!operator()@{operator()}}
+\index{operator()@{operator()}!Point@{Point}}
+\subsubsection{operator()()}
+{\footnotesize\ttfamily double Point\+::operator() (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+() Returns the value of the internal vector of the point that corresponds to the given index. 
+\begin{DoxyParams}{Parameters}
+{\em index} & the index of the value to be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the point indexed by the input index. 
+\end{DoxyReturn}
+
+
+Definition at line 123 of file Point.\+cpp.
+
+\mbox{\label{class_point_a84ede377561c9e12fd4624ce79dee52e}} 
+\index{Point@{Point}!operator+@{operator+}}
+\index{operator+@{operator+}!Point@{Point}}
+\subsubsection{operator+()}
+{\footnotesize\ttfamily \textbf{ Point} Point\+::operator+ (\begin{DoxyParamCaption}\item[{const \textbf{ Point} \&}]{p }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item operator overloading function. 
+\begin{DoxyParams}{Parameters}
+{\em p} & a reference to the rhs point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new point as the sum. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Definition at line 48 of file Point.\+cpp.
+
+\mbox{\label{class_point_a4f99aacff8c681d1666213fef33b69ea}} 
+\index{Point@{Point}!operator/@{operator/}}
+\index{operator/@{operator/}!Point@{Point}}
+\subsubsection{operator/()}
+{\footnotesize\ttfamily \textbf{ Point} Point\+::operator/ (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})}
+
+/ operator overloading function (\doxyref{Point}{p.}{class_point} object with integer). 
+\begin{DoxyParams}{Parameters}
+{\em m} & the integer by which all the values of the internal vector of the point are divided. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a point as the result of the division of the input point with the integer. 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Point.\+cpp.
+
+\mbox{\label{class_point_a9d0a9f62ffc7345f802085706101cd62}} 
+\index{Point@{Point}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Point@{Point}}
+\subsubsection{operator$<$()}
+{\footnotesize\ttfamily bool Point\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \textbf{ Point} \&}]{p }\end{DoxyParamCaption})}
+
+$<$ operator overloading function. 
+\begin{DoxyParams}{Parameters}
+{\em p} & a reference to the rhs \doxyref{Point}{p.}{class_point}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the lhs point is less than the rhs point, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file Point.\+cpp.
+
+\mbox{\label{class_point_a1abb26c14e145a8b4782a30b821dd19e}} 
+\index{Point@{Point}!operator=@{operator=}}
+\index{operator=@{operator=}!Point@{Point}}
+\subsubsection{operator=()}
+{\footnotesize\ttfamily \textbf{ Point} Point\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ Point} \&}]{p }\end{DoxyParamCaption})}
+
+= operator overloading function. 
+\begin{DoxyParams}{Parameters}
+{\em p} & a reference to the rhs point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a point to be assigned to the lhs. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Point.\+cpp.
+
+\mbox{\label{class_point_a1a69a0a1dea189f07e044f6eb868937d}} 
+\index{Point@{Point}!operator==@{operator==}}
+\index{operator==@{operator==}!Point@{Point}}
+\subsubsection{operator==()}
+{\footnotesize\ttfamily bool Point\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ Point} \&}]{p }\end{DoxyParamCaption})}
+
+== operator overloading function. 
+\begin{DoxyParams}{Parameters}
+{\em p} & a reference to the rhs \doxyref{Point}{p.}{class_point}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the points are equal, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Point.\+cpp.
+
+\mbox{\label{class_point_ac1204531b317c36ba7cd0a2c2ca20859}} 
+\index{Point@{Point}!print\+Values\+To\+Console@{print\+Values\+To\+Console}}
+\index{print\+Values\+To\+Console@{print\+Values\+To\+Console}!Point@{Point}}
+\subsubsection{print\+Values\+To\+Console()}
+{\footnotesize\ttfamily void Point\+::print\+Values\+To\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints the values of the \doxyref{Point}{p.}{class_point} in console. 
+
+Definition at line 135 of file Point.\+cpp.
+
+\mbox{\label{class_point_aac952f18d9bf4cac6e71e487bf0a6485}} 
+\index{Point@{Point}!set\+ID@{set\+ID}}
+\index{set\+ID@{set\+ID}!Point@{Point}}
+\subsubsection{set\+I\+D()}
+{\footnotesize\ttfamily void Point\+::set\+ID (\begin{DoxyParamCaption}\item[{int}]{\+\_\+\+ID }\end{DoxyParamCaption})}
+
+Sets the ID of the \doxyref{Point}{p.}{class_point}. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+ID} & the ID of the \doxyref{Point}{p.}{class_point}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file Point.\+cpp.
+
+\mbox{\label{class_point_a8b0689db3397d2822086d7c9c8388e52}} 
+\index{Point@{Point}!size@{size}}
+\index{size@{size}!Point@{Point}}
+\subsubsection{size()}
+{\footnotesize\ttfamily size\+\_\+t Point\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the size of the internal vector of the \doxyref{Point}{p.}{class_point}. \begin{DoxyReturn}{Returns}
+the size of the internal vector. 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file Point.\+cpp.
+
+\mbox{\label{class_point_a9dbaa711812c795591f242761ae49260}} 
+\index{Point@{Point}!values@{values}}
+\index{values@{values}!Point@{Point}}
+\subsubsection{values()}
+{\footnotesize\ttfamily \textbf{ Double\+Vector} $\ast$ Point\+::values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a pointer to the internal vector of the \doxyref{Point}{p.}{class_point}. \begin{DoxyReturn}{Returns}
+a pointer to the internal vector of the \doxyref{Point}{p.}{class_point}. 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file Point.\+cpp.
+
+\mbox{\label{class_point_acfe860d2ad9f538ac35e1007697b965c}} 
+\index{Point@{Point}!write\+Values\+To\+File@{write\+Values\+To\+File}}
+\index{write\+Values\+To\+File@{write\+Values\+To\+File}!Point@{Point}}
+\subsubsection{write\+Values\+To\+File()}
+{\footnotesize\ttfamily void Point\+::write\+Values\+To\+File (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})}
+
+Writes the values of the \doxyref{Point}{p.}{class_point} in a file. 
+
+Definition at line 143 of file Point.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Point.\+h}\item 
+\textbf{ Point.\+cpp}\end{DoxyCompactItemize}

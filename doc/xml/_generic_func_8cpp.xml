@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_generic_func_8cpp" kind="file" language="C++">
+    <compoundname>GenericFunc.cpp</compoundname>
+    <includes refid="_generic_func_8h" local="yes">GenericFunc.h</includes>
+    <incdepgraph>
+      <node id="91">
+        <label>functional</label>
+      </node>
+      <node id="83">
+        <label>cmath</label>
+      </node>
+      <node id="89">
+        <label>numeric</label>
+      </node>
+      <node id="80">
+        <label>string</label>
+      </node>
+      <node id="87">
+        <label>map</label>
+      </node>
+      <node id="74">
+        <label>GenericFunc.cpp</label>
+        <link refid="_generic_func_8cpp"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>fstream</label>
+      </node>
+      <node id="82">
+        <label>ctime</label>
+      </node>
+      <node id="85">
+        <label>unistd.h</label>
+      </node>
+      <node id="86">
+        <label>vector</label>
+      </node>
+      <node id="79">
+        <label>sstream</label>
+      </node>
+      <node id="75">
+        <label>GenericFunc.h</label>
+        <link refid="_generic_func_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>cstdlib</label>
+      </node>
+      <node id="77">
+        <label>iostream</label>
+      </node>
+      <node id="84">
+        <label>climits</label>
+      </node>
+      <node id="76">
+        <label>DataTypes.h</label>
+        <link refid="_data_types_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>complex</label>
+      </node>
+      <node id="88">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_generic_func_8h" kindref="compound">GenericFunc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespacegf_1ac0f4b1cee2681a53cb7c513c7f9a3b6f" refkind="member"><highlight class="normal">std::string<sp/><ref refid="namespacegf_1ac0f4b1cee2681a53cb7c513c7f9a3b6f" kindref="member">gf::getExecutablePath</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>result[<sp/>PATH_MAX<sp/>];</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>ssize_t<sp/>count<sp/>=<sp/>readlink(<sp/></highlight><highlight class="stringliteral">&quot;/proc/self/exe&quot;</highlight><highlight class="normal">,<sp/>result,<sp/>PATH_MAX<sp/>);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::string(<sp/>result,<sp/>(count<sp/>&gt;<sp/>0)<sp/>?<sp/>count<sp/>:<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="namespacegf_1a00f9f0ea9a0804a71cf70c6b1eb158cf" refkind="member"><highlight class="normal">std::string<sp/><ref refid="namespacegf_1a00f9f0ea9a0804a71cf70c6b1eb158cf" kindref="member">gf::getExecutablePathAndMatchItWithFilename</ref>(std::string<sp/>filename)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>execPath<sp/>=<sp/><ref refid="namespacegf_1ac0f4b1cee2681a53cb7c513c7f9a3b6f" kindref="member">getExecutablePath</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>found<sp/>=<sp/>execPath.find_last_of(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>execPath<sp/>=<sp/>execPath.substr(0,<sp/>found);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>execPath<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>filename;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ss.str();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="GenericFunc.cpp"/>
+  </compounddef>
+</doxygen>

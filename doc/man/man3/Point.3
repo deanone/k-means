@@ -1,0 +1,257 @@
+.TH "Point" 3 "Tue Jul 6 2021" "Version 1.0" "k-means in native C++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Point
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Point\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPoint\fP ()"
+.br
+.ti -1c
+.RI "\fB~Point\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetID\fP (int _ID)"
+.br
+.ti -1c
+.RI "int \fBgetID\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddValue\fP (double val)"
+.br
+.ti -1c
+.RI "size_t \fBsize\fP ()"
+.br
+.ti -1c
+.RI "void \fBchangeValue\fP (int index, double val)"
+.br
+.ti -1c
+.RI "\fBDoubleVector\fP * \fBvalues\fP ()"
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBoperator+\fP (const \fBPoint\fP &p)"
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBoperator=\fP (const \fBPoint\fP &p)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBPoint\fP &p)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBPoint\fP &p)"
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBoperator/\fP (int m)"
+.br
+.ti -1c
+.RI "double \fBoperator()\fP (size_t index)"
+.br
+.ti -1c
+.RI "void \fBprintValuesToConsole\fP ()"
+.br
+.ti -1c
+.RI "void \fBwriteValuesToFile\fP (std::ostream &out)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 6 of file Point\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Point::Point ()"
+Default constructor\&. 
+.PP
+Definition at line 3 of file Point\&.cpp\&.
+.SS "Point::~Point ()"
+Destructor\&. 
+.PP
+Definition at line 7 of file Point\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Point::addValue (double val)"
+Adds a value to the internal vector of the \fBPoint\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP the value to be added\&. 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file Point\&.cpp\&.
+.SS "void Point::changeValue (int index, double val)"
+Updates a specific value of the internal vector of the \fBPoint\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIindex\fP the index of the value to be updated\&. 
+.br
+\fIthe\fP new value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file Point\&.cpp\&.
+.SS "int Point::getID () const"
+Returns the ID of the \fBPoint\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the ID of the \fBPoint\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file Point\&.cpp\&.
+.SS "double Point::operator() (size_t index)"
+() Returns the value of the internal vector of the point that corresponds to the given index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIindex\fP the index of the value to be returned\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the value of the point indexed by the input index\&. 
+.RE
+.PP
+
+.PP
+Definition at line 123 of file Point\&.cpp\&.
+.SS "\fBPoint\fP Point::operator+ (const \fBPoint\fP & p)"
+
+.IP "\(bu" 2
+operator overloading function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP a reference to the rhs point\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a new point as the sum\&. 
+.RE
+.PP
+
+.PP
+
+.PP
+Definition at line 48 of file Point\&.cpp\&.
+.SS "\fBPoint\fP Point::operator/ (int m)"
+/ operator overloading function (\fBPoint\fP object with integer)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIm\fP the integer by which all the values of the internal vector of the point are divided\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a point as the result of the division of the input point with the integer\&. 
+.RE
+.PP
+
+.PP
+Definition at line 114 of file Point\&.cpp\&.
+.SS "bool Point::operator< (const \fBPoint\fP & p)"
+< operator overloading function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP a reference to the rhs \fBPoint\fP\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the lhs point is less than the rhs point, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line 95 of file Point\&.cpp\&.
+.SS "\fBPoint\fP Point::operator= (const \fBPoint\fP & p)"
+= operator overloading function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP a reference to the rhs point\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a point to be assigned to the lhs\&. 
+.RE
+.PP
+
+.PP
+Definition at line 60 of file Point\&.cpp\&.
+.SS "bool Point::operator== (const \fBPoint\fP & p)"
+== operator overloading function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP a reference to the rhs \fBPoint\fP\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the points are equal, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file Point\&.cpp\&.
+.SS "void Point::printValuesToConsole ()"
+Prints the values of the \fBPoint\fP in console\&. 
+.PP
+Definition at line 135 of file Point\&.cpp\&.
+.SS "void Point::setID (int _ID)"
+Sets the ID of the \fBPoint\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI_ID\fP the ID of the \fBPoint\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 15 of file Point\&.cpp\&.
+.SS "size_t Point::size ()"
+Returns the size of the internal vector of the \fBPoint\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the size of the internal vector\&. 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file Point\&.cpp\&.
+.SS "\fBDoubleVector\fP * Point::values ()"
+Returns a pointer to the internal vector of the \fBPoint\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+a pointer to the internal vector of the \fBPoint\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file Point\&.cpp\&.
+.SS "void Point::writeValuesToFile (std::ostream & out)"
+Writes the values of the \fBPoint\fP in a file\&. 
+.PP
+Definition at line 143 of file Point\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for k-means in native C++ from the source code\&.

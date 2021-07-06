@@ -1,0 +1,286 @@
+.TH "Kmeans" 3 "Tue Jul 6 2021" "Version 1.0" "k-means in native C++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Kmeans
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Kmeans\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBKmeans\fP (std::string datasetFilename, std::string propertiesFileName)"
+.br
+.ti -1c
+.RI "\fBKmeans\fP (std::string datasetFilename, int d, int numOfClusters, int numIt, int distMetric)"
+.br
+.ti -1c
+.RI "\fB~Kmeans\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDimension\fP (int dimension)"
+.br
+.ti -1c
+.RI "int \fBgetDimension\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetK\fP (int k)"
+.br
+.ti -1c
+.RI "int \fBgetK\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetPointsToClusters\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetInitialClustersRandomly\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetInitialClustersByInitialPoints\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFinalClusters\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisOver\fP ()"
+.br
+.ti -1c
+.RI "void \fBrunKmeans\fP ()"
+.br
+.ti -1c
+.RI "void \fBwriteCentroidsToFile\fP (std::string centroidsFilename)"
+.br
+.ti -1c
+.RI "void \fBcreatePointIDClusterIDAllocation\fP ()"
+.br
+.ti -1c
+.RI "void \fBcreateClusterIDPointsOfClusterIDsAllocation\fP ()"
+.br
+.ti -1c
+.RI "void \fBwriteClusterIDPointsOfClusterIDsAllocationToFile\fP (std::string allocationFilename1)"
+.br
+.ti -1c
+.RI "void \fBwritePointIDClusterIDAllocationToFile\fP (std::string allocationFilename2)"
+.br
+.ti -1c
+.RI "double \fBcalculateSilhouette\fP ()"
+.br
+.ti -1c
+.RI "double \fBcalculateWCSS\fP ()"
+.br
+.ti -1c
+.RI "double \fBcalculateDaviesBouldinIndex\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBPoint\fP > \fBpoints\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBCluster\fP > \fBinitialClusters\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBCluster\fP > \fBfinalClusters\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBIntIntPair\fP > \fBsizes\fP"
+.br
+.ti -1c
+.RI "\fBIntIntMap\fP \fBpointIDClusterIDAllocation\fP"
+.br
+.ti -1c
+.RI "\fBIntIntVectorMap\fP \fBclusterIDPointsOfClusterIDsAllocation\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 7 of file Kmeans\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Kmeans::Kmeans (std::string datasetFilename, std::string propertiesFileName)"
+Constructor 1\&. 
+.PP
+Definition at line 10 of file Kmeans\&.cpp\&.
+.SS "Kmeans::Kmeans (std::string datasetFilename, int d, int numOfClusters, int numIt, int distMetric)"
+Constructor 2\&. 
+.PP
+Definition at line 50 of file Kmeans\&.cpp\&.
+.SS "Kmeans::~Kmeans ()"
+Destructor\&. 
+.PP
+Definition at line 86 of file Kmeans\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double Kmeans::calculateDaviesBouldinIndex ()"
+Computes the Davies-Bouldin index\&. http://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index 
+.PP
+\fBReturns:\fP
+.RS 4
+the value of Davies-Bouldin index\&. 
+.RE
+.PP
+
+.PP
+Definition at line 414 of file Kmeans\&.cpp\&.
+.SS "double Kmeans::calculateSilhouette ()"
+\fBCluster\fP validity metrics 
+.br
+.PP
+Computes the silhouette metric\&. https://en.wikipedia.org/wiki/Silhouette_(clustering) 
+.PP
+\fBReturns:\fP
+.RS 4
+the value of the silhouette metric\&. 
+.RE
+.PP
+
+.PP
+Definition at line 342 of file Kmeans\&.cpp\&.
+.SS "double Kmeans::calculateWCSS ()"
+Computes within cluster sum of squares (WCSS)\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the value of WCSS\&. 
+.RE
+.PP
+
+.PP
+Definition at line 399 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::createClusterIDPointsOfClusterIDsAllocation ()"
+
+.PP
+Definition at line 296 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::createPointIDClusterIDAllocation ()"
+
+.PP
+Definition at line 285 of file Kmeans\&.cpp\&.
+.SS "int Kmeans::getDimension () const"
+Returns the dimension of the points of the dataset\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the features dimension\&. 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file Kmeans\&.cpp\&.
+.SS "int Kmeans::getK () const"
+Returns the number of clusters\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the number of clusters\&. 
+.RE
+.PP
+
+.PP
+Definition at line 125 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::initialize ()"
+Makes the final clusters of the iteration n - 1, initial clusters for the iteration n\&. 
+.PP
+Definition at line 244 of file Kmeans\&.cpp\&.
+.SS "bool Kmeans::isOver ()"
+Checks if the algorithm converged\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true if the algorithm converged, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line 232 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::runKmeans ()"
+Runs the k-means routine\&. 
+.PP
+Definition at line 255 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::setDimension (int dimension)"
+Sets the dimension of the points of the dataset\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdimension\fP the features dimension (i\&.e\&. number of features)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 110 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::setFinalClusters ()"
+Generates current clusters\&. 
+.PP
+Definition at line 199 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::setInitialClustersByInitialPoints ()"
+Creates the initial clusters by choosing the first k points from the dataset\&. 
+.PP
+Definition at line 142 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::setInitialClustersRandomly ()"
+Creates the initial clusters by choosing k random points from the dataset\&. 
+.PP
+Definition at line 130 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::setK (int k)"
+Sets the number of clusters\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIk\fP the number of clusters\&. 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::setPointsToClusters ()"
+Assigns points to clusters\&. 
+.PP
+Definition at line 151 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::writeCentroidsToFile (std::string centroidsFilename)"
+
+.PP
+Definition at line 274 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::writeClusterIDPointsOfClusterIDsAllocationToFile (std::string allocationFilename1)"
+
+.PP
+Definition at line 310 of file Kmeans\&.cpp\&.
+.SS "void Kmeans::writePointIDClusterIDAllocationToFile (std::string allocationFilename2)"
+
+.PP
+Definition at line 329 of file Kmeans\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBIntIntVectorMap\fP Kmeans::clusterIDPointsOfClusterIDsAllocation"
+
+.PP
+Definition at line 32 of file Kmeans\&.h\&.
+.SS "std::vector<\fBCluster\fP> Kmeans::finalClusters"
+current clusters\&. 
+.PP
+Definition at line 28 of file Kmeans\&.h\&.
+.SS "std::vector<\fBCluster\fP> Kmeans::initialClusters"
+initial clusters\&. 
+.PP
+Definition at line 25 of file Kmeans\&.h\&.
+.SS "\fBIntIntMap\fP Kmeans::pointIDClusterIDAllocation"
+
+.PP
+Definition at line 31 of file Kmeans\&.h\&.
+.SS "std::vector<\fBPoint\fP> Kmeans::points"
+the data points (full dataset) to be clustered\&. 
+.PP
+Definition at line 22 of file Kmeans\&.h\&.
+.SS "std::vector<\fBIntIntPair\fP> Kmeans::sizes"
+
+.PP
+Definition at line 30 of file Kmeans\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for k-means in native C++ from the source code\&.

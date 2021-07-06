@@ -1,0 +1,278 @@
+.TH "PropertiesParser" 3 "Tue Jul 6 2021" "Version 1.0" "k-means in native C++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PropertiesParser
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PropertiesParser\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPropertiesParser\fP (std::string propertiesFilename)"
+.br
+.ti -1c
+.RI "void \fBaddPropertiesFile\fP (std::string propertiesFilename)"
+.br
+.ti -1c
+.RI "bool \fBpropertyExists\fP (std::string propertyName)"
+.br
+.ti -1c
+.RI "std::string \fBgetPropertyAsString\fP (std::string propertyName)"
+.br
+.ti -1c
+.RI "int \fBgetPropertyAsInt\fP (std::string propertyName)"
+.br
+.ti -1c
+.RI "bool \fBgetPropertyAsBool\fP (std::string propertyName)"
+.br
+.ti -1c
+.RI "float \fBgetPropertyAsFloat\fP (std::string propertyName)"
+.br
+.ti -1c
+.RI "double \fBgetPropertyAsDouble\fP (std::string propertyName)"
+.br
+.ti -1c
+.RI "std::string \fBgetPropertyAsStringOrDefaultTo\fP (std::string propertyName, std::string defaultPropertyValue)"
+.br
+.ti -1c
+.RI "int \fBgetPropertyAsIntOrDefaultTo\fP (std::string propertyName, int defaultPropertyValue)"
+.br
+.ti -1c
+.RI "bool \fBgetPropertyAsBoolOrDefaultTo\fP (std::string propertyName, bool defaultPropertyValue)"
+.br
+.ti -1c
+.RI "float \fBgetPropertyAsFloatOrDefaultTo\fP (std::string propertyName, float defaultPropertyValue)"
+.br
+.ti -1c
+.RI "double \fBgetPropertyAsDoubleOrDefaultTo\fP (std::string propertyName, double defaultPropertyValue)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::map< std::string, std::string > \fBpropMap\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 6 of file PropertiesParser\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PropertiesParser::PropertiesParser (std::string propertiesFilename)"
+Constructor\&. 
+.PP
+Definition at line 6 of file PropertiesParser\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void PropertiesParser::addPropertiesFile (std::string propertiesFilename)"
+Creates the properties map from the properties contained in a file\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertiesFilename\fP the name of the file that contains the properties\&. 
+.RE
+.PP
+
+.PP
+Definition at line 11 of file PropertiesParser\&.cpp\&.
+.SS "bool PropertiesParser::getPropertyAsBool (std::string propertyName)"
+Returns a property as type bool\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the bool type property\&. 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file PropertiesParser\&.cpp\&.
+.SS "bool PropertiesParser::getPropertyAsBoolOrDefaultTo (std::string propertyName, bool defaultPropertyValue)"
+Returns a property as type bool, or return a default bool type value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property\&. 
+.br
+\fIdefaultPropertyValue\fP the default value of the property 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the bool type property, or a default bool type value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 101 of file PropertiesParser\&.cpp\&.
+.SS "double PropertiesParser::getPropertyAsDouble (std::string propertyName)"
+Returns a property as type double\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the double type property\&. 
+.RE
+.PP
+
+.PP
+Definition at line 69 of file PropertiesParser\&.cpp\&.
+.SS "double PropertiesParser::getPropertyAsDoubleOrDefaultTo (std::string propertyName, double defaultPropertyValue)"
+Returns a property as type double, or return a default double type value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property\&. 
+.br
+\fIdefaultPropertyValue\fP the default value of the property 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the double type property, or a default double type value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 125 of file PropertiesParser\&.cpp\&.
+.SS "float PropertiesParser::getPropertyAsFloat (std::string propertyName)"
+Returns a property as type float\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the float type property\&. 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file PropertiesParser\&.cpp\&.
+.SS "float PropertiesParser::getPropertyAsFloatOrDefaultTo (std::string propertyName, float defaultPropertyValue)"
+Returns a property as type float, or return a default float type value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property\&. 
+.br
+\fIdefaultPropertyValue\fP the default value of the property 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the int float property, or a default float type value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 113 of file PropertiesParser\&.cpp\&.
+.SS "int PropertiesParser::getPropertyAsInt (std::string propertyName)"
+Returns a property as type int\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the int type property\&. 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file PropertiesParser\&.cpp\&.
+.SS "int PropertiesParser::getPropertyAsIntOrDefaultTo (std::string propertyName, int defaultPropertyValue)"
+Returns a property as type int, or return a default int type value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property\&. 
+.br
+\fIdefaultPropertyValue\fP the default value of the property 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the int type property, or a default int type value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 89 of file PropertiesParser\&.cpp\&.
+.SS "std::string PropertiesParser::getPropertyAsString (std::string propertyName)"
+Returns a property as type string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the string type property\&. 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file PropertiesParser\&.cpp\&.
+.SS "std::string PropertiesParser::getPropertyAsStringOrDefaultTo (std::string propertyName, std::string defaultPropertyValue)"
+Returns a property as type string, or return a default string type value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property\&. 
+.br
+\fIdefaultPropertyValue\fP the default value of the property 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the string type property, or a default string type value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file PropertiesParser\&.cpp\&.
+.SS "bool PropertiesParser::propertyExists (std::string propertyName)"
+Checks if a specific property exists in the properties map\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropertyName\fP the name of the property to be checked\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if property exists in the properties map, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line 36 of file PropertiesParser\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::map<std::string, std::string> PropertiesParser::propMap\fC [protected]\fP"
+A map containing property names as keys and property values as values\&. 
+.PP
+Definition at line 13 of file PropertiesParser\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for k-means in native C++ from the source code\&.

@@ -1,0 +1,401 @@
+\section{Kmeans Class Reference}
+\label{class_kmeans}\index{Kmeans@{Kmeans}}
+
+
+{\ttfamily \#include $<$Kmeans.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Kmeans} (std\+::string dataset\+Filename, std\+::string properties\+File\+Name)
+\item 
+\textbf{ Kmeans} (std\+::string dataset\+Filename, int d, int num\+Of\+Clusters, int num\+It, int dist\+Metric)
+\item 
+\textbf{ $\sim$\+Kmeans} ()
+\item 
+void \textbf{ set\+Dimension} (int dimension)
+\item 
+int \textbf{ get\+Dimension} () const
+\item 
+void \textbf{ setK} (int k)
+\item 
+int \textbf{ getK} () const
+\item 
+void \textbf{ set\+Points\+To\+Clusters} ()
+\item 
+void \textbf{ set\+Initial\+Clusters\+Randomly} ()
+\item 
+void \textbf{ set\+Initial\+Clusters\+By\+Initial\+Points} ()
+\item 
+void \textbf{ set\+Final\+Clusters} ()
+\item 
+void \textbf{ initialize} ()
+\item 
+bool \textbf{ is\+Over} ()
+\item 
+void \textbf{ run\+Kmeans} ()
+\item 
+void \textbf{ write\+Centroids\+To\+File} (std\+::string centroids\+Filename)
+\item 
+void \textbf{ create\+Point\+I\+D\+Cluster\+I\+D\+Allocation} ()
+\item 
+void \textbf{ create\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation} ()
+\item 
+void \textbf{ write\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation\+To\+File} (std\+::string allocation\+Filename1)
+\item 
+void \textbf{ write\+Point\+I\+D\+Cluster\+I\+D\+Allocation\+To\+File} (std\+::string allocation\+Filename2)
+\item 
+double \textbf{ calculate\+Silhouette} ()
+\item 
+double \textbf{ calculate\+W\+C\+SS} ()
+\item 
+double \textbf{ calculate\+Davies\+Bouldin\+Index} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \textbf{ Point} $>$ \textbf{ points}
+\item 
+std\+::vector$<$ \textbf{ Cluster} $>$ \textbf{ initial\+Clusters}
+\item 
+std\+::vector$<$ \textbf{ Cluster} $>$ \textbf{ final\+Clusters}
+\item 
+std\+::vector$<$ \textbf{ Int\+Int\+Pair} $>$ \textbf{ sizes}
+\item 
+\textbf{ Int\+Int\+Map} \textbf{ point\+I\+D\+Cluster\+I\+D\+Allocation}
+\item 
+\textbf{ Int\+Int\+Vector\+Map} \textbf{ cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file Kmeans.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_kmeans_ab303603966171f08fa40a1abffb10a8f}} 
+\index{Kmeans@{Kmeans}!Kmeans@{Kmeans}}
+\index{Kmeans@{Kmeans}!Kmeans@{Kmeans}}
+\subsubsection{Kmeans()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Kmeans\+::\+Kmeans (\begin{DoxyParamCaption}\item[{std\+::string}]{dataset\+Filename,  }\item[{std\+::string}]{properties\+File\+Name }\end{DoxyParamCaption})}
+
+Constructor 1. 
+
+Definition at line 10 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_ac761bc0e5ccd783a85a9dcf974317d9b}} 
+\index{Kmeans@{Kmeans}!Kmeans@{Kmeans}}
+\index{Kmeans@{Kmeans}!Kmeans@{Kmeans}}
+\subsubsection{Kmeans()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Kmeans\+::\+Kmeans (\begin{DoxyParamCaption}\item[{std\+::string}]{dataset\+Filename,  }\item[{int}]{d,  }\item[{int}]{num\+Of\+Clusters,  }\item[{int}]{num\+It,  }\item[{int}]{dist\+Metric }\end{DoxyParamCaption})}
+
+Constructor 2. 
+
+Definition at line 50 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a198e4d588262f44d6ebe058796d2860e}} 
+\index{Kmeans@{Kmeans}!````~Kmeans@{$\sim$\+Kmeans}}
+\index{````~Kmeans@{$\sim$\+Kmeans}!Kmeans@{Kmeans}}
+\subsubsection{$\sim$\+Kmeans()}
+{\footnotesize\ttfamily Kmeans\+::$\sim$\+Kmeans (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. 
+
+Definition at line 86 of file Kmeans.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_kmeans_a8732bbbb9945c2b477c3696ffd7a519b}} 
+\index{Kmeans@{Kmeans}!calculate\+Davies\+Bouldin\+Index@{calculate\+Davies\+Bouldin\+Index}}
+\index{calculate\+Davies\+Bouldin\+Index@{calculate\+Davies\+Bouldin\+Index}!Kmeans@{Kmeans}}
+\subsubsection{calculate\+Davies\+Bouldin\+Index()}
+{\footnotesize\ttfamily double Kmeans\+::calculate\+Davies\+Bouldin\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Computes the Davies-\/\+Bouldin index. {\tt http\+://en.\+wikipedia.\+org/wiki/\+Davies\%\+E2\%80\%93\+Bouldin\+\_\+index} \begin{DoxyReturn}{Returns}
+the value of Davies-\/\+Bouldin index. 
+\end{DoxyReturn}
+
+
+Definition at line 414 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a4d6a55c1b2fd757020bdb30c8668c676}} 
+\index{Kmeans@{Kmeans}!calculate\+Silhouette@{calculate\+Silhouette}}
+\index{calculate\+Silhouette@{calculate\+Silhouette}!Kmeans@{Kmeans}}
+\subsubsection{calculate\+Silhouette()}
+{\footnotesize\ttfamily double Kmeans\+::calculate\+Silhouette (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{Cluster}{p.}{class_cluster} validity metrics ~\newline
+
+
+Computes the silhouette metric. {\tt https\+://en.\+wikipedia.\+org/wiki/\+Silhouette\+\_\+(clustering)} \begin{DoxyReturn}{Returns}
+the value of the silhouette metric. 
+\end{DoxyReturn}
+
+
+Definition at line 342 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a8f5acf7f3063bb8809bc057671f1009b}} 
+\index{Kmeans@{Kmeans}!calculate\+W\+C\+SS@{calculate\+W\+C\+SS}}
+\index{calculate\+W\+C\+SS@{calculate\+W\+C\+SS}!Kmeans@{Kmeans}}
+\subsubsection{calculate\+W\+C\+S\+S()}
+{\footnotesize\ttfamily double Kmeans\+::calculate\+W\+C\+SS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Computes within cluster sum of squares (W\+C\+SS). \begin{DoxyReturn}{Returns}
+the value of W\+C\+SS. 
+\end{DoxyReturn}
+
+
+Definition at line 399 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a033a59c81733a7bc1d330c29d2d7f51b}} 
+\index{Kmeans@{Kmeans}!create\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation@{create\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation}}
+\index{create\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation@{create\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation}!Kmeans@{Kmeans}}
+\subsubsection{create\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation()}
+{\footnotesize\ttfamily void Kmeans\+::create\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 296 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_adcbac766aa19bd96820946709144fdfe}} 
+\index{Kmeans@{Kmeans}!create\+Point\+I\+D\+Cluster\+I\+D\+Allocation@{create\+Point\+I\+D\+Cluster\+I\+D\+Allocation}}
+\index{create\+Point\+I\+D\+Cluster\+I\+D\+Allocation@{create\+Point\+I\+D\+Cluster\+I\+D\+Allocation}!Kmeans@{Kmeans}}
+\subsubsection{create\+Point\+I\+D\+Cluster\+I\+D\+Allocation()}
+{\footnotesize\ttfamily void Kmeans\+::create\+Point\+I\+D\+Cluster\+I\+D\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 285 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a82391dcbe29cd0e3afc811d7b52b76ca}} 
+\index{Kmeans@{Kmeans}!get\+Dimension@{get\+Dimension}}
+\index{get\+Dimension@{get\+Dimension}!Kmeans@{Kmeans}}
+\subsubsection{get\+Dimension()}
+{\footnotesize\ttfamily int Kmeans\+::get\+Dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the dimension of the points of the dataset. \begin{DoxyReturn}{Returns}
+the features dimension. 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a7e6a36baecd32b90e88aafdfc95abbe4}} 
+\index{Kmeans@{Kmeans}!getK@{getK}}
+\index{getK@{getK}!Kmeans@{Kmeans}}
+\subsubsection{get\+K()}
+{\footnotesize\ttfamily int Kmeans\+::getK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of clusters. \begin{DoxyReturn}{Returns}
+the number of clusters. 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a9de93e3a4ad5a6af3c459d19df941d00}} 
+\index{Kmeans@{Kmeans}!initialize@{initialize}}
+\index{initialize@{initialize}!Kmeans@{Kmeans}}
+\subsubsection{initialize()}
+{\footnotesize\ttfamily void Kmeans\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Makes the final clusters of the iteration n -\/ 1, initial clusters for the iteration n. 
+
+Definition at line 244 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a0d715e37f0f9c3a8ed061c3ad5393a88}} 
+\index{Kmeans@{Kmeans}!is\+Over@{is\+Over}}
+\index{is\+Over@{is\+Over}!Kmeans@{Kmeans}}
+\subsubsection{is\+Over()}
+{\footnotesize\ttfamily bool Kmeans\+::is\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the algorithm converged. \begin{DoxyReturn}{Returns}
+true if the algorithm converged, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a71506d95b271c5b7d50c8f293cf7615e}} 
+\index{Kmeans@{Kmeans}!run\+Kmeans@{run\+Kmeans}}
+\index{run\+Kmeans@{run\+Kmeans}!Kmeans@{Kmeans}}
+\subsubsection{run\+Kmeans()}
+{\footnotesize\ttfamily void Kmeans\+::run\+Kmeans (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Runs the k-\/means routine. 
+
+Definition at line 255 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a1b8aee6f50d023d7e07009ca4ff0cf00}} 
+\index{Kmeans@{Kmeans}!set\+Dimension@{set\+Dimension}}
+\index{set\+Dimension@{set\+Dimension}!Kmeans@{Kmeans}}
+\subsubsection{set\+Dimension()}
+{\footnotesize\ttfamily void Kmeans\+::set\+Dimension (\begin{DoxyParamCaption}\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+Sets the dimension of the points of the dataset. 
+\begin{DoxyParams}{Parameters}
+{\em dimension} & the features dimension (i.\+e. number of features). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 110 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a4bedfc10423edd102ee842b8aeec441b}} 
+\index{Kmeans@{Kmeans}!set\+Final\+Clusters@{set\+Final\+Clusters}}
+\index{set\+Final\+Clusters@{set\+Final\+Clusters}!Kmeans@{Kmeans}}
+\subsubsection{set\+Final\+Clusters()}
+{\footnotesize\ttfamily void Kmeans\+::set\+Final\+Clusters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Generates current clusters. 
+
+Definition at line 199 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_ab43767b9c6712459a17c69aacbc02819}} 
+\index{Kmeans@{Kmeans}!set\+Initial\+Clusters\+By\+Initial\+Points@{set\+Initial\+Clusters\+By\+Initial\+Points}}
+\index{set\+Initial\+Clusters\+By\+Initial\+Points@{set\+Initial\+Clusters\+By\+Initial\+Points}!Kmeans@{Kmeans}}
+\subsubsection{set\+Initial\+Clusters\+By\+Initial\+Points()}
+{\footnotesize\ttfamily void Kmeans\+::set\+Initial\+Clusters\+By\+Initial\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates the initial clusters by choosing the first k points from the dataset. 
+
+Definition at line 142 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a91c4453e176ed1d5f90f8f5d84ff346a}} 
+\index{Kmeans@{Kmeans}!set\+Initial\+Clusters\+Randomly@{set\+Initial\+Clusters\+Randomly}}
+\index{set\+Initial\+Clusters\+Randomly@{set\+Initial\+Clusters\+Randomly}!Kmeans@{Kmeans}}
+\subsubsection{set\+Initial\+Clusters\+Randomly()}
+{\footnotesize\ttfamily void Kmeans\+::set\+Initial\+Clusters\+Randomly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates the initial clusters by choosing k random points from the dataset. 
+
+Definition at line 130 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_aa3b881526fc71a799e9bbb5232b212a5}} 
+\index{Kmeans@{Kmeans}!setK@{setK}}
+\index{setK@{setK}!Kmeans@{Kmeans}}
+\subsubsection{set\+K()}
+{\footnotesize\ttfamily void Kmeans\+::setK (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})}
+
+Sets the number of clusters. 
+\begin{DoxyParams}{Parameters}
+{\em k} & the number of clusters. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a9e6309d7e0595b77a03064d5e8b32c84}} 
+\index{Kmeans@{Kmeans}!set\+Points\+To\+Clusters@{set\+Points\+To\+Clusters}}
+\index{set\+Points\+To\+Clusters@{set\+Points\+To\+Clusters}!Kmeans@{Kmeans}}
+\subsubsection{set\+Points\+To\+Clusters()}
+{\footnotesize\ttfamily void Kmeans\+::set\+Points\+To\+Clusters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Assigns points to clusters. 
+
+Definition at line 151 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a8ab27fb4fc940c55234b40950d6bd51f}} 
+\index{Kmeans@{Kmeans}!write\+Centroids\+To\+File@{write\+Centroids\+To\+File}}
+\index{write\+Centroids\+To\+File@{write\+Centroids\+To\+File}!Kmeans@{Kmeans}}
+\subsubsection{write\+Centroids\+To\+File()}
+{\footnotesize\ttfamily void Kmeans\+::write\+Centroids\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{centroids\+Filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 274 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a9a8994567cffa176f187784b3f31a1f5}} 
+\index{Kmeans@{Kmeans}!write\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation\+To\+File@{write\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation\+To\+File}}
+\index{write\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation\+To\+File@{write\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation\+To\+File}!Kmeans@{Kmeans}}
+\subsubsection{write\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation\+To\+File()}
+{\footnotesize\ttfamily void Kmeans\+::write\+Cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{allocation\+Filename1 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 310 of file Kmeans.\+cpp.
+
+\mbox{\label{class_kmeans_a211500cbcd8d204437b2407832184dcc}} 
+\index{Kmeans@{Kmeans}!write\+Point\+I\+D\+Cluster\+I\+D\+Allocation\+To\+File@{write\+Point\+I\+D\+Cluster\+I\+D\+Allocation\+To\+File}}
+\index{write\+Point\+I\+D\+Cluster\+I\+D\+Allocation\+To\+File@{write\+Point\+I\+D\+Cluster\+I\+D\+Allocation\+To\+File}!Kmeans@{Kmeans}}
+\subsubsection{write\+Point\+I\+D\+Cluster\+I\+D\+Allocation\+To\+File()}
+{\footnotesize\ttfamily void Kmeans\+::write\+Point\+I\+D\+Cluster\+I\+D\+Allocation\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{allocation\+Filename2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 329 of file Kmeans.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{class_kmeans_ab26a33efd06bc2f49be01e6a1c8f9812}} 
+\index{Kmeans@{Kmeans}!cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation@{cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation}}
+\index{cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation@{cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation}!Kmeans@{Kmeans}}
+\subsubsection{cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation}
+{\footnotesize\ttfamily \textbf{ Int\+Int\+Vector\+Map} Kmeans\+::cluster\+I\+D\+Points\+Of\+Cluster\+I\+Ds\+Allocation}
+
+
+
+Definition at line 32 of file Kmeans.\+h.
+
+\mbox{\label{class_kmeans_a8b71b3dfd0cf2fc039dc551bfd9ba363}} 
+\index{Kmeans@{Kmeans}!final\+Clusters@{final\+Clusters}}
+\index{final\+Clusters@{final\+Clusters}!Kmeans@{Kmeans}}
+\subsubsection{final\+Clusters}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ Cluster}$>$ Kmeans\+::final\+Clusters}
+
+current clusters. 
+
+Definition at line 28 of file Kmeans.\+h.
+
+\mbox{\label{class_kmeans_aa09b81f3736506ecf1a2e3159239af1d}} 
+\index{Kmeans@{Kmeans}!initial\+Clusters@{initial\+Clusters}}
+\index{initial\+Clusters@{initial\+Clusters}!Kmeans@{Kmeans}}
+\subsubsection{initial\+Clusters}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ Cluster}$>$ Kmeans\+::initial\+Clusters}
+
+initial clusters. 
+
+Definition at line 25 of file Kmeans.\+h.
+
+\mbox{\label{class_kmeans_a57ef3abd342caa1fb1d28d1ad4730cd2}} 
+\index{Kmeans@{Kmeans}!point\+I\+D\+Cluster\+I\+D\+Allocation@{point\+I\+D\+Cluster\+I\+D\+Allocation}}
+\index{point\+I\+D\+Cluster\+I\+D\+Allocation@{point\+I\+D\+Cluster\+I\+D\+Allocation}!Kmeans@{Kmeans}}
+\subsubsection{point\+I\+D\+Cluster\+I\+D\+Allocation}
+{\footnotesize\ttfamily \textbf{ Int\+Int\+Map} Kmeans\+::point\+I\+D\+Cluster\+I\+D\+Allocation}
+
+
+
+Definition at line 31 of file Kmeans.\+h.
+
+\mbox{\label{class_kmeans_ab97ccaa2b375814349d7acf5f5929751}} 
+\index{Kmeans@{Kmeans}!points@{points}}
+\index{points@{points}!Kmeans@{Kmeans}}
+\subsubsection{points}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ Point}$>$ Kmeans\+::points}
+
+the data points (full dataset) to be clustered. 
+
+Definition at line 22 of file Kmeans.\+h.
+
+\mbox{\label{class_kmeans_a7dfb343814b98b5104f0f970b2d5ae72}} 
+\index{Kmeans@{Kmeans}!sizes@{sizes}}
+\index{sizes@{sizes}!Kmeans@{Kmeans}}
+\subsubsection{sizes}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ Int\+Int\+Pair}$>$ Kmeans\+::sizes}
+
+
+
+Definition at line 30 of file Kmeans.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Kmeans.\+h}\item 
+\textbf{ Kmeans.\+cpp}\end{DoxyCompactItemize}

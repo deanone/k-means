@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacemf" kind="namespace" language="C++">
+    <compoundname>mf</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t mf::minSize</definition>
+        <argsstring>(Point &amp;p, Point &amp;q)</argsstring>
+        <name>minSize</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the minimum of the sizes of two <ref refid="class_point" kindref="compound">Point</ref> objects. <simplesect kind="return"><para>the minimum of the sizes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="13" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="3" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1ad29e1be602cf1426190438ba4a978886" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::mean</definition>
+        <argsstring>(Point &amp;p)</argsstring>
+        <name>mean</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the mean value of a <ref refid="class_point" kindref="compound">Point</ref>. <simplesect kind="return"><para>the mean value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="19" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1a7b665e7f861360232bc6ff8b4ab53b79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::stDev</definition>
+        <argsstring>(Point &amp;p)</argsstring>
+        <name>stDev</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the standard deviation value of a <ref refid="class_point" kindref="compound">Point</ref>. <simplesect kind="return"><para>the standard deviation value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="25" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="16" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1a40500525d65df0f162783485b005a17c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::euclideanDistance</definition>
+        <argsstring>(Point &amp;p, Point &amp;q)</argsstring>
+        <name>euclideanDistance</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the Euclidean distance between two <ref refid="class_point" kindref="compound">Point</ref> objects. <ulink url="https://en.wikipedia.org/wiki/Euclidean_distance">https://en.wikipedia.org/wiki/Euclidean_distance</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first <ref refid="class_point" kindref="compound">Point</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second <ref refid="class_point" kindref="compound">Point</ref>.  the Euclidean distance. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="36" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="25" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1a18bfb051b8501f49ad1ce7910cf5fa4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::euclideanDistanceSquared</definition>
+        <argsstring>(Point &amp;p, Point &amp;q)</argsstring>
+        <name>euclideanDistanceSquared</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the squared Euclidean distance between two <ref refid="class_point" kindref="compound">Point</ref> objects. <ulink url="https://en.wikipedia.org/wiki/Euclidean_distance">https://en.wikipedia.org/wiki/Euclidean_distance</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first <ref refid="class_point" kindref="compound">Point</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second <ref refid="class_point" kindref="compound">Point</ref>.  the squared Euclidean distance. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="45" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1a040ab6b23a68d7a4c2f818c1eae58644" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::manhattanDistance</definition>
+        <argsstring>(Point &amp;p, Point &amp;q)</argsstring>
+        <name>manhattanDistance</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the Manhattan (or taxicab) distance between two <ref refid="class_point" kindref="compound">Point</ref> objects. <ulink url="https://en.wikipedia.org/wiki/Taxicab_geometry">https://en.wikipedia.org/wiki/Taxicab_geometry</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first <ref refid="class_point" kindref="compound">Point</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second <ref refid="class_point" kindref="compound">Point</ref>.  the Manhattan distance. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="54" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="42" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1aff2481aba46c30ed52226097357bb526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::chebyshevDistance</definition>
+        <argsstring>(Point &amp;p, Point &amp;q)</argsstring>
+        <name>chebyshevDistance</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the Chebyshev distance between two <ref refid="class_point" kindref="compound">Point</ref> objects. <ulink url="https://en.wikipedia.org/wiki/Chebyshev_distance">https://en.wikipedia.org/wiki/Chebyshev_distance</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first <ref refid="class_point" kindref="compound">Point</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second <ref refid="class_point" kindref="compound">Point</ref>.  the Chebyshev distance. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="63" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="53" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1a53713d1a18fc6069e8da721e56dda3d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::brayCurtisDistance</definition>
+        <argsstring>(Point &amp;p, Point &amp;q)</argsstring>
+        <name>brayCurtisDistance</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the Bray–Curtis distance between two <ref refid="class_point" kindref="compound">Point</ref> objects. <ulink url="https://en.wikipedia.org/wiki/Bray%E2%80%93Curtis_dissimilarity">https://en.wikipedia.org/wiki/Bray%E2%80%93Curtis_dissimilarity</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first <ref refid="class_point" kindref="compound">Point</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second <ref refid="class_point" kindref="compound">Point</ref>.  the Bray–Curtis distance. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="72" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="68" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1a000039a6817d1eaab151f74651c5fac4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::canberraDistance</definition>
+        <argsstring>(Point &amp;p, Point &amp;q)</argsstring>
+        <name>canberraDistance</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the Canberra distance between two <ref refid="class_point" kindref="compound">Point</ref> objects. <ulink url="https://en.wikipedia.org/wiki/Canberra_distance">https://en.wikipedia.org/wiki/Canberra_distance</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first <ref refid="class_point" kindref="compound">Point</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second <ref refid="class_point" kindref="compound">Point</ref>.  the Canberra distance. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="81" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="82" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1a00075eb9a854aee2323bf1f9e51cf1fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::pearsonCorrelation</definition>
+        <argsstring>(Point &amp;p, Point &amp;q)</argsstring>
+        <name>pearsonCorrelation</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the Pearson correlation coefficient between two <ref refid="class_point" kindref="compound">Point</ref> objects. <ulink url="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient">https://en.wikipedia.org/wiki/Pearson_correlation_coefficient</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first <ref refid="class_point" kindref="compound">Point</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second <ref refid="class_point" kindref="compound">Point</ref>.  the Pearson correlation coefficient. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="92" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="93" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1ad3df0be2c20cff9d29cc6b3c550fd467" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::cosineSimilarity</definition>
+        <argsstring>(Point &amp;p, Point &amp;q)</argsstring>
+        <name>cosineSimilarity</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the cosine similarity between two <ref refid="class_point" kindref="compound">Point</ref> objects. <ulink url="https://en.wikipedia.org/wiki/Cosine_similarity">https://en.wikipedia.org/wiki/Cosine_similarity</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first <ref refid="class_point" kindref="compound">Point</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second <ref refid="class_point" kindref="compound">Point</ref>.  the cosine similarity. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="101" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="111" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemf_1a0a73292f72b80df3a0c6b970e2ca4be6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mf::dot</definition>
+        <argsstring>(Point &amp;p, Point &amp;q)</argsstring>
+        <name>dot</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the dot product between two <ref refid="class_point" kindref="compound">Point</ref> objects. <ulink url="https://en.wikipedia.org/wiki/Dot_product">https://en.wikipedia.org/wiki/Dot_product</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first <ref refid="class_point" kindref="compound">Point</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second <ref refid="class_point" kindref="compound">Point</ref>.  the dot product. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MathematicalFunctions.h" line="112" column="1" bodyfile="MathematicalFunctions.cpp" bodystart="128" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="MathematicalFunctions.h" line="7" column="1"/>
+  </compounddef>
+</doxygen>

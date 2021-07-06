@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_cluster_8h" kind="file" language="C++">
+    <compoundname>Cluster.h</compoundname>
+    <includes refid="_point_8h" local="yes">Point.h</includes>
+    <includedby refid="_cluster_8cpp" local="yes">Cluster.cpp</includedby>
+    <includedby refid="_kmeans_8h" local="yes">Kmeans.h</includedby>
+    <incdepgraph>
+      <node id="37">
+        <label>functional</label>
+      </node>
+      <node id="29">
+        <label>cmath</label>
+      </node>
+      <node id="35">
+        <label>numeric</label>
+      </node>
+      <node id="26">
+        <label>string</label>
+      </node>
+      <node id="33">
+        <label>map</label>
+      </node>
+      <node id="24">
+        <label>fstream</label>
+      </node>
+      <node id="20">
+        <label>Cluster.h</label>
+        <link refid="_cluster_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>ctime</label>
+      </node>
+      <node id="21">
+        <label>Point.h</label>
+        <link refid="_point_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>unistd.h</label>
+      </node>
+      <node id="32">
+        <label>vector</label>
+      </node>
+      <node id="25">
+        <label>sstream</label>
+      </node>
+      <node id="27">
+        <label>cstdlib</label>
+      </node>
+      <node id="23">
+        <label>iostream</label>
+      </node>
+      <node id="30">
+        <label>climits</label>
+      </node>
+      <node id="22">
+        <label>DataTypes.h</label>
+        <link refid="_data_types_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>complex</label>
+      </node>
+      <node id="34">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="39">
+        <label>Cluster.cpp</label>
+        <link refid="_cluster_8cpp"/>
+      </node>
+      <node id="41">
+        <label>Kmeans.cpp</label>
+        <link refid="_kmeans_8cpp"/>
+      </node>
+      <node id="38">
+        <label>Cluster.h</label>
+        <link refid="_cluster_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="40">
+        <label>Kmeans.h</label>
+        <link refid="_kmeans_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_cluster" prot="public">Cluster</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CLUSTER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLUSTER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_point_8h" kindref="compound">Point.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_cluster" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cluster" kindref="compound">Cluster</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID;<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11" refid="class_cluster_1ac1d89bf8b236d6fe18a0865276274d9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Point*&gt;<sp/><ref refid="class_cluster_1ac1d89bf8b236d6fe18a0865276274d9c" kindref="member">pointsOfCluster</ref>;<sp/></highlight></codeline>
+<codeline lineno="12" refid="class_cluster_1acc4e23a98671996549c96284a5b57976" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_cluster_1acc4e23a98671996549c96284a5b57976" kindref="member">center</ref>;<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cluster_1a5e07ba3b4772eb29eeac0095eef3cd3a" kindref="member">Cluster</ref>(<ref refid="class_point" kindref="compound">Point</ref><sp/>c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cluster_1a4bddfc88ac859610acab15dd12851b58" kindref="member">~Cluster</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1a6b6cf07bd9eb4ed49231265e33ea335a" kindref="member">setID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1a7e3843eaa486b9dd28de25a7c9f4e1f9" kindref="member">getID</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1a62456a396315240a3fbfbcb060f0e6ca" kindref="member">setCenter</ref>(<ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;<ref refid="class_cluster_1acc4e23a98671996549c96284a5b57976" kindref="member">center</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_cluster_1a72b992c37dc0792e84dbe5ac2d89bbbe" kindref="member">getCenter</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1a43ab4e6a60110bba519e54a1634521fc" kindref="member">setPointsToCluster</ref>(<ref refid="class_point" kindref="compound">Point</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1a937233153e5610b9e8d91815e3a43b5e" kindref="member">getNumOfPointsInCluster</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref>*<sp/><ref refid="class_cluster_1a77c17b4532c831f5c9c3ef9fdc4f3822" kindref="member">getPointOfCluster</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1afa46912376ac9690ee946612ddc99c76" kindref="member">clearPointsOfCluster</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1ae1bfa43c1d8e63b5b7c8de057822655e" kindref="member">operator==</ref>(<ref refid="class_cluster" kindref="compound">Cluster</ref><sp/>&amp;c);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1a2e34a51e1018f359c406effc187c3443" kindref="member">operator&lt;</ref>(<ref refid="class_cluster" kindref="compound">Cluster</ref><sp/>&amp;c);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1a0a1e41f9daeb97afd1c38ccf057ab465" kindref="member">printCentroidInConsole</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1a7674117b1d96399b80866984ba9a7669" kindref="member">printAllocationInConsole</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1a854307ce8f209f71102f61c36dbfacf1" kindref="member">writeCentroidToFile</ref>(std::ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cluster_1a1d4245d0e9c51efac7cd51a9425466ad" kindref="member">writeAllocationToFile</ref>(std::ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/><sp/>CLUSTER_H</highlight></codeline>
+    </programlisting>
+    <location file="Cluster.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,57 @@
+.TH "FileFunc.h" 3 "Tue Jul 6 2021" "Version 1.0" "k-means in native C++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FileFunc.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBflnc\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::basic_istream< char, std::char_traits< char > > \fBminput_stream\fP"
+.br
+.ti -1c
+.RI "typedef std::basic_ostream< char, std::char_traits< char > > \fBmoutput_stream\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename TYPE > void \fBflnc::WriteVectorToFile\fP (\fBmoutput_stream\fP *TrainingFileOut, const std::vector< TYPE > &vec)"
+.br
+.ti -1c
+.RI "template<typename TYPE > void \fBflnc::Write2DVectorToFile\fP (\fBmoutput_stream\fP *TrainingFileOut, const std::vector< std::vector< TYPE > > &vec)"
+.br
+.ti -1c
+.RI "template<typename TYPE > void \fBflnc::ReadVectorFromFile\fP (\fBminput_stream\fP *TrainingFileIn, std::vector< TYPE > &vec)"
+.br
+.ti -1c
+.RI "template<typename TYPE > void \fBflnc::Read2DVectorFromFile\fP (\fBminput_stream\fP *TrainingFileIn, std::vector< std::vector< TYPE > > &vec)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef std::basic_istream<char,std::char_traits<char> > \fBminput_stream\fP"
+
+.PP
+Definition at line 5 of file FileFunc\&.h\&.
+.SS "typedef std::basic_ostream<char,std::char_traits<char> > \fBmoutput_stream\fP"
+
+.PP
+Definition at line 6 of file FileFunc\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for k-means in native C++ from the source code\&.

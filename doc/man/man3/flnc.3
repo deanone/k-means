@@ -1,0 +1,111 @@
+.TH "flnc" 3 "Tue Jul 6 2021" "Version 1.0" "k-means in native C++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+flnc
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename TYPE > void \fBWriteVectorToFile\fP (\fBmoutput_stream\fP *TrainingFileOut, const std::vector< TYPE > &vec)"
+.br
+.ti -1c
+.RI "template<typename TYPE > void \fBWrite2DVectorToFile\fP (\fBmoutput_stream\fP *TrainingFileOut, const std::vector< std::vector< TYPE > > &vec)"
+.br
+.ti -1c
+.RI "template<typename TYPE > void \fBReadVectorFromFile\fP (\fBminput_stream\fP *TrainingFileIn, std::vector< TYPE > &vec)"
+.br
+.ti -1c
+.RI "template<typename TYPE > void \fBRead2DVectorFromFile\fP (\fBminput_stream\fP *TrainingFileIn, std::vector< std::vector< TYPE > > &vec)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "template<typename TYPE > void flnc::Read2DVectorFromFile (\fBminput_stream\fP * TrainingFileIn, std::vector< std::vector< TYPE > > & vec)"
+Reads a vector of vectors to file\&. The format of the file must be 
+.PP
+.nf
+number_of_vectors
+vector_size vector_1st_element vector_2nd_element \&.\&.\&.
+vector_size vector_1st_element vector_2nd_element \&.\&.\&.
+    \&.\&.\&.            \&.\&.\&.                \&.\&.\&.         \&.\&.\&.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fITrainingFileIn\fP the input stream of the file to read the vector from\&. 
+.br
+\fIvec\fP the vector of vectors to be read to file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file FileFunc\&.h\&.
+.SS "template<typename TYPE > void flnc::ReadVectorFromFile (\fBminput_stream\fP * TrainingFileIn, std::vector< TYPE > & vec)"
+Reads a vector from file\&. The format of the file must be 
+.PP
+.nf
+vector_size vector_1st_element vector_2nd_element \&.\&.\&.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fITrainingFileIn\fP the input stream of the file to read the vector from\&. 
+.br
+\fIvec\fP the vector to be read to file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file FileFunc\&.h\&.
+.SS "template<typename TYPE > void flnc::Write2DVectorToFile (\fBmoutput_stream\fP * TrainingFileOut, const std::vector< std::vector< TYPE > > & vec)"
+Writes a vector of vectors to file\&. The format is: 
+.PP
+.nf
+number_of_vectors
+vector_size vector_1st_element vector_2nd_element \&.\&.\&.
+vector_size vector_1st_element vector_2nd_element \&.\&.\&.
+    \&.\&.\&.            \&.\&.\&.                \&.\&.\&.         \&.\&.\&.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fITrainingFileOut\fP the output stream of the file to write the vector to\&. 
+.br
+\fIvec\fP the vector of vectors to be written to file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file FileFunc\&.h\&.
+.SS "template<typename TYPE > void flnc::WriteVectorToFile (\fBmoutput_stream\fP * TrainingFileOut, const std::vector< TYPE > & vec)"
+Writes a vector to file\&. The format is: 
+.PP
+.nf
+vector_size vector_1st_element vector_2nd_element \&.\&.\&.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fITrainingFileOut\fP the output stream of the file to write the vector to\&. 
+.br
+\fIvec\fP the vector to be written to file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file FileFunc\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for k-means in native C++ from the source code\&.

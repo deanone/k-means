@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_kmeans" kind="class" language="C++" prot="public">
+    <compoundname>Kmeans</compoundname>
+    <includes refid="_kmeans_8h" local="no">Kmeans.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_kmeans_1a3ba0328587f2a92b718648aa0220b7e7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Kmeans::dimension</definition>
+        <argsstring></argsstring>
+        <name>dimension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of dimensions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="10" column="1" bodyfile="Kmeans.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kmeans_1a7c85a9452b7d116fcba17c3c72596199" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Kmeans::k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of clusters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="13" column="1" bodyfile="Kmeans.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kmeans_1afe8748faa9e4f33182847abd9bf6e31c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Kmeans::numOfIterations</definition>
+        <argsstring></argsstring>
+        <name>numOfIterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="16" column="1" bodyfile="Kmeans.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kmeans_1a2c398ac00d735f60a03503ab3a12d24d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Kmeans::distanceMetric</definition>
+        <argsstring></argsstring>
+        <name>distanceMetric</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the type of used distance metric. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="19" column="1" bodyfile="Kmeans.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_kmeans_1ab97ccaa2b375814349d7acf5f5929751" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_point" kindref="compound">Point</ref> &gt;</type>
+        <definition>std::vector&lt;Point&gt; Kmeans::points</definition>
+        <argsstring></argsstring>
+        <name>points</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the data points (full dataset) to be clustered. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="22" column="1" bodyfile="Kmeans.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kmeans_1aa09b81f3736506ecf1a2e3159239af1d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_cluster" kindref="compound">Cluster</ref> &gt;</type>
+        <definition>std::vector&lt;Cluster&gt; Kmeans::initialClusters</definition>
+        <argsstring></argsstring>
+        <name>initialClusters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>initial clusters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="25" column="1" bodyfile="Kmeans.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kmeans_1a8b71b3dfd0cf2fc039dc551bfd9ba363" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_cluster" kindref="compound">Cluster</ref> &gt;</type>
+        <definition>std::vector&lt;Cluster&gt; Kmeans::finalClusters</definition>
+        <argsstring></argsstring>
+        <name>finalClusters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current clusters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="28" column="1" bodyfile="Kmeans.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kmeans_1a7dfb343814b98b5104f0f970b2d5ae72" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="_data_types_8h_1aafe152bbcb51930b658b8a4406f4d67e" kindref="member">IntIntPair</ref> &gt;</type>
+        <definition>std::vector&lt;IntIntPair&gt; Kmeans::sizes</definition>
+        <argsstring></argsstring>
+        <name>sizes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="30" column="1" bodyfile="Kmeans.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kmeans_1a57ef3abd342caa1fb1d28d1ad4730cd2" prot="public" static="no" mutable="no">
+        <type><ref refid="_data_types_8h_1a1972afbb2da11833cc5c4e7dda7936cf" kindref="member">IntIntMap</ref></type>
+        <definition>IntIntMap Kmeans::pointIDClusterIDAllocation</definition>
+        <argsstring></argsstring>
+        <name>pointIDClusterIDAllocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="31" column="1" bodyfile="Kmeans.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kmeans_1ab26a33efd06bc2f49be01e6a1c8f9812" prot="public" static="no" mutable="no">
+        <type><ref refid="_data_types_8h_1afae9076c89b4ed1654b0f85beb47af82" kindref="member">IntIntVectorMap</ref></type>
+        <definition>IntIntVectorMap Kmeans::clusterIDPointsOfClusterIDsAllocation</definition>
+        <argsstring></argsstring>
+        <name>clusterIDPointsOfClusterIDsAllocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="32" column="1" bodyfile="Kmeans.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_kmeans_1ab303603966171f08fa40a1abffb10a8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Kmeans::Kmeans</definition>
+        <argsstring>(std::string datasetFilename, std::string propertiesFileName)</argsstring>
+        <name>Kmeans</name>
+        <param>
+          <type>std::string</type>
+          <declname>datasetFilename</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>propertiesFileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor 1. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="38" column="1" bodyfile="Kmeans.cpp" bodystart="10" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1ac761bc0e5ccd783a85a9dcf974317d9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Kmeans::Kmeans</definition>
+        <argsstring>(std::string datasetFilename, int d, int numOfClusters, int numIt, int distMetric)</argsstring>
+        <name>Kmeans</name>
+        <param>
+          <type>std::string</type>
+          <declname>datasetFilename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numOfClusters</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numIt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>distMetric</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor 2. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="43" column="1" bodyfile="Kmeans.cpp" bodystart="50" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a198e4d588262f44d6ebe058796d2860e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Kmeans::~Kmeans</definition>
+        <argsstring>()</argsstring>
+        <name>~Kmeans</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="48" column="1" bodyfile="Kmeans.cpp" bodystart="86" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a1b8aee6f50d023d7e07009ca4ff0cf00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::setDimension</definition>
+        <argsstring>(int dimension)</argsstring>
+        <name>setDimension</name>
+        <param>
+          <type>int</type>
+          <declname>dimension</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the dimension of the points of the dataset. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dimension</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the features dimension (i.e. number of features). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="54" column="1" bodyfile="Kmeans.cpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a82391dcbe29cd0e3afc811d7b52b76ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Kmeans::getDimension</definition>
+        <argsstring>() const</argsstring>
+        <name>getDimension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the dimension of the points of the dataset. <simplesect kind="return"><para>the features dimension. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="60" column="1" bodyfile="Kmeans.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1aa3b881526fc71a799e9bbb5232b212a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::setK</definition>
+        <argsstring>(int k)</argsstring>
+        <name>setK</name>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the number of clusters. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of clusters. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="66" column="1" bodyfile="Kmeans.cpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a7e6a36baecd32b90e88aafdfc95abbe4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Kmeans::getK</definition>
+        <argsstring>() const</argsstring>
+        <name>getK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of clusters. <simplesect kind="return"><para>the number of clusters. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="72" column="1" bodyfile="Kmeans.cpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a9e6309d7e0595b77a03064d5e8b32c84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::setPointsToClusters</definition>
+        <argsstring>()</argsstring>
+        <name>setPointsToClusters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns points to clusters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="77" column="1" bodyfile="Kmeans.cpp" bodystart="151" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a91c4453e176ed1d5f90f8f5d84ff346a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::setInitialClustersRandomly</definition>
+        <argsstring>()</argsstring>
+        <name>setInitialClustersRandomly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates the initial clusters by choosing k random points from the dataset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="82" column="1" bodyfile="Kmeans.cpp" bodystart="130" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1ab43767b9c6712459a17c69aacbc02819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::setInitialClustersByInitialPoints</definition>
+        <argsstring>()</argsstring>
+        <name>setInitialClustersByInitialPoints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates the initial clusters by choosing the first k points from the dataset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="87" column="1" bodyfile="Kmeans.cpp" bodystart="142" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a4bedfc10423edd102ee842b8aeec441b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::setFinalClusters</definition>
+        <argsstring>()</argsstring>
+        <name>setFinalClusters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates current clusters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="92" column="1" bodyfile="Kmeans.cpp" bodystart="199" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a9de93e3a4ad5a6af3c459d19df941d00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Makes the final clusters of the iteration n - 1, initial clusters for the iteration n. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="97" column="1" bodyfile="Kmeans.cpp" bodystart="244" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a0d715e37f0f9c3a8ed061c3ad5393a88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Kmeans::isOver</definition>
+        <argsstring>()</argsstring>
+        <name>isOver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the algorithm converged. <simplesect kind="return"><para>true if the algorithm converged, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="103" column="1" bodyfile="Kmeans.cpp" bodystart="232" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a71506d95b271c5b7d50c8f293cf7615e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::runKmeans</definition>
+        <argsstring>()</argsstring>
+        <name>runKmeans</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Runs the k-means routine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="108" column="1" bodyfile="Kmeans.cpp" bodystart="255" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a8ab27fb4fc940c55234b40950d6bd51f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::writeCentroidsToFile</definition>
+        <argsstring>(std::string centroidsFilename)</argsstring>
+        <name>writeCentroidsToFile</name>
+        <param>
+          <type>std::string</type>
+          <declname>centroidsFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="110" column="1" bodyfile="Kmeans.cpp" bodystart="274" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1adcbac766aa19bd96820946709144fdfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::createPointIDClusterIDAllocation</definition>
+        <argsstring>()</argsstring>
+        <name>createPointIDClusterIDAllocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="111" column="1" bodyfile="Kmeans.cpp" bodystart="285" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a033a59c81733a7bc1d330c29d2d7f51b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::createClusterIDPointsOfClusterIDsAllocation</definition>
+        <argsstring>()</argsstring>
+        <name>createClusterIDPointsOfClusterIDsAllocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="112" column="1" bodyfile="Kmeans.cpp" bodystart="296" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a9a8994567cffa176f187784b3f31a1f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::writeClusterIDPointsOfClusterIDsAllocationToFile</definition>
+        <argsstring>(std::string allocationFilename1)</argsstring>
+        <name>writeClusterIDPointsOfClusterIDsAllocationToFile</name>
+        <param>
+          <type>std::string</type>
+          <declname>allocationFilename1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="113" column="1" bodyfile="Kmeans.cpp" bodystart="310" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a211500cbcd8d204437b2407832184dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kmeans::writePointIDClusterIDAllocationToFile</definition>
+        <argsstring>(std::string allocationFilename2)</argsstring>
+        <name>writePointIDClusterIDAllocationToFile</name>
+        <param>
+          <type>std::string</type>
+          <declname>allocationFilename2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="114" column="1" bodyfile="Kmeans.cpp" bodystart="329" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a4d6a55c1b2fd757020bdb30c8668c676" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Kmeans::calculateSilhouette</definition>
+        <argsstring>()</argsstring>
+        <name>calculateSilhouette</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_cluster" kindref="compound">Cluster</ref> validity metrics <linebreak/>
+</para><para>Computes the silhouette metric. <ulink url="https://en.wikipedia.org/wiki/Silhouette_(clustering)">https://en.wikipedia.org/wiki/Silhouette_(clustering)</ulink> <simplesect kind="return"><para>the value of the silhouette metric. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="124" column="1" bodyfile="Kmeans.cpp" bodystart="342" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a8f5acf7f3063bb8809bc057671f1009b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Kmeans::calculateWCSS</definition>
+        <argsstring>()</argsstring>
+        <name>calculateWCSS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes within cluster sum of squares (WCSS). <simplesect kind="return"><para>the value of WCSS. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="130" column="1" bodyfile="Kmeans.cpp" bodystart="399" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kmeans_1a8732bbbb9945c2b477c3696ffd7a519b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Kmeans::calculateDaviesBouldinIndex</definition>
+        <argsstring>()</argsstring>
+        <name>calculateDaviesBouldinIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the Davies-Bouldin index. <ulink url="http://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index">http://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index</ulink> <simplesect kind="return"><para>the value of Davies-Bouldin index. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kmeans.h" line="137" column="1" bodyfile="Kmeans.cpp" bodystart="414" bodyend="466"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kmeans.h" line="8" column="1" bodyfile="Kmeans.h" bodystart="7" bodyend="138"/>
+    <listofallmembers>
+      <member refid="class_kmeans_1a8732bbbb9945c2b477c3696ffd7a519b" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>calculateDaviesBouldinIndex</name></member>
+      <member refid="class_kmeans_1a4d6a55c1b2fd757020bdb30c8668c676" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>calculateSilhouette</name></member>
+      <member refid="class_kmeans_1a8f5acf7f3063bb8809bc057671f1009b" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>calculateWCSS</name></member>
+      <member refid="class_kmeans_1ab26a33efd06bc2f49be01e6a1c8f9812" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>clusterIDPointsOfClusterIDsAllocation</name></member>
+      <member refid="class_kmeans_1a033a59c81733a7bc1d330c29d2d7f51b" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>createClusterIDPointsOfClusterIDsAllocation</name></member>
+      <member refid="class_kmeans_1adcbac766aa19bd96820946709144fdfe" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>createPointIDClusterIDAllocation</name></member>
+      <member refid="class_kmeans_1a3ba0328587f2a92b718648aa0220b7e7" prot="private" virt="non-virtual"><scope>Kmeans</scope><name>dimension</name></member>
+      <member refid="class_kmeans_1a2c398ac00d735f60a03503ab3a12d24d" prot="private" virt="non-virtual"><scope>Kmeans</scope><name>distanceMetric</name></member>
+      <member refid="class_kmeans_1a8b71b3dfd0cf2fc039dc551bfd9ba363" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>finalClusters</name></member>
+      <member refid="class_kmeans_1a82391dcbe29cd0e3afc811d7b52b76ca" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>getDimension</name></member>
+      <member refid="class_kmeans_1a7e6a36baecd32b90e88aafdfc95abbe4" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>getK</name></member>
+      <member refid="class_kmeans_1aa09b81f3736506ecf1a2e3159239af1d" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>initialClusters</name></member>
+      <member refid="class_kmeans_1a9de93e3a4ad5a6af3c459d19df941d00" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>initialize</name></member>
+      <member refid="class_kmeans_1a0d715e37f0f9c3a8ed061c3ad5393a88" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>isOver</name></member>
+      <member refid="class_kmeans_1a7c85a9452b7d116fcba17c3c72596199" prot="private" virt="non-virtual"><scope>Kmeans</scope><name>k</name></member>
+      <member refid="class_kmeans_1ab303603966171f08fa40a1abffb10a8f" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>Kmeans</name></member>
+      <member refid="class_kmeans_1ac761bc0e5ccd783a85a9dcf974317d9b" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>Kmeans</name></member>
+      <member refid="class_kmeans_1afe8748faa9e4f33182847abd9bf6e31c" prot="private" virt="non-virtual"><scope>Kmeans</scope><name>numOfIterations</name></member>
+      <member refid="class_kmeans_1a57ef3abd342caa1fb1d28d1ad4730cd2" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>pointIDClusterIDAllocation</name></member>
+      <member refid="class_kmeans_1ab97ccaa2b375814349d7acf5f5929751" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>points</name></member>
+      <member refid="class_kmeans_1a71506d95b271c5b7d50c8f293cf7615e" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>runKmeans</name></member>
+      <member refid="class_kmeans_1a1b8aee6f50d023d7e07009ca4ff0cf00" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>setDimension</name></member>
+      <member refid="class_kmeans_1a4bedfc10423edd102ee842b8aeec441b" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>setFinalClusters</name></member>
+      <member refid="class_kmeans_1ab43767b9c6712459a17c69aacbc02819" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>setInitialClustersByInitialPoints</name></member>
+      <member refid="class_kmeans_1a91c4453e176ed1d5f90f8f5d84ff346a" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>setInitialClustersRandomly</name></member>
+      <member refid="class_kmeans_1aa3b881526fc71a799e9bbb5232b212a5" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>setK</name></member>
+      <member refid="class_kmeans_1a9e6309d7e0595b77a03064d5e8b32c84" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>setPointsToClusters</name></member>
+      <member refid="class_kmeans_1a7dfb343814b98b5104f0f970b2d5ae72" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>sizes</name></member>
+      <member refid="class_kmeans_1a8ab27fb4fc940c55234b40950d6bd51f" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>writeCentroidsToFile</name></member>
+      <member refid="class_kmeans_1a9a8994567cffa176f187784b3f31a1f5" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>writeClusterIDPointsOfClusterIDsAllocationToFile</name></member>
+      <member refid="class_kmeans_1a211500cbcd8d204437b2407832184dcc" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>writePointIDClusterIDAllocationToFile</name></member>
+      <member refid="class_kmeans_1a198e4d588262f44d6ebe058796d2860e" prot="public" virt="non-virtual"><scope>Kmeans</scope><name>~Kmeans</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

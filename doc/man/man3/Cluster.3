@@ -1,0 +1,234 @@
+.TH "Cluster" 3 "Tue Jul 6 2021" "Version 1.0" "k-means in native C++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Cluster
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Cluster\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCluster\fP (\fBPoint\fP c, int id)"
+.br
+.ti -1c
+.RI "\fB~Cluster\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetID\fP (int ID)"
+.br
+.ti -1c
+.RI "int \fBgetID\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetCenter\fP (\fBPoint\fP &\fBcenter\fP)"
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBgetCenter\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPointsToCluster\fP (\fBPoint\fP *p)"
+.br
+.ti -1c
+.RI "size_t \fBgetNumOfPointsInCluster\fP ()"
+.br
+.ti -1c
+.RI "\fBPoint\fP * \fBgetPointOfCluster\fP (size_t index)"
+.br
+.ti -1c
+.RI "void \fBclearPointsOfCluster\fP ()"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (\fBCluster\fP &c)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (\fBCluster\fP &c)"
+.br
+.ti -1c
+.RI "void \fBprintCentroidInConsole\fP ()"
+.br
+.ti -1c
+.RI "void \fBprintAllocationInConsole\fP ()"
+.br
+.ti -1c
+.RI "void \fBwriteCentroidToFile\fP (std::ostream &out)"
+.br
+.ti -1c
+.RI "void \fBwriteAllocationToFile\fP (std::ostream &out)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBPoint\fP * > \fBpointsOfCluster\fP"
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBcenter\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 6 of file Cluster\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Cluster::Cluster (\fBPoint\fP c, int id)"
+Constructor\&. 
+.PP
+Definition at line 3 of file Cluster\&.cpp\&.
+.SS "Cluster::~Cluster ()"
+Destructor\&. 
+.PP
+Definition at line 7 of file Cluster\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Cluster::clearPointsOfCluster ()"
+Deletes all points of the \fBCluster\fP\&. 
+.PP
+Definition at line 53 of file Cluster\&.cpp\&.
+.SS "\fBPoint\fP Cluster::getCenter ()"
+Returns the center of the \fBCluster\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the center (i\&.e\&., a \fBPoint\fP object) of the \fBCluster\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file Cluster\&.cpp\&.
+.SS "int Cluster::getID () const"
+Returns the ID of the \fBCluster\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the ID of the \fBCluster\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file Cluster\&.cpp\&.
+.SS "size_t Cluster::getNumOfPointsInCluster ()"
+Returns the number of points in the \fBCluster\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the number of points in the \fBCluster\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file Cluster\&.cpp\&.
+.SS "\fBPoint\fP * Cluster::getPointOfCluster (size_t index)"
+Returns a \fBPoint\fP of the \fBCluster\fP for a specific index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIindex\fP the index of the \fBPoint\fP to be returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file Cluster\&.cpp\&.
+.SS "bool Cluster::operator< (\fBCluster\fP & c)"
+< operator overloading function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP a reference to the rhs \fBCluster\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 67 of file Cluster\&.cpp\&.
+.SS "bool Cluster::operator== (\fBCluster\fP & c)"
+== operator overloading function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP a reference to the rhs \fBCluster\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 58 of file Cluster\&.cpp\&.
+.SS "void Cluster::printAllocationInConsole ()"
+Prints the ids of the points of \fBCluster\fP to console\&. 
+.PP
+Definition at line 82 of file Cluster\&.cpp\&.
+.SS "void Cluster::printCentroidInConsole ()"
+Prints the centroid of the \fBCluster\fP to console\&. 
+.PP
+Definition at line 76 of file Cluster\&.cpp\&.
+.SS "void Cluster::setCenter (\fBPoint\fP & center)"
+Sets the center of the \fBCluster\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcenter\fP the center (i\&.e\&., a \fBPoint\fP object) of the \fBCluster\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file Cluster\&.cpp\&.
+.SS "void Cluster::setID (int ID)"
+Sets the ID of the \fBCluster\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIID\fP the ID of the \fBCluster\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 15 of file Cluster\&.cpp\&.
+.SS "void Cluster::setPointsToCluster (\fBPoint\fP * p)"
+Adds Points to the \fBCluster\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP a \fBPoint\fP to be added\&. 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file Cluster\&.cpp\&.
+.SS "void Cluster::writeAllocationToFile (std::ostream & out)"
+Writes the ids of the points of \fBCluster\fP to file\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIout\fP the stream handle of the output file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 96 of file Cluster\&.cpp\&.
+.SS "void Cluster::writeCentroidToFile (std::ostream & out)"
+Writes the centroid of the \fBCluster\fP to file\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIout\fP the stream handle of the output file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file Cluster\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPoint\fP Cluster::center"
+
+.PP
+Definition at line 12 of file Cluster\&.h\&.
+.SS "std::vector<\fBPoint\fP*> Cluster::pointsOfCluster"
+
+.PP
+Definition at line 11 of file Cluster\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for k-means in native C++ from the source code\&.

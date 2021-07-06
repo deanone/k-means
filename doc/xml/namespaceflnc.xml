@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceflnc" kind="namespace" language="C++">
+    <compoundname>flnc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceflnc_1aa6a517635283780c9142bf6ad194013e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TYPE</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void flnc::WriteVectorToFile</definition>
+        <argsstring>(moutput_stream *TrainingFileOut, const std::vector&lt; TYPE &gt; &amp;vec)</argsstring>
+        <name>WriteVectorToFile</name>
+        <param>
+          <type><ref refid="_file_func_8h_1adf5ef842b05a918896d7eb7755bbee56" kindref="member">moutput_stream</ref> *</type>
+          <declname>TrainingFileOut</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TYPE &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes a vector to file. The format is: <programlisting><codeline><highlight class="normal">vector_size<sp/>vector_1st_element<sp/>vector_2nd_element<sp/>...</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TrainingFileOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the output stream of the file to write the vector to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector to be written to file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FileFunc.h" line="20" column="1" bodyfile="FileFunc.h" bodystart="20" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceflnc_1a5ee4b13fe9860b1398a2e2c8d07776c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TYPE</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void flnc::Write2DVectorToFile</definition>
+        <argsstring>(moutput_stream *TrainingFileOut, const std::vector&lt; std::vector&lt; TYPE &gt; &gt; &amp;vec)</argsstring>
+        <name>Write2DVectorToFile</name>
+        <param>
+          <type><ref refid="_file_func_8h_1adf5ef842b05a918896d7eb7755bbee56" kindref="member">moutput_stream</ref> *</type>
+          <declname>TrainingFileOut</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; TYPE &gt; &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes a vector of vectors to file. The format is: <programlisting><codeline><highlight class="normal">number_of_vectors</highlight></codeline>
+<codeline><highlight class="normal">vector_size<sp/>vector_1st_element<sp/>vector_2nd_element<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">vector_size<sp/>vector_1st_element<sp/>vector_2nd_element<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TrainingFileOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the output stream of the file to write the vector to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector of vectors to be written to file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FileFunc.h" line="39" column="1" bodyfile="FileFunc.h" bodystart="39" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceflnc_1a51e2434fe14f26a9d979282b2d6524f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TYPE</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void flnc::ReadVectorFromFile</definition>
+        <argsstring>(minput_stream *TrainingFileIn, std::vector&lt; TYPE &gt; &amp;vec)</argsstring>
+        <name>ReadVectorFromFile</name>
+        <param>
+          <type><ref refid="_file_func_8h_1ac7d0feb122d3a455f1a91ba26b3de612" kindref="member">minput_stream</ref> *</type>
+          <declname>TrainingFileIn</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; TYPE &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a vector from file. The format of the file must be <programlisting><codeline><highlight class="normal">vector_size<sp/>vector_1st_element<sp/>vector_2nd_element<sp/>...</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TrainingFileIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the input stream of the file to read the vector from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector to be read to file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FileFunc.h" line="55" column="1" bodyfile="FileFunc.h" bodystart="55" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceflnc_1a43f11ba9f2a94bcf4e8680f806a54a47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TYPE</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void flnc::Read2DVectorFromFile</definition>
+        <argsstring>(minput_stream *TrainingFileIn, std::vector&lt; std::vector&lt; TYPE &gt; &gt; &amp;vec)</argsstring>
+        <name>Read2DVectorFromFile</name>
+        <param>
+          <type><ref refid="_file_func_8h_1ac7d0feb122d3a455f1a91ba26b3de612" kindref="member">minput_stream</ref> *</type>
+          <declname>TrainingFileIn</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; TYPE &gt; &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a vector of vectors to file. The format of the file must be <programlisting><codeline><highlight class="normal">number_of_vectors</highlight></codeline>
+<codeline><highlight class="normal">vector_size<sp/>vector_1st_element<sp/>vector_2nd_element<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">vector_size<sp/>vector_1st_element<sp/>vector_2nd_element<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TrainingFileIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the input stream of the file to read the vector from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector of vectors to be read to file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FileFunc.h" line="75" column="1" bodyfile="FileFunc.h" bodystart="75" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="FileFunc.h" line="9" column="1"/>
+  </compounddef>
+</doxygen>

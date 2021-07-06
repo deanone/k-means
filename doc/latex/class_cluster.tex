@@ -1,0 +1,309 @@
+\section{Cluster Class Reference}
+\label{class_cluster}\index{Cluster@{Cluster}}
+
+
+{\ttfamily \#include $<$Cluster.\+h$>$}
+
+
+
+Collaboration diagram for Cluster\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{class_cluster__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Cluster} (\textbf{ Point} c, int id)
+\item 
+\textbf{ $\sim$\+Cluster} ()
+\item 
+void \textbf{ set\+ID} (int ID)
+\item 
+int \textbf{ get\+ID} () const
+\item 
+void \textbf{ set\+Center} (\textbf{ Point} \&\textbf{ center})
+\item 
+\textbf{ Point} \textbf{ get\+Center} ()
+\item 
+void \textbf{ set\+Points\+To\+Cluster} (\textbf{ Point} $\ast$p)
+\item 
+size\+\_\+t \textbf{ get\+Num\+Of\+Points\+In\+Cluster} ()
+\item 
+\textbf{ Point} $\ast$ \textbf{ get\+Point\+Of\+Cluster} (size\+\_\+t index)
+\item 
+void \textbf{ clear\+Points\+Of\+Cluster} ()
+\item 
+bool \textbf{ operator==} (\textbf{ Cluster} \&c)
+\item 
+bool \textbf{ operator$<$} (\textbf{ Cluster} \&c)
+\item 
+void \textbf{ print\+Centroid\+In\+Console} ()
+\item 
+void \textbf{ print\+Allocation\+In\+Console} ()
+\item 
+void \textbf{ write\+Centroid\+To\+File} (std\+::ostream \&out)
+\item 
+void \textbf{ write\+Allocation\+To\+File} (std\+::ostream \&out)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \textbf{ Point} $\ast$ $>$ \textbf{ points\+Of\+Cluster}
+\item 
+\textbf{ Point} \textbf{ center}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Cluster.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_cluster_a5e07ba3b4772eb29eeac0095eef3cd3a}} 
+\index{Cluster@{Cluster}!Cluster@{Cluster}}
+\index{Cluster@{Cluster}!Cluster@{Cluster}}
+\subsubsection{Cluster()}
+{\footnotesize\ttfamily Cluster\+::\+Cluster (\begin{DoxyParamCaption}\item[{\textbf{ Point}}]{c,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Constructor. 
+
+Definition at line 3 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a4bddfc88ac859610acab15dd12851b58}} 
+\index{Cluster@{Cluster}!````~Cluster@{$\sim$\+Cluster}}
+\index{````~Cluster@{$\sim$\+Cluster}!Cluster@{Cluster}}
+\subsubsection{$\sim$\+Cluster()}
+{\footnotesize\ttfamily Cluster\+::$\sim$\+Cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. 
+
+Definition at line 7 of file Cluster.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_cluster_afa46912376ac9690ee946612ddc99c76}} 
+\index{Cluster@{Cluster}!clear\+Points\+Of\+Cluster@{clear\+Points\+Of\+Cluster}}
+\index{clear\+Points\+Of\+Cluster@{clear\+Points\+Of\+Cluster}!Cluster@{Cluster}}
+\subsubsection{clear\+Points\+Of\+Cluster()}
+{\footnotesize\ttfamily void Cluster\+::clear\+Points\+Of\+Cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Deletes all points of the \doxyref{Cluster}{p.}{class_cluster}. 
+
+Definition at line 53 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a72b992c37dc0792e84dbe5ac2d89bbbe}} 
+\index{Cluster@{Cluster}!get\+Center@{get\+Center}}
+\index{get\+Center@{get\+Center}!Cluster@{Cluster}}
+\subsubsection{get\+Center()}
+{\footnotesize\ttfamily \textbf{ Point} Cluster\+::get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the center of the \doxyref{Cluster}{p.}{class_cluster}. \begin{DoxyReturn}{Returns}
+the center (i.\+e., a \doxyref{Point}{p.}{class_point} object) of the \doxyref{Cluster}{p.}{class_cluster}. 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a7e3843eaa486b9dd28de25a7c9f4e1f9}} 
+\index{Cluster@{Cluster}!get\+ID@{get\+ID}}
+\index{get\+ID@{get\+ID}!Cluster@{Cluster}}
+\subsubsection{get\+I\+D()}
+{\footnotesize\ttfamily int Cluster\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the ID of the \doxyref{Cluster}{p.}{class_cluster}. \begin{DoxyReturn}{Returns}
+the ID of the \doxyref{Cluster}{p.}{class_cluster}. 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a937233153e5610b9e8d91815e3a43b5e}} 
+\index{Cluster@{Cluster}!get\+Num\+Of\+Points\+In\+Cluster@{get\+Num\+Of\+Points\+In\+Cluster}}
+\index{get\+Num\+Of\+Points\+In\+Cluster@{get\+Num\+Of\+Points\+In\+Cluster}!Cluster@{Cluster}}
+\subsubsection{get\+Num\+Of\+Points\+In\+Cluster()}
+{\footnotesize\ttfamily size\+\_\+t Cluster\+::get\+Num\+Of\+Points\+In\+Cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the number of points in the \doxyref{Cluster}{p.}{class_cluster}. \begin{DoxyReturn}{Returns}
+the number of points in the \doxyref{Cluster}{p.}{class_cluster}. 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a77c17b4532c831f5c9c3ef9fdc4f3822}} 
+\index{Cluster@{Cluster}!get\+Point\+Of\+Cluster@{get\+Point\+Of\+Cluster}}
+\index{get\+Point\+Of\+Cluster@{get\+Point\+Of\+Cluster}!Cluster@{Cluster}}
+\subsubsection{get\+Point\+Of\+Cluster()}
+{\footnotesize\ttfamily \textbf{ Point} $\ast$ Cluster\+::get\+Point\+Of\+Cluster (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+Returns a \doxyref{Point}{p.}{class_point} of the \doxyref{Cluster}{p.}{class_cluster} for a specific index. 
+\begin{DoxyParams}{Parameters}
+{\em index} & the index of the \doxyref{Point}{p.}{class_point} to be returned. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a2e34a51e1018f359c406effc187c3443}} 
+\index{Cluster@{Cluster}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Cluster@{Cluster}}
+\subsubsection{operator$<$()}
+{\footnotesize\ttfamily bool Cluster\+::operator$<$ (\begin{DoxyParamCaption}\item[{\textbf{ Cluster} \&}]{c }\end{DoxyParamCaption})}
+
+$<$ operator overloading function. 
+\begin{DoxyParams}{Parameters}
+{\em c} & a reference to the rhs \doxyref{Cluster}{p.}{class_cluster}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_ae1bfa43c1d8e63b5b7c8de057822655e}} 
+\index{Cluster@{Cluster}!operator==@{operator==}}
+\index{operator==@{operator==}!Cluster@{Cluster}}
+\subsubsection{operator==()}
+{\footnotesize\ttfamily bool Cluster\+::operator== (\begin{DoxyParamCaption}\item[{\textbf{ Cluster} \&}]{c }\end{DoxyParamCaption})}
+
+== operator overloading function. 
+\begin{DoxyParams}{Parameters}
+{\em c} & a reference to the rhs \doxyref{Cluster}{p.}{class_cluster}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a7674117b1d96399b80866984ba9a7669}} 
+\index{Cluster@{Cluster}!print\+Allocation\+In\+Console@{print\+Allocation\+In\+Console}}
+\index{print\+Allocation\+In\+Console@{print\+Allocation\+In\+Console}!Cluster@{Cluster}}
+\subsubsection{print\+Allocation\+In\+Console()}
+{\footnotesize\ttfamily void Cluster\+::print\+Allocation\+In\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints the ids of the points of \doxyref{Cluster}{p.}{class_cluster} to console. 
+
+Definition at line 82 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a0a1e41f9daeb97afd1c38ccf057ab465}} 
+\index{Cluster@{Cluster}!print\+Centroid\+In\+Console@{print\+Centroid\+In\+Console}}
+\index{print\+Centroid\+In\+Console@{print\+Centroid\+In\+Console}!Cluster@{Cluster}}
+\subsubsection{print\+Centroid\+In\+Console()}
+{\footnotesize\ttfamily void Cluster\+::print\+Centroid\+In\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints the centroid of the \doxyref{Cluster}{p.}{class_cluster} to console. 
+
+Definition at line 76 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a62456a396315240a3fbfbcb060f0e6ca}} 
+\index{Cluster@{Cluster}!set\+Center@{set\+Center}}
+\index{set\+Center@{set\+Center}!Cluster@{Cluster}}
+\subsubsection{set\+Center()}
+{\footnotesize\ttfamily void Cluster\+::set\+Center (\begin{DoxyParamCaption}\item[{\textbf{ Point} \&}]{center }\end{DoxyParamCaption})}
+
+Sets the center of the \doxyref{Cluster}{p.}{class_cluster}. 
+\begin{DoxyParams}{Parameters}
+{\em center} & the center (i.\+e., a \doxyref{Point}{p.}{class_point} object) of the \doxyref{Cluster}{p.}{class_cluster}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a6b6cf07bd9eb4ed49231265e33ea335a}} 
+\index{Cluster@{Cluster}!set\+ID@{set\+ID}}
+\index{set\+ID@{set\+ID}!Cluster@{Cluster}}
+\subsubsection{set\+I\+D()}
+{\footnotesize\ttfamily void Cluster\+::set\+ID (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+Sets the ID of the \doxyref{Cluster}{p.}{class_cluster}. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & the ID of the \doxyref{Cluster}{p.}{class_cluster}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a43ab4e6a60110bba519e54a1634521fc}} 
+\index{Cluster@{Cluster}!set\+Points\+To\+Cluster@{set\+Points\+To\+Cluster}}
+\index{set\+Points\+To\+Cluster@{set\+Points\+To\+Cluster}!Cluster@{Cluster}}
+\subsubsection{set\+Points\+To\+Cluster()}
+{\footnotesize\ttfamily void Cluster\+::set\+Points\+To\+Cluster (\begin{DoxyParamCaption}\item[{\textbf{ Point} $\ast$}]{p }\end{DoxyParamCaption})}
+
+Adds Points to the \doxyref{Cluster}{p.}{class_cluster}. 
+\begin{DoxyParams}{Parameters}
+{\em p} & a \doxyref{Point}{p.}{class_point} to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a1d4245d0e9c51efac7cd51a9425466ad}} 
+\index{Cluster@{Cluster}!write\+Allocation\+To\+File@{write\+Allocation\+To\+File}}
+\index{write\+Allocation\+To\+File@{write\+Allocation\+To\+File}!Cluster@{Cluster}}
+\subsubsection{write\+Allocation\+To\+File()}
+{\footnotesize\ttfamily void Cluster\+::write\+Allocation\+To\+File (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})}
+
+Writes the ids of the points of \doxyref{Cluster}{p.}{class_cluster} to file. 
+\begin{DoxyParams}{Parameters}
+{\em out} & the stream handle of the output file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file Cluster.\+cpp.
+
+\mbox{\label{class_cluster_a854307ce8f209f71102f61c36dbfacf1}} 
+\index{Cluster@{Cluster}!write\+Centroid\+To\+File@{write\+Centroid\+To\+File}}
+\index{write\+Centroid\+To\+File@{write\+Centroid\+To\+File}!Cluster@{Cluster}}
+\subsubsection{write\+Centroid\+To\+File()}
+{\footnotesize\ttfamily void Cluster\+::write\+Centroid\+To\+File (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})}
+
+Writes the centroid of the \doxyref{Cluster}{p.}{class_cluster} to file. 
+\begin{DoxyParams}{Parameters}
+{\em out} & the stream handle of the output file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 90 of file Cluster.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{class_cluster_acc4e23a98671996549c96284a5b57976}} 
+\index{Cluster@{Cluster}!center@{center}}
+\index{center@{center}!Cluster@{Cluster}}
+\subsubsection{center}
+{\footnotesize\ttfamily \textbf{ Point} Cluster\+::center}
+
+
+
+Definition at line 12 of file Cluster.\+h.
+
+\mbox{\label{class_cluster_ac1d89bf8b236d6fe18a0865276274d9c}} 
+\index{Cluster@{Cluster}!points\+Of\+Cluster@{points\+Of\+Cluster}}
+\index{points\+Of\+Cluster@{points\+Of\+Cluster}!Cluster@{Cluster}}
+\subsubsection{points\+Of\+Cluster}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ Point}$\ast$$>$ Cluster\+::points\+Of\+Cluster}
+
+
+
+Definition at line 11 of file Cluster.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Cluster.\+h}\item 
+\textbf{ Cluster.\+cpp}\end{DoxyCompactItemize}

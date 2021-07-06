@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_kmeans_8h" kind="file" language="C++">
+    <compoundname>Kmeans.h</compoundname>
+    <includes refid="_point_8h" local="yes">Point.h</includes>
+    <includes refid="_cluster_8h" local="yes">Cluster.h</includes>
+    <includedby refid="_kmeans_8cpp" local="yes">Kmeans.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <incdepgraph>
+      <node id="153">
+        <label>functional</label>
+      </node>
+      <node id="145">
+        <label>cmath</label>
+      </node>
+      <node id="151">
+        <label>numeric</label>
+      </node>
+      <node id="142">
+        <label>string</label>
+      </node>
+      <node id="149">
+        <label>map</label>
+      </node>
+      <node id="140">
+        <label>fstream</label>
+      </node>
+      <node id="154">
+        <label>Cluster.h</label>
+        <link refid="_cluster_8h"/>
+        <childnode refid="137" relation="include">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>ctime</label>
+      </node>
+      <node id="137">
+        <label>Point.h</label>
+        <link refid="_point_8h"/>
+        <childnode refid="138" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>unistd.h</label>
+      </node>
+      <node id="148">
+        <label>vector</label>
+      </node>
+      <node id="141">
+        <label>sstream</label>
+      </node>
+      <node id="143">
+        <label>cstdlib</label>
+      </node>
+      <node id="139">
+        <label>iostream</label>
+      </node>
+      <node id="146">
+        <label>climits</label>
+      </node>
+      <node id="138">
+        <label>DataTypes.h</label>
+        <link refid="_data_types_8h"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>complex</label>
+      </node>
+      <node id="150">
+        <label>algorithm</label>
+      </node>
+      <node id="136">
+        <label>Kmeans.h</label>
+        <link refid="_kmeans_8h"/>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="156">
+        <label>Kmeans.cpp</label>
+        <link refid="_kmeans_8cpp"/>
+      </node>
+      <node id="157">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="155">
+        <label>Kmeans.h</label>
+        <link refid="_kmeans_8h"/>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_kmeans" prot="public">Kmeans</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>KMEANS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KMEANS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_point_8h" kindref="compound">Point.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_cluster_8h" kindref="compound">Cluster.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_kmeans" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_kmeans" kindref="compound">Kmeans</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimension;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>maximum<sp/>number<sp/>of<sp/>iterations<sp/>for<sp/>the<sp/>convergence<sp/>of<sp/>the<sp/>algorithm.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numOfIterations;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>distanceMetric;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="class_kmeans_1ab97ccaa2b375814349d7acf5f5929751" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Point&gt;<sp/><ref refid="class_kmeans_1ab97ccaa2b375814349d7acf5f5929751" kindref="member">points</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_kmeans_1aa09b81f3736506ecf1a2e3159239af1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Cluster&gt;<sp/><ref refid="class_kmeans_1aa09b81f3736506ecf1a2e3159239af1d" kindref="member">initialClusters</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="class_kmeans_1a8b71b3dfd0cf2fc039dc551bfd9ba363" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Cluster&gt;<sp/><ref refid="class_kmeans_1a8b71b3dfd0cf2fc039dc551bfd9ba363" kindref="member">finalClusters</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_kmeans_1a7dfb343814b98b5104f0f970b2d5ae72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;IntIntPair&gt;<sp/><ref refid="class_kmeans_1a7dfb343814b98b5104f0f970b2d5ae72" kindref="member">sizes</ref>;</highlight></codeline>
+<codeline lineno="31" refid="class_kmeans_1a57ef3abd342caa1fb1d28d1ad4730cd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_data_types_8h_1a1972afbb2da11833cc5c4e7dda7936cf" kindref="member">IntIntMap</ref><sp/><ref refid="class_kmeans_1a57ef3abd342caa1fb1d28d1ad4730cd2" kindref="member">pointIDClusterIDAllocation</ref>;</highlight></codeline>
+<codeline lineno="32" refid="class_kmeans_1ab26a33efd06bc2f49be01e6a1c8f9812" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_data_types_8h_1afae9076c89b4ed1654b0f85beb47af82" kindref="member">IntIntVectorMap</ref><sp/><ref refid="class_kmeans_1ab26a33efd06bc2f49be01e6a1c8f9812" kindref="member">clusterIDPointsOfClusterIDsAllocation</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_kmeans_1ab303603966171f08fa40a1abffb10a8f" kindref="member">Kmeans</ref>(std::string<sp/>datasetFilename,<sp/>std::string<sp/>propertiesFileName);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_kmeans_1ab303603966171f08fa40a1abffb10a8f" kindref="member">Kmeans</ref>(std::string<sp/>datasetFilename,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numOfClusters,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numIt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>distMetric);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_kmeans_1a198e4d588262f44d6ebe058796d2860e" kindref="member">~Kmeans</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a1b8aee6f50d023d7e07009ca4ff0cf00" kindref="member">setDimension</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimension);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a82391dcbe29cd0e3afc811d7b52b76ca" kindref="member">getDimension</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1aa3b881526fc71a799e9bbb5232b212a5" kindref="member">setK</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a7e6a36baecd32b90e88aafdfc95abbe4" kindref="member">getK</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a9e6309d7e0595b77a03064d5e8b32c84" kindref="member">setPointsToClusters</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a91c4453e176ed1d5f90f8f5d84ff346a" kindref="member">setInitialClustersRandomly</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1ab43767b9c6712459a17c69aacbc02819" kindref="member">setInitialClustersByInitialPoints</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a4bedfc10423edd102ee842b8aeec441b" kindref="member">setFinalClusters</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a9de93e3a4ad5a6af3c459d19df941d00" kindref="member">initialize</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a0d715e37f0f9c3a8ed061c3ad5393a88" kindref="member">isOver</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a71506d95b271c5b7d50c8f293cf7615e" kindref="member">runKmeans</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a8ab27fb4fc940c55234b40950d6bd51f" kindref="member">writeCentroidsToFile</ref>(std::string<sp/>centroidsFilename);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1adcbac766aa19bd96820946709144fdfe" kindref="member">createPointIDClusterIDAllocation</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a033a59c81733a7bc1d330c29d2d7f51b" kindref="member">createClusterIDPointsOfClusterIDsAllocation</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a9a8994567cffa176f187784b3f31a1f5" kindref="member">writeClusterIDPointsOfClusterIDsAllocationToFile</ref>(std::string<sp/>allocationFilename1);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a211500cbcd8d204437b2407832184dcc" kindref="member">writePointIDClusterIDAllocationToFile</ref>(std::string<sp/>allocationFilename2);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a4d6a55c1b2fd757020bdb30c8668c676" kindref="member">calculateSilhouette</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a8f5acf7f3063bb8809bc057671f1009b" kindref="member">calculateWCSS</ref>();<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_kmeans_1a8732bbbb9945c2b477c3696ffd7a519b" kindref="member">calculateDaviesBouldinIndex</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/><sp/><sp/>KMEANS_H</highlight></codeline>
+    </programlisting>
+    <location file="Kmeans.h"/>
+  </compounddef>
+</doxygen>

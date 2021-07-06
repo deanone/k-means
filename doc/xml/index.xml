@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.14">
+  <compound refid="class_cluster" kind="class"><name>Cluster</name>
+    <member refid="class_cluster_1a4afc7b3399570b17157ac1a9b592a17f" kind="variable"><name>ID</name></member>
+    <member refid="class_cluster_1ac1d89bf8b236d6fe18a0865276274d9c" kind="variable"><name>pointsOfCluster</name></member>
+    <member refid="class_cluster_1acc4e23a98671996549c96284a5b57976" kind="variable"><name>center</name></member>
+    <member refid="class_cluster_1a5e07ba3b4772eb29eeac0095eef3cd3a" kind="function"><name>Cluster</name></member>
+    <member refid="class_cluster_1a4bddfc88ac859610acab15dd12851b58" kind="function"><name>~Cluster</name></member>
+    <member refid="class_cluster_1a6b6cf07bd9eb4ed49231265e33ea335a" kind="function"><name>setID</name></member>
+    <member refid="class_cluster_1a7e3843eaa486b9dd28de25a7c9f4e1f9" kind="function"><name>getID</name></member>
+    <member refid="class_cluster_1a62456a396315240a3fbfbcb060f0e6ca" kind="function"><name>setCenter</name></member>
+    <member refid="class_cluster_1a72b992c37dc0792e84dbe5ac2d89bbbe" kind="function"><name>getCenter</name></member>
+    <member refid="class_cluster_1a43ab4e6a60110bba519e54a1634521fc" kind="function"><name>setPointsToCluster</name></member>
+    <member refid="class_cluster_1a937233153e5610b9e8d91815e3a43b5e" kind="function"><name>getNumOfPointsInCluster</name></member>
+    <member refid="class_cluster_1a77c17b4532c831f5c9c3ef9fdc4f3822" kind="function"><name>getPointOfCluster</name></member>
+    <member refid="class_cluster_1afa46912376ac9690ee946612ddc99c76" kind="function"><name>clearPointsOfCluster</name></member>
+    <member refid="class_cluster_1ae1bfa43c1d8e63b5b7c8de057822655e" kind="function"><name>operator==</name></member>
+    <member refid="class_cluster_1a2e34a51e1018f359c406effc187c3443" kind="function"><name>operator&lt;</name></member>
+    <member refid="class_cluster_1a0a1e41f9daeb97afd1c38ccf057ab465" kind="function"><name>printCentroidInConsole</name></member>
+    <member refid="class_cluster_1a7674117b1d96399b80866984ba9a7669" kind="function"><name>printAllocationInConsole</name></member>
+    <member refid="class_cluster_1a854307ce8f209f71102f61c36dbfacf1" kind="function"><name>writeCentroidToFile</name></member>
+    <member refid="class_cluster_1a1d4245d0e9c51efac7cd51a9425466ad" kind="function"><name>writeAllocationToFile</name></member>
+  </compound>
+  <compound refid="class_kmeans" kind="class"><name>Kmeans</name>
+    <member refid="class_kmeans_1a3ba0328587f2a92b718648aa0220b7e7" kind="variable"><name>dimension</name></member>
+    <member refid="class_kmeans_1a7c85a9452b7d116fcba17c3c72596199" kind="variable"><name>k</name></member>
+    <member refid="class_kmeans_1afe8748faa9e4f33182847abd9bf6e31c" kind="variable"><name>numOfIterations</name></member>
+    <member refid="class_kmeans_1a2c398ac00d735f60a03503ab3a12d24d" kind="variable"><name>distanceMetric</name></member>
+    <member refid="class_kmeans_1ab97ccaa2b375814349d7acf5f5929751" kind="variable"><name>points</name></member>
+    <member refid="class_kmeans_1aa09b81f3736506ecf1a2e3159239af1d" kind="variable"><name>initialClusters</name></member>
+    <member refid="class_kmeans_1a8b71b3dfd0cf2fc039dc551bfd9ba363" kind="variable"><name>finalClusters</name></member>
+    <member refid="class_kmeans_1a7dfb343814b98b5104f0f970b2d5ae72" kind="variable"><name>sizes</name></member>
+    <member refid="class_kmeans_1a57ef3abd342caa1fb1d28d1ad4730cd2" kind="variable"><name>pointIDClusterIDAllocation</name></member>
+    <member refid="class_kmeans_1ab26a33efd06bc2f49be01e6a1c8f9812" kind="variable"><name>clusterIDPointsOfClusterIDsAllocation</name></member>
+    <member refid="class_kmeans_1ab303603966171f08fa40a1abffb10a8f" kind="function"><name>Kmeans</name></member>
+    <member refid="class_kmeans_1ac761bc0e5ccd783a85a9dcf974317d9b" kind="function"><name>Kmeans</name></member>
+    <member refid="class_kmeans_1a198e4d588262f44d6ebe058796d2860e" kind="function"><name>~Kmeans</name></member>
+    <member refid="class_kmeans_1a1b8aee6f50d023d7e07009ca4ff0cf00" kind="function"><name>setDimension</name></member>
+    <member refid="class_kmeans_1a82391dcbe29cd0e3afc811d7b52b76ca" kind="function"><name>getDimension</name></member>
+    <member refid="class_kmeans_1aa3b881526fc71a799e9bbb5232b212a5" kind="function"><name>setK</name></member>
+    <member refid="class_kmeans_1a7e6a36baecd32b90e88aafdfc95abbe4" kind="function"><name>getK</name></member>
+    <member refid="class_kmeans_1a9e6309d7e0595b77a03064d5e8b32c84" kind="function"><name>setPointsToClusters</name></member>
+    <member refid="class_kmeans_1a91c4453e176ed1d5f90f8f5d84ff346a" kind="function"><name>setInitialClustersRandomly</name></member>
+    <member refid="class_kmeans_1ab43767b9c6712459a17c69aacbc02819" kind="function"><name>setInitialClustersByInitialPoints</name></member>
+    <member refid="class_kmeans_1a4bedfc10423edd102ee842b8aeec441b" kind="function"><name>setFinalClusters</name></member>
+    <member refid="class_kmeans_1a9de93e3a4ad5a6af3c459d19df941d00" kind="function"><name>initialize</name></member>
+    <member refid="class_kmeans_1a0d715e37f0f9c3a8ed061c3ad5393a88" kind="function"><name>isOver</name></member>
+    <member refid="class_kmeans_1a71506d95b271c5b7d50c8f293cf7615e" kind="function"><name>runKmeans</name></member>
+    <member refid="class_kmeans_1a8ab27fb4fc940c55234b40950d6bd51f" kind="function"><name>writeCentroidsToFile</name></member>
+    <member refid="class_kmeans_1adcbac766aa19bd96820946709144fdfe" kind="function"><name>createPointIDClusterIDAllocation</name></member>
+    <member refid="class_kmeans_1a033a59c81733a7bc1d330c29d2d7f51b" kind="function"><name>createClusterIDPointsOfClusterIDsAllocation</name></member>
+    <member refid="class_kmeans_1a9a8994567cffa176f187784b3f31a1f5" kind="function"><name>writeClusterIDPointsOfClusterIDsAllocationToFile</name></member>
+    <member refid="class_kmeans_1a211500cbcd8d204437b2407832184dcc" kind="function"><name>writePointIDClusterIDAllocationToFile</name></member>
+    <member refid="class_kmeans_1a4d6a55c1b2fd757020bdb30c8668c676" kind="function"><name>calculateSilhouette</name></member>
+    <member refid="class_kmeans_1a8f5acf7f3063bb8809bc057671f1009b" kind="function"><name>calculateWCSS</name></member>
+    <member refid="class_kmeans_1a8732bbbb9945c2b477c3696ffd7a519b" kind="function"><name>calculateDaviesBouldinIndex</name></member>
+  </compound>
+  <compound refid="class_point" kind="class"><name>Point</name>
+    <member refid="class_point_1a1db9dc500c5972dfb3e5c2c58e8dea8e" kind="variable"><name>ID</name></member>
+    <member refid="class_point_1aab1a36388e8cf732ac39bfc3be14decf" kind="variable"><name>v</name></member>
+    <member refid="class_point_1ad92f2337b839a94ce97dcdb439b4325a" kind="function"><name>Point</name></member>
+    <member refid="class_point_1a395fa04b4ec126b66fc053f829a30cc1" kind="function"><name>~Point</name></member>
+    <member refid="class_point_1aac952f18d9bf4cac6e71e487bf0a6485" kind="function"><name>setID</name></member>
+    <member refid="class_point_1a70f96664692429af8c591eac51e65faa" kind="function"><name>getID</name></member>
+    <member refid="class_point_1adc21fb4804add5777f2a1774b024fea7" kind="function"><name>addValue</name></member>
+    <member refid="class_point_1a8b0689db3397d2822086d7c9c8388e52" kind="function"><name>size</name></member>
+    <member refid="class_point_1a1a104867c565a737ae4b090d17de94f5" kind="function"><name>changeValue</name></member>
+    <member refid="class_point_1a9dbaa711812c795591f242761ae49260" kind="function"><name>values</name></member>
+    <member refid="class_point_1a84ede377561c9e12fd4624ce79dee52e" kind="function"><name>operator+</name></member>
+    <member refid="class_point_1a1abb26c14e145a8b4782a30b821dd19e" kind="function"><name>operator=</name></member>
+    <member refid="class_point_1a1a69a0a1dea189f07e044f6eb868937d" kind="function"><name>operator==</name></member>
+    <member refid="class_point_1a9d0a9f62ffc7345f802085706101cd62" kind="function"><name>operator&lt;</name></member>
+    <member refid="class_point_1a4f99aacff8c681d1666213fef33b69ea" kind="function"><name>operator/</name></member>
+    <member refid="class_point_1a7cc71f8277ff5a921bab778f4200558f" kind="function"><name>operator()</name></member>
+    <member refid="class_point_1ac1204531b317c36ba7cd0a2c2ca20859" kind="function"><name>printValuesToConsole</name></member>
+    <member refid="class_point_1acfe860d2ad9f538ac35e1007697b965c" kind="function"><name>writeValuesToFile</name></member>
+  </compound>
+  <compound refid="class_properties_parser" kind="class"><name>PropertiesParser</name>
+    <member refid="class_properties_parser_1a3a1d77a3b2bad9327510f594c193f624" kind="variable"><name>propMap</name></member>
+    <member refid="class_properties_parser_1aa075e76c89abc9639b2b146433ac9dd0" kind="function"><name>PropertiesParser</name></member>
+    <member refid="class_properties_parser_1a8cb6ad9a2c83e27dffc9a3a1f0cc6097" kind="function"><name>addPropertiesFile</name></member>
+    <member refid="class_properties_parser_1a75272b9a95defaf287a061e45f8acc51" kind="function"><name>propertyExists</name></member>
+    <member refid="class_properties_parser_1a8566ea176851c43e244ea291eb5968e5" kind="function"><name>getPropertyAsString</name></member>
+    <member refid="class_properties_parser_1abe15fe0fd4563627204f58f9256aacbf" kind="function"><name>getPropertyAsInt</name></member>
+    <member refid="class_properties_parser_1a8a64ae1f8c21897ea7cd8b02a37dbf9f" kind="function"><name>getPropertyAsBool</name></member>
+    <member refid="class_properties_parser_1a2a5c7bdd4d170982e1003ec52283c3c8" kind="function"><name>getPropertyAsFloat</name></member>
+    <member refid="class_properties_parser_1ac22f3d6ac1e9737a29ec2a69d3302a2f" kind="function"><name>getPropertyAsDouble</name></member>
+    <member refid="class_properties_parser_1abc496cea92a4d563710e11f85f2dc957" kind="function"><name>getPropertyAsStringOrDefaultTo</name></member>
+    <member refid="class_properties_parser_1a1ed9676009e9e2c0624150b8d3b658c0" kind="function"><name>getPropertyAsIntOrDefaultTo</name></member>
+    <member refid="class_properties_parser_1a47050c9748f17321a60b080f21258b93" kind="function"><name>getPropertyAsBoolOrDefaultTo</name></member>
+    <member refid="class_properties_parser_1a452cb82689e31abc2a1192015328e323" kind="function"><name>getPropertyAsFloatOrDefaultTo</name></member>
+    <member refid="class_properties_parser_1a269a569985b8fd79b816baa4962cfa62" kind="function"><name>getPropertyAsDoubleOrDefaultTo</name></member>
+  </compound>
+  <compound refid="namespaceflnc" kind="namespace"><name>flnc</name>
+    <member refid="namespaceflnc_1aa6a517635283780c9142bf6ad194013e" kind="function"><name>WriteVectorToFile</name></member>
+    <member refid="namespaceflnc_1a5ee4b13fe9860b1398a2e2c8d07776c8" kind="function"><name>Write2DVectorToFile</name></member>
+    <member refid="namespaceflnc_1a51e2434fe14f26a9d979282b2d6524f5" kind="function"><name>ReadVectorFromFile</name></member>
+    <member refid="namespaceflnc_1a43f11ba9f2a94bcf4e8680f806a54a47" kind="function"><name>Read2DVectorFromFile</name></member>
+  </compound>
+  <compound refid="namespacegf" kind="namespace"><name>gf</name>
+    <member refid="namespacegf_1ac0f4b1cee2681a53cb7c513c7f9a3b6f" kind="function"><name>getExecutablePath</name></member>
+    <member refid="namespacegf_1a00f9f0ea9a0804a71cf70c6b1eb158cf" kind="function"><name>getExecutablePathAndMatchItWithFilename</name></member>
+  </compound>
+  <compound refid="namespacemf" kind="namespace"><name>mf</name>
+    <member refid="namespacemf_1aacf640ab87407a419a237ff36d0c0c09" kind="function"><name>minSize</name></member>
+    <member refid="namespacemf_1ad29e1be602cf1426190438ba4a978886" kind="function"><name>mean</name></member>
+    <member refid="namespacemf_1a7b665e7f861360232bc6ff8b4ab53b79" kind="function"><name>stDev</name></member>
+    <member refid="namespacemf_1a40500525d65df0f162783485b005a17c" kind="function"><name>euclideanDistance</name></member>
+    <member refid="namespacemf_1a18bfb051b8501f49ad1ce7910cf5fa4e" kind="function"><name>euclideanDistanceSquared</name></member>
+    <member refid="namespacemf_1a040ab6b23a68d7a4c2f818c1eae58644" kind="function"><name>manhattanDistance</name></member>
+    <member refid="namespacemf_1aff2481aba46c30ed52226097357bb526" kind="function"><name>chebyshevDistance</name></member>
+    <member refid="namespacemf_1a53713d1a18fc6069e8da721e56dda3d1" kind="function"><name>brayCurtisDistance</name></member>
+    <member refid="namespacemf_1a000039a6817d1eaab151f74651c5fac4" kind="function"><name>canberraDistance</name></member>
+    <member refid="namespacemf_1a00075eb9a854aee2323bf1f9e51cf1fa" kind="function"><name>pearsonCorrelation</name></member>
+    <member refid="namespacemf_1ad3df0be2c20cff9d29cc6b3c550fd467" kind="function"><name>cosineSimilarity</name></member>
+    <member refid="namespacemf_1a0a73292f72b80df3a0c6b970e2ca4be6" kind="function"><name>dot</name></member>
+  </compound>
+  <compound refid="_cluster_8cpp" kind="file"><name>Cluster.cpp</name>
+  </compound>
+  <compound refid="_cluster_8h" kind="file"><name>Cluster.h</name>
+  </compound>
+  <compound refid="_data_types_8h" kind="file"><name>DataTypes.h</name>
+    <member refid="_data_types_8h_1a64be07a13efb96ba9d376c4cbc6f501e" kind="typedef"><name>FloatVector</name></member>
+    <member refid="_data_types_8h_1a90fed7f97f1803c7719d26e6f21b4de6" kind="typedef"><name>FloatVector2D</name></member>
+    <member refid="_data_types_8h_1a82f6bc76e1c7a0f51bf3e95ad5d3c590" kind="typedef"><name>DoubleVector</name></member>
+    <member refid="_data_types_8h_1a7e70d37182fdafec492c4dd396c9698c" kind="typedef"><name>DoubleVector2D</name></member>
+    <member refid="_data_types_8h_1a9b8f2f96749808efd0d975e75d96a71c" kind="typedef"><name>IntVector</name></member>
+    <member refid="_data_types_8h_1a2611314ab2c7ffc99f4b34f959b4723c" kind="typedef"><name>IntVector2D</name></member>
+    <member refid="_data_types_8h_1ab8e1ede88e2ff1c3b448334e6cbd3533" kind="typedef"><name>StringVector</name></member>
+    <member refid="_data_types_8h_1acccc44108a5c4da23723c861fdaf8ed5" kind="typedef"><name>StringVector2D</name></member>
+    <member refid="_data_types_8h_1aafe152bbcb51930b658b8a4406f4d67e" kind="typedef"><name>IntIntPair</name></member>
+    <member refid="_data_types_8h_1a3d5049745a50e0c457cb380125e045dc" kind="typedef"><name>IntFloatPair</name></member>
+    <member refid="_data_types_8h_1a1972afbb2da11833cc5c4e7dda7936cf" kind="typedef"><name>IntIntMap</name></member>
+    <member refid="_data_types_8h_1afae9076c89b4ed1654b0f85beb47af82" kind="typedef"><name>IntIntVectorMap</name></member>
+    <member refid="_data_types_8h_1ae9ec0f616e5edddb88bd7cba63e2ea88" kind="typedef"><name>IntFloatVectorMap</name></member>
+  </compound>
+  <compound refid="_file_func_8h" kind="file"><name>FileFunc.h</name>
+    <member refid="_file_func_8h_1ac7d0feb122d3a455f1a91ba26b3de612" kind="typedef"><name>minput_stream</name></member>
+    <member refid="_file_func_8h_1adf5ef842b05a918896d7eb7755bbee56" kind="typedef"><name>moutput_stream</name></member>
+  </compound>
+  <compound refid="_generic_func_8cpp" kind="file"><name>GenericFunc.cpp</name>
+  </compound>
+  <compound refid="_generic_func_8h" kind="file"><name>GenericFunc.h</name>
+  </compound>
+  <compound refid="_kmeans_8cpp" kind="file"><name>Kmeans.cpp</name>
+    <member refid="_kmeans_8cpp_1af55f0370ee6815bfd82fce81e16ad74e" kind="function"><name>less_f</name></member>
+  </compound>
+  <compound refid="_kmeans_8h" kind="file"><name>Kmeans.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_mathematical_functions_8cpp" kind="file"><name>MathematicalFunctions.cpp</name>
+  </compound>
+  <compound refid="_mathematical_functions_8h" kind="file"><name>MathematicalFunctions.h</name>
+  </compound>
+  <compound refid="_point_8cpp" kind="file"><name>Point.cpp</name>
+  </compound>
+  <compound refid="_point_8h" kind="file"><name>Point.h</name>
+  </compound>
+  <compound refid="_properties_parser_8cpp" kind="file"><name>PropertiesParser.cpp</name>
+  </compound>
+  <compound refid="_properties_parser_8h" kind="file"><name>PropertiesParser.h</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
+  </compound>
+</doxygenindex>
