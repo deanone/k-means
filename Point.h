@@ -109,4 +109,4 @@ public:
 	void writeValuesToFile(std::ostream &out); 
 };
 
-#endif	// POINT_H
+#endif	//	POINT_H

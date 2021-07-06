@@ -81,4 +81,4 @@ namespace flnc
 	}
 }
 
-#endif	// FLNC_H
+#endif	//	FLNC_H

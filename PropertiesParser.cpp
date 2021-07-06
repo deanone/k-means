@@ -58,9 +58,9 @@ bool PropertiesParser::getPropertyAsBool(std::string propertyName)
 	return propertyValue;
 }
 
-double PropertiesParser::getPropertyAsFloat(std::string propertyName)
+float PropertiesParser::getPropertyAsFloat(std::string propertyName)
 {
-	double propertyValue;
+	float propertyValue;
 	std::stringstream strStream(propMap[propertyName]);
 	strStream >> propertyValue;
 	return propertyValue;
@@ -110,7 +110,7 @@ bool PropertiesParser::getPropertyAsBoolOrDefaultTo(std::string propertyName, bo
 	}
 }
 
-double PropertiesParser::getPropertyAsFloatOrDefaultTo(std::string propertyName, double defaultPropertyValue)
+float PropertiesParser::getPropertyAsFloatOrDefaultTo(std::string propertyName, float defaultPropertyValue)
 {
 	if (propertyExists(propertyName))
 	{
