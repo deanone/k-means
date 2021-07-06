@@ -6,39 +6,25 @@
 
 class Kmeans
 {
-	/*! 
-	 * Number of dimensions.
-	 */
+	/*! number of dimensions. */
 	int	dimension;
 	
-	/*! 
-	 * Number of clusters.
-	 */
+	/*! number of clusters. */
 	int k;
 
-	/* 
-	 * Maximum number of iterations for the convergence of the algorithm.
-	 */
+	/* maximum number of iterations for the convergence of the algorithm. */
 	int numOfIterations;
 
-	/*!
-	 * The type of used distance metric.
-	 */
+	/*! the type of used distance metric. */
 	int distanceMetric;		
 public:
-	/*! 
-	 * The data points (full dataset) to be clustered.
-	 */
+	/*! the data points (full dataset) to be clustered. */
 	std::vector<Point> points;
 
-	/*! 
-	 * Initial clusters.
-	 */
+	/*! initial clusters. */
 	std::vector<Cluster> initialClusters;
 	
-	/*! 
-	 * Current clusters.
-	 */
+	/*! current clusters. */
 	std::vector<Cluster> finalClusters;
 
 	std::vector<IntIntPair> sizes;
@@ -46,11 +32,13 @@ public:
 	IntIntVectorMap clusterIDPointsOfClusterIDsAllocation;
 
 public:
-	/*! Constructor - the parameters of the algorithm are given as arguments. */
+	/*!
+	 * Constructor 1.
+	 */
 	Kmeans(std::string datasetFilename, std::string propertiesFileName);
 	
 	/*!
-     * Constructor.
+     * Constructor 2.
      */
 	Kmeans(std::string datasetFilename, int d, int numOfClusters, int numIt, int distMetric);	
 	
@@ -60,28 +48,28 @@ public:
 	~Kmeans();				
 
 	/*! 
-	 * Setter of the dimension of the points of the dataset.
+	 * Sets the dimension of the points of the dataset.
 	 * @param dimension the features dimension (i.e. number of features).
 	 */
 	void setDimension(int dimension);
 
 	/*! 
-	 * Getter of the dimension of the points of the dataset.
+	 * Returns the dimension of the points of the dataset.
 	 * @return the features dimension.
 	 */
-	int getDimension();
+	int getDimension() const;
 
 	/*! 
-	 * Setter of the number of clusters.
+	 * Sets the number of clusters.
 	 * @param k the number of clusters.
 	 */
 	void setK(int k);
 
 	/*! 
-	 * Getter of the number of clusters.
+	 * Returns the number of clusters.
 	 * @return the number of clusters.
 	 */
-	int getK();
+	int getK() const;
 
 	/*! 
 	 * Assigns points to clusters.
@@ -129,22 +117,24 @@ public:
 	/*! Cluster validity metrics */
 	
 	/*! 
-	 * Calculates the silhouette metric. (https://en.wikipedia.org/wiki/Silhouette_(clustering))
+	 * Computes the silhouette metric.
+	 * https://en.wikipedia.org/wiki/Silhouette_(clustering)
 	 * @return the value of the silhouette metric.
 	 */
 	double calculateSilhouette();
 
 	/*! 
-	 * Calculates within cluster sum of squares (WCSS).
+	 * Computes within cluster sum of squares (WCSS).
 	 * @return the value of WCSS.
  	 */
 	double calculateWCSS(); 
 
-	/* 
-	 * !Calculates the Davies-Bouldin index. (http://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index)
+	/*! 
+	 * Computes the Davies-Bouldin index.
+	 * http://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index
 	 * @return the value of Davies-Bouldin index.
 	 */
 	double calculateDaviesBouldinIndex();
 };
 
-#endif
+#endif //	KMEANS_H

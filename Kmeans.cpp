@@ -20,7 +20,7 @@ Kmeans::Kmeans(std::string datasetFilename, std::string propertiesFileName)
 	in.open(datasetFilename.c_str(), std::ios::in);
 	if (in.is_open())
 	{
-		while(std::getline(in, dataline))
+		while (std::getline(in, dataline))
 		{ 
 			std::stringstream ss(dataline);
 			std::string item;
@@ -55,7 +55,7 @@ dimension(d), k(numOfClusters), numOfIterations(numIt), distanceMetric(distMetri
 	in.open(datasetFilename.c_str(), std::ios::in);
 	if (in.is_open())
 	{
-		while(std::getline(in, dataline))
+		while (std::getline(in, dataline))
 		{ 
 			std::stringstream ss(dataline);
 			std::string item;
@@ -105,6 +105,26 @@ Kmeans::~Kmeans()
 	{
 		clusterIDPointsOfClusterIDsAllocation.clear();
 	}
+}
+
+void Kmeans::setDimension(int dimension)
+{
+	this->dimension = dimension;
+}
+
+int Kmeans::getDimension() const
+{
+	return dimension;
+}
+
+void Kmeans::setK(int k)
+{
+	this->k = k;
+}
+
+int Kmeans::getK() const
+{
+	return k;
 }
 
 void Kmeans::setInitialClustersRandomly()
