@@ -6,15 +6,15 @@ Point::Point() : ID(-1)
 
 Point::~Point()
 {
-	if (v.size() > 0)
+	if (!v.empty())
 	{
 		v.clear();
 	}
 }
 
-void Point::setID(int _ID)
+void Point::setID(int ID)
 {
-	ID = _ID;
+	this->ID = ID;
 }
 
 int Point::getID() const

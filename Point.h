@@ -21,9 +21,9 @@ public:
 
 	/*! 
 	 * Sets the ID of the Point.
-	 * @param _ID the ID of the Point.
+	 * @param ID the ID of the Point.
 	 */
-	void setID(int _ID);
+	void setID(int ID);
 
 	/*!
 	 * Returns the ID of the Point. 
